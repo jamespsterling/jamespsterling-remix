@@ -1,0 +1,55 @@
+body.dark,
+body.dark #projects {
+  background-color: #292c35;
+}
+
+body.dark #about,
+body.dark #experience,
+body.dark #education,
+body.dark #projects {
+  border-bottom: 1px solid #595959;
+}
+
+body.dark #experience,
+body.dark #skills {
+  background-color: #434343;
+  border-bottom: 1px solid #292929;
+}
+
+body.dark #experience .vtimeline-content {
+  background: #373737;
+  color: #fff;
+  border: 1px solid #232323;
+}
+body.dark #experience .vtimeline-content h3 {
+  color: #f2f2f2;
+}
+body.dark #experience .vtimeline-content h4 {
+  color: #c1c1c1;
+}
+
+body.dark #projects .project {
+  background: #373737;
+  color: #fff;
+  border: 1px solid #232323;
+}
+body.dark #projects h3 {
+  color: #f2f2f2;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark #about h2,
+body.dark #experience h2,
+body.dark #projects h2,
+body.dark #skills h2,
+body.dark a,
+body.dark p,
+body.dark #about p,
+body.dark #projects p,
+body.dark #experience p,
+body.dark .vtimeline-date {
+  color: #fff;
+}
+
+/*# sourceMappingURL=dark.css.map */

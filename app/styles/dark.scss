@@ -1,0 +1,63 @@
+// Dark mode
+body.dark,
+body.dark #projects {
+  background-color: #292c35;
+}
+
+body.dark #about,
+body.dark #experience,
+body.dark #education,
+body.dark #projects {
+  border-bottom: 1px solid #595959;
+}
+
+body.dark #experience,
+body.dark #skills {
+  background-color: #434343;
+  border-bottom: 1px solid #292929;
+}
+
+body.dark #experience {
+  .vtimeline-content {
+    background: #373737;
+    color: #fff;
+    border: 1px solid #232323;
+
+    h3 {
+      color: #f2f2f2;
+    }
+
+    h4 {
+      color: #c1c1c1;
+    }
+  }
+}
+
+body.dark #projects {
+  .project {
+    background: #373737;
+    color: #fff;
+    border: 1px solid #232323;
+  }
+
+  h3 {
+    color: #f2f2f2;
+  }
+}
+
+body.dark {
+  h1,
+  h2,
+  #about h2,
+  #experience h2,
+  #projects h2,
+  #skills h2,
+  a,
+  p,
+  #about p,
+  #projects p,
+  #experience p,
+  .vtimeline-date {
+    color: #fff;
+  }
+}
