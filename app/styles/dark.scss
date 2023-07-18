@@ -45,6 +45,30 @@ body.dark #projects {
   }
 }
 
+body.dark #education {
+  .education-block {
+    background: #373737;
+    color: #fff;
+    border: 1px solid #232323;
+  }
+
+  .education-date {
+    color: #afafaf;
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+  h4 {
+    color: #c1c1c1;
+  }
+
+  ul {
+    color: #f2f2f2;
+  }
+}
+
 body.dark {
   h1,
   h2,
@@ -59,5 +83,40 @@ body.dark {
   #experience p,
   .vtimeline-date {
     color: #fff;
+  }
+
+  $base-color: #1c1c1c;
+  $triad-color-1: #2f1537;
+
+  #contact {
+    background: $base-color;
+    background: -moz-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* ff3.6+ */
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      right top,
+      color-stop(0%, $triad-color-1),
+      color-stop(100%, $base-color)
+    ); /* safari4+,chrome */
+    background: -webkit-linear-gradient(
+      55deg,
+      $triad-color-1 0%,
+      $base-color 100%
+    ); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* ie10+ */
+    background: linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$triad-color-1', endColorstr='$base-color',GradientType=0 ); /* ie6-9 */
+
+    h2 {
+      color: #fff;
+    }
+  }
+
+  #skills {
+    li {
+      color: #ffffff;
+      background: #272727;
+    }
   }
 }

@@ -8,7 +8,7 @@ export default function Experience() {
       <div id="experience-timeline">
         {data.jobs.map((job, i) => (
           <div className="vtimeline-point" key={i}>
-            <div className="vtimeline-icon"><i className="fab fa-react"></i></div>
+            <div className="vtimeline-icon"><i className={job.icon}></i></div>
             <div className="vtimeline-block">
               <span className="vtimeline-date">{job.time}</span>
               <div

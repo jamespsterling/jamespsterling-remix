@@ -6,6 +6,7 @@ export const data = {
       employer: 'Lattice',
       title: 'Staff Software Engineer',
       time: 'May 2022 - Present',
+      icon: 'fab fa-react',
       description: [
         'Full stack development focused engineering empowering experiences using React, Nextjs, Relay, & GraphQL.',
       ],
@@ -15,6 +16,7 @@ export const data = {
       employer: 'Nortal',
       title: 'Lead Software Development Engineer',
       time: 'October 2020 - May 2022',
+      icon: 'fab fa-angular',
       description: [
         'Front-end & Microservice focused engineering of enterprise web experiences using Angular 12+, Nx, NgRx (Angular Redux), RxJs, Jest, Spectator, HAPI, and Adobe Adobe Experience Manager.',
         'Leads teams in technology best practices with Angular, TypeScript, NodeJs, Git, Material UI, and others with in-depth code reviews, coaching, and pair programming.',
@@ -26,6 +28,7 @@ export const data = {
       employer: 'Extreme Arts + Sciences',
       title: 'Senior Full Stack Developer',
       time: 'October 2018 - October 2020',
+      icon: 'fab fa-node-js',
       description: [
         'Full-stack development focused on building unique solutions for our clients that includes PHP (Laravel & custom), HTML5, CSS/Sass, Front-end/Back-end Node/JS (Ractive.js, React-native, jQuery, Typescript, HapiJs, Joi, ExpressJs, ES6, and more), Build & Task runners (Grunt, Webpack), UI Unit and Automation testing (PHPUnit, Ruby, Cucumber, Selenium), Ionic (Angular 7/8) Mobile App Development, and Sitecore (C# XP 9) development and support, containerization using Docker/Docker-compose, cloud platform operations support and configuration (Azure, AWS, & Google Cloud Platform).',
         'Encourages test-driven development by leveraging Unit testing as well as QA Automation testing with Ruby, Cucumber and Selenium.',
@@ -36,6 +39,7 @@ export const data = {
       employer: 'York Risk Services Group, Inc.',
       title: 'Full Stack Developer',
       time: 'January 2014 - October 2018',
+      icon: 'fas fa-laptop-code',
       description: [
         'Works with web technologies such as HTML5, CSS3, Responsive Web Design, PHP (Laravel, Joomla, Wordpress), JavaScript (AngularJS, jQuery, RivetsJS, MVVM), LAMP Stack/Administration, MySQL/MSSQL, MongoDB, Apache Solr, Task Runners (Grunt, Gulp, Yarn), ASP.Net Webforms/MVC/Entity Framework and processes such as user experience design (UXD) and user interface design (UID), web presence, web mastery.',
         'Leads colleagues in best practices for Web design, Software Architecture, and Continuous Integration technologies.',
@@ -47,6 +51,7 @@ export const data = {
       employer: 'MEDTRON Software Intelligence Corporation',
       title: 'Application Programmer / Analyst',
       time: 'April 2013 - January 2014',
+      icon: 'fab fa-php',
       description: [
         'Works with leading edge web technologies such as HTML5, CSS3, PHP, Zend MVC, PDO DB Abstraction with Doctrine 2 ORM/DBAL.',
         "Works to improve MEDTRON's Electronic Health Record System (EHR).",
@@ -57,6 +62,7 @@ export const data = {
       employer: 'York Risk Services Group, Inc.',
       title: 'Software Engineer I & II',
       time: 'February 2009 - April 2013',
+      icon: 'fas fa-code',
       description: [
         'Progress 4GL - OpenEdge Advanced Business Language, or OpenEdge ABL for short, is a business application development language created and maintained by Progress Software Corporation (PSC).',
         'Open Source - JavaScript, jQuery, jQueryUI, PHP, MySQL, Perl, XML, HTML, CSS. Server Configuration/Administration – SuSE Linux Enterprise, Apache 2.x, Apache Tomcat 5.x/6, Apache Solr, Apache Lucene, Secure FTP.',
@@ -143,9 +149,6 @@ export const data = {
       image: {
         src: '/img/iot-phone-mockup.png',
         height: 300,
-        styles: {
-          paddingLeft: '88px',
-        } as CSSProperties,
       },
       description:
         'Ionic v4 Angular 8 hybrid built as a companion to iotinactionevents.com, with quick access to event details, ticket for event entry, event-centric push notifications, QR contact scan & share, and dynamic content publishing platform. This app is deployed to Android and iOS using Ionic and Apache Cordova.',
@@ -153,7 +156,10 @@ export const data = {
     },
     {
       name: 'IoT In Action Events',
-      image: { src: '/img/iot-web.png', height: 300 },
+      image: {
+        src: '/img/iot-web.png',
+        height: 300,
+      },
       description:
         'A web-based event orchestration platform, from event registration to in-person networking using the proprietary matchmaking software, IoT in Action Events has been a staple product for Microsoft to empower industry IoT experts, students, and solution providers all in one place. Supplemented in 2019 with the IoT Event mobile app, and Video-on-demand platform, the IoT in Action experience continues to grow under partnership between EAS and Microsoft.',
       link: 'https://web.archive.org/web/20200816235044/https:/iotinactionevents.com/',

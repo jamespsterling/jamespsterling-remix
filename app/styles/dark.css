@@ -37,6 +37,24 @@ body.dark #projects h3 {
   color: #f2f2f2;
 }
 
+body.dark #education .education-block {
+  background: #373737;
+  color: #fff;
+  border: 1px solid #232323;
+}
+body.dark #education .education-date {
+  color: #afafaf;
+}
+body.dark #education h3 {
+  color: #fff;
+}
+body.dark #education h4 {
+  color: #c1c1c1;
+}
+body.dark #education ul {
+  color: #f2f2f2;
+}
+
 body.dark h1,
 body.dark h2,
 body.dark #about h2,
@@ -50,6 +68,23 @@ body.dark #projects p,
 body.dark #experience p,
 body.dark .vtimeline-date {
   color: #fff;
+}
+body.dark #contact {
+  background: #1c1c1c;
+  background: -moz-linear-gradient(0deg, #2f1537 0%, #1c1c1c 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #2f1537), color-stop(100%, #1c1c1c)); /* safari4+,chrome */
+  background: -webkit-linear-gradient(55deg, #2f1537 0%, #1c1c1c 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(0deg, #2f1537 0%, #1c1c1c 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(0deg, #2f1537 0%, #1c1c1c 100%); /* ie10+ */
+  background: linear-gradient(0deg, #2f1537 0%, #1c1c1c 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$triad-color-1", endColorstr="$base-color",GradientType=0 ); /* ie6-9 */
+}
+body.dark #contact h2 {
+  color: #fff;
+}
+body.dark #skills li {
+  color: #ffffff;
+  background: #272727;
 }
 
 /*# sourceMappingURL=dark.css.map */

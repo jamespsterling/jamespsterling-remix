@@ -2,7 +2,7 @@ export default function Contact() {
 
   return (
     <div id="contact">
-      <h2>Get in Touch</h2>
+      <h2 className="heading">Get in Touch</h2>
       <div id="contact-form">
         <form
           method="POST"

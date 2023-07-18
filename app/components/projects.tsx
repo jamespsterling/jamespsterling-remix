@@ -11,7 +11,7 @@ export default function Projects() {
         <div className="row">
           {data.projects.map((project, i) => (
             <div className="project shadow-large" key={i}>
-              <div className="project-image" style={project.image.styles}>
+              <div className="project-image">
                 <div className={project.image.class}>
                   {imageExtension(project.image.src) === 'svg' ? (
                     <div className="svg-wrapper">
@@ -20,8 +20,6 @@ export default function Projects() {
                   ) : (
                     <img
                       src={project.image.src}
-                      height={project.image.height}
-                      width={project.image.width}
                     />
                   )}
                 </div>

@@ -368,7 +368,7 @@ footer {
   position: relative;
   background-image: url(/img/lead-bg-7.jpg);
   background-size: cover;
-  padding: 185px 15px 100px;
+  padding: 185px 15px 150px;
   overflow: hidden;
 }
 
@@ -605,7 +605,7 @@ footer {
   border-radius: 3px;
 }
 .education-block h3 {
-  font-weight: 500;
+  font-weight: 300;
   float: left;
   margin: 0;
   color: #464646;
@@ -617,7 +617,8 @@ footer {
 .education-block h4 {
   color: #74808a;
   clear: both;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 1.25rem;
   margin: 0 0 15px 0;
 }
 .education-block p,
@@ -633,7 +634,7 @@ footer {
   display: inline-block;
 }
 .education-block .education-header img {
-  height: 48px;
+  height: 64px;
 }
 .education-block .education-header .education-text-header {
   display: inline-block;
@@ -663,16 +664,16 @@ footer {
   overflow: hidden;
   background: #fff;
   border-radius: 4px;
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-column-gap: 2rem;
+  padding: 1rem;
 }
 
-.project-image {
-  float: left;
+.project-image img {
+  max-height: 300px;
 }
 
-.project-info {
-  margin-left: 300px;
-  padding: 15px;
-}
 .project-info h3 {
   font-size: 1.5em;
   font-weight: 300;
@@ -722,20 +723,18 @@ footer {
 */
 #contact {
   padding: 50px 15px;
-  background: #63aee0;
-  background: -moz-linear-gradient(55deg, #dbdbdb 0%, #63aee0 100%); /* ff3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #dbdbdb), color-stop(100%, #63aee0)); /* safari4+,chrome */
-  background: -webkit-linear-gradient(55deg, #dbdbdb 0%, #63aee0 100%); /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(55deg, #dbdbdb 0%, #63aee0 100%); /* opera 11.10+ */
-  background: -ms-linear-gradient(55deg, #dbdbdb 0%, #63aee0 100%); /* ie10+ */
-  background: linear-gradient(35deg, #dbdbdb 0%, #63aee0 100%); /* w3c */
+  background: #dddddd;
+  background: -moz-linear-gradient(0deg, #8e7097 0%, #dddddd 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #8e7097), color-stop(100%, #dddddd)); /* safari4+,chrome */
+  background: -webkit-linear-gradient(55deg, #8e7097 0%, #dddddd 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(0deg, #8e7097 0%, #dddddd 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(0deg, #8e7097 0%, #dddddd 100%); /* ie10+ */
+  background: linear-gradient(0deg, #8e7097 0%, #dddddd 100%); /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$triad-color-1", endColorstr="$base-color",GradientType=0 ); /* ie6-9 */
   text-align: center;
 }
 #contact h2 {
   margin: 0 0 15px 0;
-  color: #fff;
-  font-weight: 500;
 }
 
 #contact-form {
@@ -750,9 +749,9 @@ footer {
   border-radius: 4px;
   border: none;
   margin-bottom: 10px;
-  background: #5c5c5c;
+  background: #454545;
   color: #fff;
-  border: 1px #5c5c5c;
+  border: 1px #2c2c2c;
   transition: 0.5s ease all;
 }
 #contact-form input::-webkit-input-placeholder,
@@ -776,7 +775,7 @@ footer {
 #contact-form input:focus,
 #contact-form textarea:focus {
   outline: none;
-  background: #424242;
+  background: #121212;
 }
 #contact-form textarea {
   height: 150px;
@@ -789,7 +788,7 @@ footer {
   border-radius: 4px;
   padding: 5px 10px;
   border: none;
-  color: #63aee0;
+  color: #dddddd;
   font-weight: 700;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.5s ease all;
@@ -879,6 +878,10 @@ footer {
   .education-block span {
     float: none;
   }
+  .project {
+    grid-template-columns: auto;
+    grid-column-gap: 2rem;
+  }
   .project-info {
     position: relative;
     margin: 0;
@@ -902,6 +905,10 @@ footer {
   #lead-content a {
     font-size: 0.9em;
     padding: 5px 10px;
+  }
+  .project {
+    grid-template-columns: auto;
+    grid-column-gap: 2rem;
   }
 }
 .york-loader {
