@@ -55,11 +55,6 @@ export const meta: V2_MetaFunction = () => {
   return [{ title: 'James Sterling' }, { name: 'description', content: 'Portfolio' }];
 };
 
-export const handle = {
-  scripts: () => [{ src: '/scripts/scripts.js' }],
-  // TODO: google analytics
-};
-
 export const loader = darkMode;
 
 export const action = async ({ request }: ActionArgs) => {

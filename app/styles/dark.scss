@@ -1,75 +1,13 @@
 // Dark mode
-body.dark,
-body.dark #projects {
-  background-color: #292c35;
-}
-
-body.dark #about,
-body.dark #experience,
-body.dark #education,
-body.dark #projects {
-  border-bottom: 1px solid #595959;
-}
-
-body.dark #experience,
-body.dark #skills {
-  background-color: #434343;
-  border-bottom: 1px solid #292929;
-}
-
-body.dark #experience {
-  .vtimeline-content {
-    background: #373737;
-    color: #fff;
-    border: 1px solid #232323;
-
-    h3 {
-      color: #f2f2f2;
-    }
-
-    h4 {
-      color: #c1c1c1;
-    }
-  }
-}
-
-body.dark #projects {
-  .project {
-    background: #373737;
-    color: #fff;
-    border: 1px solid #232323;
-  }
-
-  h3 {
-    color: #f2f2f2;
-  }
-}
-
-body.dark #education {
-  .education-block {
-    background: #373737;
-    color: #fff;
-    border: 1px solid #232323;
-  }
-
-  .education-date {
-    color: #afafaf;
-  }
-
-  h3 {
-    color: #fff;
-  }
-
-  h4 {
-    color: #c1c1c1;
-  }
-
-  ul {
-    color: #f2f2f2;
-  }
-}
-
 body.dark {
+  background-color: #292c35;
+
+  header {
+    a:hover {
+      background: #1c1c1c;
+    }
+  }
+
   h1,
   h2,
   #about h2,
@@ -85,10 +23,83 @@ body.dark {
     color: #fff;
   }
 
-  $base-color: #1c1c1c;
-  $triad-color-1: #2f1537;
+  #projects {
+    background-color: #292c35;
+  }
+
+  #about,
+  #experience,
+  #education,
+  #projects {
+    border-bottom: 1px solid #595959;
+  }
+
+  #experience,
+  #skills {
+    background-color: #434343;
+    border-bottom: 1px solid #292929;
+  }
+
+  #projects {
+    .project {
+      background: #373737;
+      color: #fff;
+      border: 1px solid #232323;
+    }
+
+    h3 {
+      color: #f2f2f2;
+    }
+  }
+
+  #experience {
+    .vtimeline-content {
+      background: #373737;
+      color: #fff;
+      border: 1px solid #232323;
+
+      h3 {
+        color: #f2f2f2;
+      }
+
+      h4 {
+        color: #c1c1c1;
+      }
+    }
+
+    .shadow-large {
+      box-shadow: 0 3px 10px #00000014, 0 3px 6px #00000026;
+    }
+  }
+
+  #education {
+    .education-block {
+      background: #373737;
+      color: #fff;
+      border: 1px solid #232323;
+    }
+
+    .education-date {
+      color: #afafaf;
+    }
+
+    h3 {
+      color: #fff;
+    }
+
+    h4 {
+      color: #c1c1c1;
+    }
+
+    ul {
+      color: #f2f2f2;
+    }
+  }
 
   #contact {
+    $base-color: #1c1c1c;
+    $triad-color-1: #2f1537;
+
     background: $base-color;
     background: -moz-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* ff3.6+ */
     background: -webkit-gradient(
@@ -117,6 +128,20 @@ body.dark {
     li {
       color: #ffffff;
       background: #272727;
+    }
+  }
+
+  #contact-form {
+    button {
+      background: #1a1a1a;
+    }
+
+    input,
+    textarea {
+      &:focus {
+        outline: none;
+        background: darken(#454545, 5%);
+      }
     }
   }
 }

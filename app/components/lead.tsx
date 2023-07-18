@@ -9,8 +9,8 @@ export default function Lead() {
       </div>
 
       <div id="lead-overlay">
-        {fireflies.map(() => (
-          <div className="firefly"></div>
+        {fireflies.map((_, i) => (
+          <div className="firefly" key={i}></div>
         ))}
       </div>
     </div>

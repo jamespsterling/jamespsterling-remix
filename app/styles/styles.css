@@ -117,13 +117,10 @@ header {
   animation-duration: 0.75s;
 }
 header ul {
-  display: inline-block;
-  background: rgba(10, 10, 10, 0.66);
+  background: rgba(10, 10, 10, 0.4);
   text-align: center;
   padding: 10px;
   margin: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
 }
 @media only screen and (max-width: 767px) {
   header {
@@ -132,6 +129,11 @@ header ul {
 }
 header li {
   display: inline-block;
+}
+header .dark-mode-toggle {
+  padding: 10px;
+  position: absolute;
+  right: 0;
 }
 header a {
   display: block;
@@ -175,12 +177,10 @@ header.active {
   display: none;
   text-align: right;
   width: 100%;
-  background: #2a2a2a;
   font-size: 1.5em;
-  padding-right: 15px;
-  padding-top: 10px;
+  padding: 10px 15px;
   cursor: pointer;
-  color: #096ca7;
+  color: #ffffff;
 }
 #mobile-menu-close span {
   font-size: 0.5em;
@@ -221,7 +221,7 @@ footer {
 }
 .top i {
   color: #74808a;
-  top: 4px;
+  top: 3px;
   position: relative;
 }
 
@@ -788,13 +788,13 @@ footer {
   border-radius: 4px;
   padding: 5px 10px;
   border: none;
-  color: #dddddd;
+  color: #6b6b6b;
   font-weight: 700;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.5s ease all;
 }
 #contact-form button:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /*
@@ -823,7 +823,7 @@ footer {
 }
 @media only screen and (max-width: 992px) {
   #lead {
-    padding: 100px 15px;
+    padding: 150px 15px 100px;
   }
   #lead-content h1 {
     font-size: 3em;
@@ -862,6 +862,12 @@ footer {
     display: block;
     margin-bottom: 10px;
   }
+  #menu .dark-mode-toggle {
+    display: inline-block;
+    padding: unset;
+    right: unset;
+    position: relative;
+  }
   #lead-content h1 {
     font-size: 2em;
   }
@@ -887,6 +893,7 @@ footer {
     margin: 0;
     top: auto;
     transform: none;
+    padding-top: 20px;
   }
   footer {
     text-align: center;

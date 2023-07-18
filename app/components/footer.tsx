@@ -11,7 +11,9 @@ export default function Footer() {
             </p>
           </div>
           <div className="col-sm-2 top">
-            <span id="to-top">
+            <span id="to-top" onClick={() => {
+              window.scroll({ top: 0, behavior: 'smooth' });
+            }}>
               <i className="fa fa-chevron-up" aria-hidden="true"></i>
             </span>
           </div>

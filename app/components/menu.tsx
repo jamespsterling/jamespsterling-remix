@@ -6,11 +6,17 @@ type Props = {
 export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
   return (
     <>
-      <div id="mobile-menu-open" className="shadow-large">
+      <div id="mobile-menu-open" className="shadow-large" onClick={() => {
+        document.querySelector('body')?.classList.add('active');
+        document.querySelector('header')?.classList.add('active');
+      }}>
         <i className="fa fa-bars" aria-hidden="true"></i>
       </div>
       <header>
-        <div id="mobile-menu-close">
+        <div id="mobile-menu-close" onClick={() => {
+          document.querySelector('body')?.classList.remove('active');
+          document.querySelector('header')?.classList.remove('active');
+        }}>
           <span>Close</span> <i className="fa fa-times" aria-hidden="true"></i>
         </div>
         <ul id="menu" className="shadow">
@@ -32,7 +38,7 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
           <li>
             <a href="#contact">Contact</a>
           </li>
-          <li>
+          <li className="dark-mode-toggle">
             <input
               type="checkbox"
               className="checkbox"

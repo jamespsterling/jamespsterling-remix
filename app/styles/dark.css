@@ -1,21 +1,45 @@
-body.dark,
+body.dark {
+  background-color: #292c35;
+}
+body.dark header a:hover {
+  background: #1c1c1c;
+}
+body.dark h1,
+body.dark h2,
+body.dark #about h2,
+body.dark #experience h2,
+body.dark #projects h2,
+body.dark #skills h2,
+body.dark a,
+body.dark p,
+body.dark #about p,
+body.dark #projects p,
+body.dark #experience p,
+body.dark .vtimeline-date {
+  color: #fff;
+}
 body.dark #projects {
   background-color: #292c35;
 }
-
 body.dark #about,
 body.dark #experience,
 body.dark #education,
 body.dark #projects {
   border-bottom: 1px solid #595959;
 }
-
 body.dark #experience,
 body.dark #skills {
   background-color: #434343;
   border-bottom: 1px solid #292929;
 }
-
+body.dark #projects .project {
+  background: #373737;
+  color: #fff;
+  border: 1px solid #232323;
+}
+body.dark #projects h3 {
+  color: #f2f2f2;
+}
 body.dark #experience .vtimeline-content {
   background: #373737;
   color: #fff;
@@ -27,16 +51,9 @@ body.dark #experience .vtimeline-content h3 {
 body.dark #experience .vtimeline-content h4 {
   color: #c1c1c1;
 }
-
-body.dark #projects .project {
-  background: #373737;
-  color: #fff;
-  border: 1px solid #232323;
+body.dark #experience .shadow-large {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.0784313725), 0 3px 6px rgba(0, 0, 0, 0.1490196078);
 }
-body.dark #projects h3 {
-  color: #f2f2f2;
-}
-
 body.dark #education .education-block {
   background: #373737;
   color: #fff;
@@ -54,21 +71,6 @@ body.dark #education h4 {
 body.dark #education ul {
   color: #f2f2f2;
 }
-
-body.dark h1,
-body.dark h2,
-body.dark #about h2,
-body.dark #experience h2,
-body.dark #projects h2,
-body.dark #skills h2,
-body.dark a,
-body.dark p,
-body.dark #about p,
-body.dark #projects p,
-body.dark #experience p,
-body.dark .vtimeline-date {
-  color: #fff;
-}
 body.dark #contact {
   background: #1c1c1c;
   background: -moz-linear-gradient(0deg, #2f1537 0%, #1c1c1c 100%); /* ff3.6+ */
@@ -85,6 +87,14 @@ body.dark #contact h2 {
 body.dark #skills li {
   color: #ffffff;
   background: #272727;
+}
+body.dark #contact-form button {
+  background: #1a1a1a;
+}
+body.dark #contact-form input:focus,
+body.dark #contact-form textarea:focus {
+  outline: none;
+  background: #383838;
 }
 
 /*# sourceMappingURL=dark.css.map */

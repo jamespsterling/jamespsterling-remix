@@ -1,6 +1,6 @@
-import { createCookie } from '@remix-run/cloudflare'
+import { createCookie } from '@remix-run/cloudflare';
 
 export const userPrefs = createCookie('user-prefs', {
-  maxAge: 604_800, // one week
+  maxAge: 10 * 365 * 24 * 60 * 60, // one year
   sameSite: 'strict',
-})
+});
