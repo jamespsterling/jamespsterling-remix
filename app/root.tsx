@@ -37,9 +37,6 @@ export default function App() {
   const { env, gaTrackingId, darkMode } = useLoaderData<typeof loader>();
 
   useEffect(() => {
-    console.log('gaTrackingId', gaTrackingId);
-    console.log('env', env);
-
     if (gaTrackingId?.length) {
       gtag.pageview(location.pathname, gaTrackingId);
     }
