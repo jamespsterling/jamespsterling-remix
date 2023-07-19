@@ -76,6 +76,7 @@ body {
 
 a {
   color: $base-color;
+  text-decoration: none;
 
   &:hover {
     color: $triad-color-1;
@@ -433,6 +434,7 @@ footer {
   position: relative;
   background-image: url(/img/lead-bg-7.jpg);
   background-size: cover;
+  background-position: center;
   padding: 185px 15px 150px;
   overflow: hidden;
 }
@@ -601,12 +603,50 @@ footer {
   border-radius: 3px;
   text-align: left;
 
+  .heading-grid {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    margin-bottom: 12px;
+
+    img {
+      max-width: 75px;
+      justify-self: end;
+    }
+
+    h3 {
+      a {
+        i {
+          opacity: 0;
+          transition: 0.2s all;
+        }
+        &:hover {
+          i {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
   h3 {
     font-size: 1.5em;
     font-weight: 300;
     color: $heading;
     display: inline-block;
     margin: 0;
+
+    a:hover {
+      color: darken($heading, 20%);
+      transition: 0.2s all;
+    }
+
+    i {
+      margin-left: 6px;
+      margin-top: -2px;
+      font-size: 0.9rem;
+      color: #c9c9c9;
+      vertical-align: middle;
+    }
   }
 
   h4 {
@@ -621,12 +661,26 @@ footer {
     font-size: 0.9em;
     margin: 0;
   }
+
+  .client-logos {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(max(100px, 100% / var(--n)), 1fr));
+
+    img {
+      max-width: 100px;
+      max-height: 50px;
+    }
+  }
 }
 
 .vtimeline-point {
   position: relative;
   display: block;
-  vertical-align: top;
   margin-bottom: 30px;
 }
 
@@ -684,13 +738,15 @@ footer {
 }
 
 .education-block {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto 30px auto;
   padding: 15px;
   border: 1px solid $border;
   text-align: left;
   background: #fff;
   border-radius: 3px;
+  display: grid;
+  grid-template-columns: auto 20%;
 
   h3 {
     font-weight: 300;
@@ -701,15 +757,20 @@ footer {
 
   span {
     color: $text;
-    float: right;
+    font-size: 0.9rem;
   }
 
   h4 {
     color: $text;
     clear: both;
     font-weight: 300;
-    font-size: 1.25rem;
-    margin: 0 0 15px 0;
+    font-size: 1.15rem;
+    margin: 0;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+    color: lighten($text, 10%);
   }
 
   p,
@@ -1046,6 +1107,19 @@ $triad-color-1: #8e7097;
 
   .social {
     text-align: center;
+  }
+
+  .education-block {
+    grid-template-columns: auto;
+  }
+
+  .vtimeline-content {
+    h3 {
+      font-size: 1.33em;
+      i {
+        font-size: 0.75rem;
+      }
+    }
   }
 }
 

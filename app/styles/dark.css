@@ -1,3 +1,8 @@
+/*
+    ------------------------
+    ----- 1. Colors -----
+    ------------------------
+*/
 body.dark {
   background-color: #292c35;
 }
@@ -25,12 +30,15 @@ body.dark #about,
 body.dark #experience,
 body.dark #education,
 body.dark #projects {
-  border-bottom: 1px solid #595959;
+  border-bottom: 1px solid #3b3b3b;
 }
 body.dark #experience,
 body.dark #skills {
   background-color: #434343;
   border-bottom: 1px solid #292929;
+}
+body.dark #experience {
+  background: linear-gradient(0deg, #2d2d2d 0%, #1c1c1c 100%);
 }
 body.dark #projects .project {
   background: #373737;
@@ -47,6 +55,9 @@ body.dark #experience .vtimeline-content {
 }
 body.dark #experience .vtimeline-content h3 {
   color: #f2f2f2;
+}
+body.dark #experience .vtimeline-content h3 a:hover {
+  color: #e2c7ea;
 }
 body.dark #experience .vtimeline-content h4 {
   color: #c1c1c1;
@@ -68,6 +79,9 @@ body.dark #education h3 {
 body.dark #education h4 {
   color: #c1c1c1;
 }
+body.dark #education h5 {
+  color: #b1b1b1;
+}
 body.dark #education ul {
   color: #f2f2f2;
 }
@@ -79,7 +93,7 @@ body.dark #contact {
   background: -o-linear-gradient(0deg, #2f1537 0%, #1c1c1c 100%); /* opera 11.10+ */
   background: -ms-linear-gradient(0deg, #2f1537 0%, #1c1c1c 100%); /* ie10+ */
   background: linear-gradient(0deg, #2f1537 0%, #1c1c1c 100%); /* w3c */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$triad-color-1", endColorstr="$base-color",GradientType=0 ); /* ie6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$gradient-2", endColorstr="$gradient-1",GradientType=0 ); /* ie6-9 */
 }
 body.dark #contact h2 {
   color: #fff;

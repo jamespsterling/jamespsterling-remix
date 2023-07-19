@@ -37,6 +37,7 @@ export default function App() {
   const { env, gaTrackingId, darkMode } = useLoaderData<typeof loader>();
 
   useEffect(() => {
+    // https://github.com/remix-run/examples/blob/main/google-analytics/app/root.tsx
     if (gaTrackingId?.length) {
       gtag.pageview(location.pathname, gaTrackingId);
     }

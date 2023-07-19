@@ -1,3 +1,5 @@
+@import 'colors.scss';
+
 // Dark mode
 body.dark {
   background-color: #292c35;
@@ -31,13 +33,17 @@ body.dark {
   #experience,
   #education,
   #projects {
-    border-bottom: 1px solid #595959;
+    border-bottom: 1px solid #3b3b3b;
   }
 
   #experience,
   #skills {
     background-color: #434343;
     border-bottom: 1px solid #292929;
+  }
+
+  #experience {
+    background: linear-gradient(0deg, #2d2d2d 0%, #1c1c1c 100%);
   }
 
   #projects {
@@ -60,6 +66,9 @@ body.dark {
 
       h3 {
         color: #f2f2f2;
+        a:hover {
+          color: lighten($triad-color-2, 70%);
+        }
       }
 
       h4 {
@@ -91,33 +100,37 @@ body.dark {
       color: #c1c1c1;
     }
 
+    h5 {
+      color: #b1b1b1;
+    }
+
     ul {
       color: #f2f2f2;
     }
   }
 
   #contact {
-    $base-color: #1c1c1c;
-    $triad-color-1: #2f1537;
+    $gradient-1: #1c1c1c;
+    $gradient-2: #2f1537;
 
-    background: $base-color;
-    background: -moz-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* ff3.6+ */
+    background: $gradient-1;
+    background: -moz-linear-gradient(0deg, $gradient-2 0%, $gradient-1 100%); /* ff3.6+ */
     background: -webkit-gradient(
       linear,
       left bottom,
       right top,
-      color-stop(0%, $triad-color-1),
-      color-stop(100%, $base-color)
+      color-stop(0%, $gradient-2),
+      color-stop(100%, $gradient-1)
     ); /* safari4+,chrome */
     background: -webkit-linear-gradient(
       55deg,
-      $triad-color-1 0%,
-      $base-color 100%
+      $gradient-2 0%,
+      $gradient-1 100%
     ); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* ie10+ */
-    background: linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$triad-color-1', endColorstr='$base-color',GradientType=0 ); /* ie6-9 */
+    background: -o-linear-gradient(0deg, $gradient-2 0%, $gradient-1 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(0deg, $gradient-2 0%, $gradient-1 100%); /* ie10+ */
+    background: linear-gradient(0deg, $gradient-2 0%, $gradient-1 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-2', endColorstr='$gradient-1',GradientType=0 ); /* ie6-9 */
 
     h2 {
       color: #fff;
