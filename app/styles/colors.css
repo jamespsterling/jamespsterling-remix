@@ -3,5 +3,10 @@
     ----- 1. Colors -----
     ------------------------
 */
+:root {
+  --base-color: #096ca7;
+  --accent-color: #71c900;
+  --dark-color: #2a2a2a;
+}
 
 /*# sourceMappingURL=colors.css.map */

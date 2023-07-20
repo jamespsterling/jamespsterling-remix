@@ -6,9 +6,14 @@
 
 // Define base and accent colors
 $base-color: #096ca7;
-$triad-color-1: #71c900;
-$triad-color-2: #2f1537;
+$accent-color: #71c900;
 $dark-color: #2a2a2a;
+
+:root {
+  --base-color: #{$base-color};
+  --accent-color: #{$accent-color};
+  --dark-color: #{$dark-color};
+}
 
 // $base-color-hover: darken($base-color, 10%);
 $base-color-hover: lighten($dark-color, 10%);
@@ -24,3 +29,6 @@ $border: #dcd9d9;
 // Define text colors
 $heading: #464646;
 $text: #676767;
+
+$contact-base: #d7d7d7;
+$contact-accent: #096ca7;

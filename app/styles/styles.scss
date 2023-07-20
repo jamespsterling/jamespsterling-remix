@@ -75,11 +75,11 @@ body {
 }
 
 a {
-  color: $base-color;
+  color: var(--base-color);
   text-decoration: none;
 
   &:hover {
-    color: $triad-color-1;
+    color: var(--accent-color);
   }
 }
 
@@ -151,10 +151,10 @@ header {
   right: 0;
   text-align: center;
   z-index: 10;
-  animation-name: dropHeader;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-duration: 0.75s;
+  // animation-name: dropHeader;
+  // animation-iteration-count: 1;
+  // animation-timing-function: ease;
+  // animation-duration: 0.75s;
 
   ul {
     background: rgba($background-dark, 0.4);
@@ -191,7 +191,7 @@ header {
     }
 
     &:focus {
-      color: $base-color;
+      color: var(--base-color);
       text-decoration: none;
     }
   }
@@ -213,7 +213,7 @@ header {
   position: fixed;
   right: 15px;
   top: 10px;
-  color: $base-color;
+  color: var(--base-color);
   font-size: 1.5em;
   z-index: 10;
   padding: 0 7px;
@@ -268,7 +268,7 @@ footer {
     transition: 0.3s all;
 
     &:hover {
-      border: 3px solid $base-color;
+      border: 3px solid var(--base-color);
     }
   }
 
@@ -299,7 +299,7 @@ footer {
     padding: 10px;
 
     &:hover {
-      color: $base-color;
+      color: var(--base-color);
     }
   }
 }
@@ -329,7 +329,7 @@ footer {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   &:hover {
     color: #2a2a2a;
-    border-color: $base-color;
+    border-color: var(--base-color);
   }
   &.button--inverted {
     &:hover {
@@ -370,7 +370,7 @@ footer {
   @include transition();
 
   &:hover {
-    color: $base-color;
+    color: var(--base-color);
     background: #fff;
     text-decoration: none;
   }
@@ -416,7 +416,7 @@ footer {
     left: 0;
     right: 0;
     margin: 0 auto;
-    background: $base-color;
+    background: var(--base-color);
   }
 }
 
@@ -437,6 +437,7 @@ footer {
   background-position: center;
   padding: 185px 15px 150px;
   overflow: hidden;
+  filter: saturate(1.33);
 }
 
 #lead-content {
@@ -459,7 +460,7 @@ footer {
   }
 
   h2 {
-    color: lighten($triad-color-1, 5%);
+    color: var(--accent-color);
     font-weight: 500;
     margin-bottom: 15px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
@@ -495,12 +496,12 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid darken($triad-color-1, 2%);
+    border: 3px --accent-color;
     text-align: center;
     transition: 0.3s all;
 
     &:hover {
-      border: 3px solid $base-color;
+      border: 3px solid var(--base-color);
     }
   }
 
@@ -579,7 +580,7 @@ footer {
     right: auto;
     height: 100%;
     width: 3px;
-    background: $base-color;
+    background: var(--base-color);
     z-index: 0;
   }
 
@@ -588,8 +589,8 @@ footer {
     content: '';
     width: 3px;
     height: 40px;
-    background: $base-color;
-    background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
+    background: var(--base-color);
+    background: linear-gradient(to bottom, var(--base-color), rgba(var(--base-color), 0));
     top: 100%;
     left: 303px;
   }
@@ -689,7 +690,7 @@ footer {
   color: #fff;
   width: 50px;
   height: 50px;
-  background: $base-color;
+  background: var(--base-color);
   border-radius: 50%;
   float: left;
   z-index: 99;
@@ -890,29 +891,9 @@ footer {
     -------------------------------
 */
 
-$base-color: #dddddd;
-$triad-color-1: #8e7097;
-
 #contact {
   padding: 50px 15px;
-  background: $base-color;
-  background: -moz-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* ff3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    right top,
-    color-stop(0%, $triad-color-1),
-    color-stop(100%, $base-color)
-  ); /* safari4+,chrome */
-  background: -webkit-linear-gradient(
-    55deg,
-    $triad-color-1 0%,
-    $base-color 100%
-  ); /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* opera 11.10+ */
-  background: -ms-linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* ie10+ */
-  background: linear-gradient(0deg, $triad-color-1 0%, $base-color 100%); /* w3c */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$triad-color-1', endColorstr='$base-color',GradientType=0 ); /* ie6-9 */
+  background: $contact-base;
   text-align: center;
 
   h2 {
@@ -942,7 +923,7 @@ $triad-color-1: #8e7097;
 
     &:focus {
       outline: none;
-      background: darken(#454545, 20%);
+      background: darken(#454545, 10%);
     }
   }
 

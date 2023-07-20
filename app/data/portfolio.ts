@@ -26,7 +26,7 @@ export const data = {
       ],
       link: 'https://nortal.com/',
       logo: '/img/companies/nortal.png',
-      clientLogos: ['/img/brands/t-mobile.png', '/img/brands/metro.svg'],
+      clientLogos: ['/img/brands/tmobile.png', '/img/brands/tvision.png', '/img/brands/metro.png'],
     },
     {
       employer: 'Extreme Arts + Sciences',
@@ -60,7 +60,7 @@ export const data = {
       ],
       link: 'https://www.sedgwick.com/acquisition-news',
       logo: '/img/companies/york.png',
-      clientLogos: ['/img/brands/farmers.webp', '/img/brands/lyft.png'],
+      clientLogos: ['/img/brands/farmers.webp', '/img/brands/walmart.png', '/img/brands/lyft.png'],
     },
     {
       employer: 'MEDTRON Software Intelligence Corporation',

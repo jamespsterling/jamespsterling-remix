@@ -1,13 +1,26 @@
 @import 'colors.scss';
 
+$base-color: #7f3eff;
+$accent-color: #ff7200;
+$dark-color: #2a2a2a;
+
 // Dark mode
 body.dark {
+  --base-color: #{$base-color};
+  --accent-color: #{$accent-color};
+  --dark-color: #{$dark-color};
+
   background-color: #292c35;
 
   header {
     a:hover {
       background: #1c1c1c;
     }
+  }
+
+  #lead {
+    background-image: url(/img/lead-bg-8.jpg);
+    background-position: bottom;
   }
 
   h1,
@@ -67,7 +80,7 @@ body.dark {
       h3 {
         color: #f2f2f2;
         a:hover {
-          color: lighten($triad-color-2, 70%);
+          color: lighten(#2f1537, 70%);
         }
       }
 
@@ -147,6 +160,7 @@ body.dark {
   #contact-form {
     button {
       background: #1a1a1a;
+      color: #f2f2f2;
     }
 
     input,

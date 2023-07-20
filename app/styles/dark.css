@@ -3,11 +3,24 @@
     ----- 1. Colors -----
     ------------------------
 */
+:root {
+  --base-color: #096ca7;
+  --accent-color: #71c900;
+  --dark-color: #2a2a2a;
+}
+
 body.dark {
+  --base-color: #7f3eff;
+  --accent-color: #ff7200;
+  --dark-color: #2a2a2a;
   background-color: #292c35;
 }
 body.dark header a:hover {
   background: #1c1c1c;
+}
+body.dark #lead {
+  background-image: url(/img/lead-bg-8.jpg);
+  background-position: bottom;
 }
 body.dark h1,
 body.dark h2,
@@ -104,6 +117,7 @@ body.dark #skills li {
 }
 body.dark #contact-form button {
   background: #1a1a1a;
+  color: #f2f2f2;
 }
 body.dark #contact-form input:focus,
 body.dark #contact-form textarea:focus {
