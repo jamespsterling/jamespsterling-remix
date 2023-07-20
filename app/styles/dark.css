@@ -16,7 +16,7 @@ body.dark {
   background-color: #292c35;
 }
 body.dark header a:hover {
-  background: #1c1c1c;
+  background: rgba(0, 0, 0, 0.75);
 }
 body.dark #lead {
   background-image: url(/img/lead-bg-8.jpg);

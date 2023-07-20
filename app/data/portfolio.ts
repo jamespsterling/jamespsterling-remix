@@ -180,7 +180,7 @@ export const data = {
     {
       name: 'IoT Events App',
       image: {
-        src: '/img/iot-phone-mockup.png',
+        src: '/img/iot-mobile-app.png',
         height: 300,
       },
       description:
