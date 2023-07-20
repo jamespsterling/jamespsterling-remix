@@ -95,7 +95,7 @@ export default function Index() {
       />
       <Lead />
       <About />
-      <Experience />
+      <Experience darkMode={darkMode === 'enabled'} />
       <Education />
       <Projects />
       <Skills />

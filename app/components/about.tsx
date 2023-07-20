@@ -17,9 +17,9 @@ export default function About() {
 
             <p className="justify">
               As a technology enthusiast, I have a huge affinity for meaningful technological
-              experiences. This appreciation drives me to learn and design robust, clean code as well
-              as simple interface patterns that translate into software that not only empowers my
-              peers developer experience but delivers a top-notch user experience for the end-user.
+              experiences. This appreciation drives me to learn and design robust, clean code as
+              well as simple patterns that translate into software that not only empowers my peer's
+              developer experience but delivers a top-notch user experience for the end-user.
             </p>
             <br />
 

@@ -664,17 +664,20 @@ footer {
   }
 
   .client-logos {
-    display: grid;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    margin: 20px;
+    margin: 8px;
     align-items: center;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(max(100px, 100% / var(--n)), 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    img {
-      max-width: 100px;
-      max-height: 50px;
+    div {
+      flex: 0 0 calc(25% - 20px);
+      margin: 4px 10px;
+
+      img {
+        max-height: 50px;
+        max-width: 100px;
+      }
     }
   }
 }
@@ -998,14 +1001,6 @@ footer {
       font-size: 1.75em;
     }
   }
-
-  #about {
-    text-align: center;
-
-    p {
-      text-align: left;
-    }
-  }
 }
 
 // Small Devices
@@ -1106,15 +1101,11 @@ footer {
 
 // Extra Small Devices
 @media only screen and (max-width: 480px) {
+  body {
+    font-size: 14.5px;
+  }
+
   #lead-content {
-    h1 {
-      font-size: 1.5em;
-    }
-
-    h2 {
-      font-size: 1em;
-    }
-
     a {
       font-size: 0.9em;
       padding: 5px 10px;
@@ -1124,6 +1115,19 @@ footer {
   .project {
     grid-template-columns: auto;
     grid-column-gap: 2rem;
+  }
+
+  .vtimeline-content {
+    .heading-grid img {
+      max-width: 50px;
+    }
+
+    h3 {
+      font-size: 1.25em;
+      i {
+        font-size: 0.75rem;
+      }
+    }
   }
 }
 

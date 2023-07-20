@@ -26,7 +26,10 @@ export const data = {
       ],
       link: 'https://nortal.com/',
       logo: '/img/companies/nortal.png',
-      clientLogos: ['/img/brands/tmobile.png', '/img/brands/tvision.png', '/img/brands/metro.png'],
+      clientLogos: {
+        light: ['/img/brands/tmobile.png', '/img/brands/tvision.png', '/img/brands/metro.png'],
+        dark: ['/img/brands/tmobile.png', '/img/brands/tvision.png', '/img/brands/metro-dark.png'],
+      },
     },
     {
       employer: 'Extreme Arts + Sciences',
@@ -40,13 +43,22 @@ export const data = {
       ],
       link: 'https://easci.com/',
       logo: '/img/companies/eas-logo.webp',
-      clientLogos: [
-        '/img/brands/microsoft.png',
-        '/img/brands/bing.png',
-        '/img/brands/godaddy.png',
-        '/img/brands/united-fcu.svg',
-        '/img/brands/tdecu.svg',
-      ],
+      clientLogos: {
+        light: [
+          '/img/brands/microsoft.png',
+          '/img/brands/bing.png',
+          '/img/brands/godaddy.png',
+          '/img/brands/united-fcu.svg',
+          '/img/brands/tdecu.svg',
+        ],
+        dark: [
+          '/img/brands/microsoft.png',
+          '/img/brands/bing.png',
+          '/img/brands/godaddy.png',
+          '/img/brands/united-fcu.svg',
+          '/img/brands/tdecu.svg',
+        ],
+      },
     },
     {
       employer: 'York',
@@ -60,7 +72,10 @@ export const data = {
       ],
       link: 'https://www.sedgwick.com/acquisition-news',
       logo: '/img/companies/york.png',
-      clientLogos: ['/img/brands/farmers.webp', '/img/brands/walmart.png', '/img/brands/lyft.png'],
+      clientLogos: {
+        light: ['/img/brands/farmers.webp', '/img/brands/walmart.png', '/img/brands/lyft.png'],
+        dark: ['/img/brands/farmers-dark.png', '/img/brands/walmart.png', '/img/brands/lyft.png'],
+      },
     },
     {
       employer: 'MEDTRON Software Intelligence Corporation',

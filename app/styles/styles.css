@@ -571,17 +571,19 @@ footer {
   margin: 0;
 }
 .vtimeline-content .client-logos {
-  display: grid;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  margin: 20px;
+  margin: 8px;
   align-items: center;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(max(100px, 100% / var(--n)), 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.vtimeline-content .client-logos img {
-  max-width: 100px;
+.vtimeline-content .client-logos div {
+  flex: 0 0 calc(25% - 20px);
+  margin: 4px 10px;
+}
+.vtimeline-content .client-logos div img {
   max-height: 50px;
+  max-width: 100px;
 }
 
 .vtimeline-point {
@@ -874,12 +876,6 @@ footer {
   #lead-content h2 {
     font-size: 1.75em;
   }
-  #about {
-    text-align: center;
-  }
-  #about p {
-    text-align: left;
-  }
 }
 @media only screen and (max-width: 768px) {
   header {
@@ -955,11 +951,8 @@ footer {
   }
 }
 @media only screen and (max-width: 480px) {
-  #lead-content h1 {
-    font-size: 1.5em;
-  }
-  #lead-content h2 {
-    font-size: 1em;
+  body {
+    font-size: 14.5px;
   }
   #lead-content a {
     font-size: 0.9em;
@@ -968,6 +961,15 @@ footer {
   .project {
     grid-template-columns: auto;
     grid-column-gap: 2rem;
+  }
+  .vtimeline-content .heading-grid img {
+    max-width: 50px;
+  }
+  .vtimeline-content h3 {
+    font-size: 1.25em;
+  }
+  .vtimeline-content h3 i {
+    font-size: 0.75rem;
   }
 }
 .york-loader {

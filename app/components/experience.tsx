@@ -1,7 +1,7 @@
 import { ReactSVG } from 'react-svg';
 import { data } from '~/data/portfolio';
 
-export default function Experience() {
+export default function Experience({ darkMode }: { darkMode: boolean }) {
   const imageExtension = (src: string) => src.split('.').pop();
 
   return (
@@ -44,14 +44,14 @@ export default function Experience() {
                 </ul>
 
                 {job.clientLogos && (
-                  <div
-                    className="client-logos"
-                    style={{
-                      '--n': job.clientLogos.length + 1
-                    }}
-                  >
-                    {job.clientLogos.map((clientLogo, k) => (
-                      <img src={clientLogo} key={k} />
+                  <div className="client-logos">
+                    {(darkMode
+                      ? job.clientLogos.dark
+                      : job.clientLogos.light
+                    ).map((clientLogo, k) => (
+                      <div key={k}>
+                        <img src={clientLogo} />
+                      </div>
                     ))}
                   </div>
                 )}
