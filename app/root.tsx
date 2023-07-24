@@ -63,10 +63,8 @@ export default function App() {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-
-                gtag('config', '${gaTrackingId}', {
-                  page_path: window.location.pathname,
-                });
+              
+                gtag('config', 'G-JKJJVMPEQ6');
               `,
               }}
             />
