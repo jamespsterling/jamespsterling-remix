@@ -888,6 +888,8 @@ footer {
     padding: 5px 10px;
     color: $heading;
     background: darken($background-alt, 5%);
+    box-shadow: 0 2px 4px #4d4d4d1c;
+    border: 1px solid #0000001c;
     list-style: none;
     cursor: default;
     font-size: 1.2em;

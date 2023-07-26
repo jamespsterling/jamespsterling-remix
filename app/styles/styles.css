@@ -764,6 +764,8 @@ footer {
   padding: 5px 10px;
   color: #464646;
   background: #e4e4ea;
+  box-shadow: 0 2px 4px rgba(77, 77, 77, 0.1098039216);
+  border: 1px solid rgba(0, 0, 0, 0.1098039216);
   list-style: none;
   cursor: default;
   font-size: 1.2em;

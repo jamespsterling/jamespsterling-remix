@@ -118,6 +118,8 @@ body.dark #contact h2 {
 body.dark #skills li {
   color: #ffffff;
   background: #272727;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
+  border: 1px solid #393939;
 }
 body.dark #contact-form button {
   background: #1a1a1a;
