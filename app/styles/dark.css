@@ -78,6 +78,10 @@ body.dark #experience .vtimeline-content h4 {
 body.dark #experience .shadow-large {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.0784313725), 0 3px 6px rgba(0, 0, 0, 0.1490196078);
 }
+body.dark #education {
+  background: #183725;
+  background: linear-gradient(355deg, #335547 0%, #0c1c13 100%);
+}
 body.dark #education .education-block {
   background: #373737;
   color: #fff;

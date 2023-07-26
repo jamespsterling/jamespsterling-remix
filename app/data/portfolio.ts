@@ -52,7 +52,7 @@ export const data = {
           '/img/brands/tdecu.svg',
         ],
         dark: [
-          '/img/brands/microsoft.png',
+          '/img/brands/microsoft-dark.png',
           '/img/brands/bing.png',
           '/img/brands/godaddy.png',
           '/img/brands/united-fcu.svg',

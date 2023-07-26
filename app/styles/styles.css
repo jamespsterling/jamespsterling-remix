@@ -504,6 +504,7 @@ footer {
   height: 100%;
   width: 3px;
   background: var(--base-color);
+  background: linear-gradient(180deg, var(--base-color) 0%, var(--base-color) 97%, rgba(0, 0, 0, 0) 100%);
   z-index: 0;
 }
 #experience-timeline:after {
@@ -628,9 +629,9 @@ footer {
   padding: 50px 15px 20px 15px;
   border-bottom: 1px solid #dcd9d9;
   text-align: center;
-  background: #34cc8c;
-  background: linear-gradient(35deg, #45a07a 0%, #19f575 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#45a07a", endColorstr="#19f575",GradientType=0 );
+  background: #2b4f3a;
+  background: linear-gradient(355deg, #45a07a 0%, #2b4f3a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#45a07a", endColorstr="#2b4f3a ",GradientType=0 );
 }
 #education h2 {
   color: #fff;
