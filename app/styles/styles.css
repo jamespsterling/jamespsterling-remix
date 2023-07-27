@@ -382,6 +382,11 @@ footer {
   z-index: 10;
   text-align: center;
 }
+#lead-content img {
+  width: 12vw;
+  border-radius: 50%;
+  margin: 1rem;
+}
 #lead-content h1,
 #lead-content h2 {
   margin: 0;
@@ -881,6 +886,10 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
+  #lead-content img {
+    width: 15vw;
+    margin: 1rem;
+  }
   header {
     position: fixed;
     display: none;
@@ -956,6 +965,10 @@ footer {
 @media only screen and (max-width: 480px) {
   body {
     font-size: 14.5px;
+  }
+  #lead-content img {
+    width: 25vw;
+    margin: 1rem;
   }
   #lead-content a {
     font-size: 0.9em;

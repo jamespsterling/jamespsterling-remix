@@ -4,6 +4,7 @@ export default function Lead() {
   return (
     <div id="lead">
       <div id="lead-content">
+        <img src="/img/headshot.jpg" />
         <h1 className="animate-pop-in">James Sterling</h1>
         <h2 className="animate-pop-in">Software Engineer</h2>
       </div>
