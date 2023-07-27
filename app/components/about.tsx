@@ -8,25 +8,25 @@ export default function About() {
           </div>
           <div className="col-md-8">
             <p className="justify">
-              Hello, I am James Sterling, a <b>Software Engineer</b> based in North Carolina. My
-              mission revolves around crafting modern client and server software orchestrations that
-              are not just highly functional but also user-friendly.
+              I am a Software Engineer based in North Carolina. I enjoy crafting modern, web-based
+              software orchestrations that are highly functional and deliver on a robust user
+              experience.
               <br />
             </p>
             <br />
 
             <p className="justify">
               As a technology enthusiast, I have a huge affinity for meaningful technological
-              experiences. This appreciation drives me to learn and design robust, clean code as
-              well as simple patterns that translate into software that not only empowers my peer's
-              developer experience but delivers a top-notch user experience for the end-user.
+              experiences. This appreciation drives me to continually learn and adapt to the every
+              changing landscape of software engineering. I enjoy using this discipline across the
+              entire technology stack.
             </p>
             <br />
 
             <p className="justify">
-              With a keen eye for detail and a strong commitment to excellence, I take great pride
-              in my work, always striving to push the boundaries of what's possible and deliver
-              solutions that leave a lasting impression.
+              With a creative eye and a commitment to quality, I take great pride in my work, always
+              striving to push the boundaries of what's possible and deliver solutions that leave a
+              lasting impression.
             </p>
           </div>
         </div>
