@@ -14,6 +14,7 @@ body.dark {
   --accent-color: #ff7200;
   --dark-color: #2a2a2a;
   background-color: #292c35;
+  transition: 0.2s all;
 }
 body.dark header a:hover {
   background: rgba(0, 0, 0, 0.75);
@@ -21,6 +22,7 @@ body.dark header a:hover {
 body.dark #lead {
   background-image: url(/img/lead-bg-8.jpg);
   background-position: bottom;
+  transition: 0.2s all;
 }
 body.dark h1,
 body.dark h2,
@@ -34,7 +36,7 @@ body.dark #about p,
 body.dark #projects p,
 body.dark #experience p,
 body.dark .vtimeline-date {
-  color: #fff;
+  color: #e9e9e9;
 }
 body.dark #projects {
   background-color: #292c35;
@@ -44,6 +46,7 @@ body.dark #experience,
 body.dark #education,
 body.dark #projects {
   border-bottom: 1px solid #3b3b3b;
+  transition: 0.2s all;
 }
 body.dark #experience,
 body.dark #skills {
@@ -55,7 +58,7 @@ body.dark #experience {
 }
 body.dark #projects .project {
   background: #373737;
-  color: #fff;
+  color: #e9e9e9;
   border: 1px solid #232323;
 }
 body.dark #projects h3 {
@@ -63,7 +66,7 @@ body.dark #projects h3 {
 }
 body.dark #experience .vtimeline-content {
   background: #313131;
-  color: #fff;
+  color: #e9e9e9;
   border: 1px solid #232323;
 }
 body.dark #experience .vtimeline-content h3 {
@@ -84,14 +87,14 @@ body.dark #education {
 }
 body.dark #education .education-block {
   background: #373737;
-  color: #fff;
+  color: #e9e9e9;
   border: 1px solid #232323;
 }
 body.dark #education .education-date {
   color: #afafaf;
 }
 body.dark #education h3 {
-  color: #fff;
+  color: #e9e9e9;
 }
 body.dark #education h4 {
   color: #c1c1c1;
@@ -113,10 +116,10 @@ body.dark #contact {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$gradient-2", endColorstr="$gradient-1",GradientType=0 ); /* ie6-9 */
 }
 body.dark #contact h2 {
-  color: #fff;
+  color: #e9e9e9;
 }
 body.dark #skills li {
-  color: #ffffff;
+  color: #e9e9e9;
   background: #272727;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
   border: 1px solid #393939;

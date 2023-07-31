@@ -7,26 +7,14 @@ export default function About() {
             <h2 className="heading">About Me</h2>
           </div>
           <div className="col-md-8">
-            <p className="justify">
-              I am a Software Engineer based in North Carolina. I enjoy crafting modern, web-based
-              software orchestrations that are highly functional and deliver on a robust user
-              experience.
-              <br />
-            </p>
-            <br />
-
-            <p className="justify">
-              As a technology enthusiast, I have a huge affinity for meaningful technological
-              experiences. This appreciation drives me to continually learn and adapt to the every
-              changing landscape of software engineering. I enjoy using this discipline across the
-              entire technology stack.
-            </p>
-            <br />
-
-            <p className="justify">
-              With a creative eye and a commitment to quality, I take great pride in my work, always
-              striving to push the boundaries of what's possible and deliver solutions that leave a
-              lasting impression.
+            <p>
+              Full-stack software engineer with 14+ years experience crafting software for SaaS
+              platforms, enterprise deployments, and everything in between. My focus is to leverage
+              the entire stack, back-end, middleware, and front-end to deliver thoughtful UI/UX
+              experiences. My passion for self-documenting, scalable, and robust software
+              orchestrations drive me to learn from and coach other engineers in best practices,
+              refine developer experience (DX) tooling, and continuously hone my craft as a curious
+              engineer.
             </p>
           </div>
         </div>

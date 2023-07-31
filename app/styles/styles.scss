@@ -67,6 +67,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  transition: 0.2s all;
 
   &.active {
     overflow: hidden;
@@ -438,6 +439,7 @@ footer {
   padding: 185px 15px 150px;
   overflow: hidden;
   filter: saturate(1.33);
+  transition: 0.2s all;
 }
 
 #lead-content {
@@ -566,6 +568,7 @@ footer {
   padding: 50px 15px;
   text-align: center;
   border-bottom: 1px solid $border;
+  transition: 0.2s all;
 
   h2 {
     color: $heading;
@@ -1003,7 +1006,7 @@ footer {
 // Medium Devices
 @media only screen and (max-width: 992px) {
   #lead {
-    padding: 150px 15px 100px;
+    padding: 100px 15px 100px;
   }
 
   #lead-content {
