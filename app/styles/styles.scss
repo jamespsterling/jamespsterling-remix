@@ -76,11 +76,21 @@ body {
 }
 
 a {
-  color: var(--base-color);
+  color: #212529;
   text-decoration: none;
 
   &:hover {
-    color: var(--accent-color);
+    color: $background-alt;
+    background: $accent-color;
+    transition: 0.2s all;
+  }
+}
+
+#experience {
+  a {
+    &.external-link {
+      text-decoration: underline $accent-color;
+    }
   }
 }
 
@@ -637,6 +647,7 @@ footer {
         }
         &:hover {
           i {
+            color: $background-alt;
             opacity: 1;
           }
         }
@@ -653,6 +664,7 @@ footer {
 
     a:hover {
       color: darken($heading, 20%);
+      color: $background-alt;
       transition: 0.2s all;
     }
 

@@ -19,6 +19,13 @@ body.dark {
 body.dark header a:hover {
   background: rgba(0, 0, 0, 0.75);
 }
+body.dark a:hover {
+  background: #7f3eff;
+  transition: 0.2s all;
+}
+body.dark #experience a.external-link {
+  text-decoration: underline #7f3eff;
+}
 body.dark #lead {
   background-image: url(/img/lead-bg-8.jpg);
   background-position: bottom;

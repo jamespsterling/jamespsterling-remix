@@ -57,11 +57,17 @@ body.active {
 }
 
 a {
-  color: var(--base-color);
+  color: #212529;
   text-decoration: none;
 }
 a:hover {
-  color: var(--accent-color);
+  color: #f2f2f5;
+  background: #71c900;
+  transition: 0.2s all;
+}
+
+#experience a.external-link {
+  text-decoration: underline #71c900;
 }
 
 .justify {
@@ -548,6 +554,7 @@ footer {
   transition: 0.2s all;
 }
 .vtimeline-content .heading-grid h3 a:hover i {
+  color: #f2f2f5;
   opacity: 1;
 }
 .vtimeline-content h3 {
@@ -559,6 +566,7 @@ footer {
 }
 .vtimeline-content h3 a:hover {
   color: #131313;
+  color: #f2f2f5;
   transition: 0.2s all;
 }
 .vtimeline-content h3 i {

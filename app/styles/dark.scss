@@ -20,6 +20,19 @@ body.dark {
     }
   }
 
+  a:hover {
+    background: $base-color;
+    transition: 0.2s all;
+  }
+
+  #experience {
+    a {
+      &.external-link {
+        text-decoration: underline $base-color;
+      }
+    }
+  }
+
   #lead {
     background-image: url(/img/lead-bg-8.jpg);
     background-position: bottom;
