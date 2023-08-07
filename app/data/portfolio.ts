@@ -8,7 +8,7 @@ export const data = {
       time: 'May 2022 - Present',
       icon: 'fab fa-react',
       description: [
-        'Full stack development on new product initiatives and next-gen platform engineering focused engineering empowering experiences using <b>React</b>, <b>Next.js</b>, <b>Chakra UI</b>, <b>Zod</b>, <b>Relay</b>, <b>GraphQL</b>, <b>NestJS</b>, <b>Sequelize</b>, <b>gRPC</b>, & <b>Node.js</b>.',
+        'Full stack development on new product initiatives and next-gen platform focused engineering empowering experiences using <b>React</b>, <b>Next.js</b>, <b>Chakra UI</b>, <b>Zod</b>, <b>Relay</b>, <b>GraphQL</b>, <b>NestJS</b>, <b>Sequelize</b>, <b>gRPC</b>, & <b>Node.js</b>.',
         'Leads effort to establish patterns for internationalization and localization (i18n) using <b>react-intl</b> as well as improving DX tooling by leveraging custom linting configuration.',
         'Plays a key role in delivering new features by working closely with Product & Design–translating requirements into technical specifications, atomic tasks, and organizing the effort for large epics.',
         'Champions <b>type-safety</b> and data-model simplicity across the stack to help reduce cognitive load, reduce tech debt, and reduce issues in production.',
@@ -27,8 +27,8 @@ export const data = {
         'Front-end & Microservice focused engineering of enterprise web experiences using <b>Angular</b> 12-13, <b>Nx</b>, <b>NgRx</b> (Angular Redux), <b>RxJs</b>, <b>Jest</b>, <b>Spectator</b>, <b>HAPI</b>, and Adobe Adobe Experience Manager (AEM).',
         'Leads colleagues in technology best practices for core technologies & processes with in-depth code reviews, coaching, and pair programming.',
         'Works closely with Product, Architecture, Backend, Security, and UI/UX teams to ensure delivery of highly usable customer-facing experiences across desktop and mobile.',
-        "Partnered across teams to deliver T-Mobile's TVision <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://web.archive.org/web/20220604032641/https:/www.t-mobile.com/tv-streaming'>marketing and upper-funnel</a> user-facing application.",
-        "Lead the development effort for migration to next-gen <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://www.metrobyt-mobile.com/cart'>cart and checkout experiences</a> for Metro by T-Mobile.",
+        "Partners across teams to deliver T-Mobile's TVision <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://web.archive.org/web/20220604032641/https:/www.t-mobile.com/tv-streaming'>marketing and upper-funnel</a> user-facing application.",
+        "Leads the development effort for migration to next-gen <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://www.metrobyt-mobile.com/cart'>cart and checkout experiences</a> for Metro by T-Mobile.",
       ],
       link: 'https://nortal.com/',
       logo: '/img/companies/nortal.png',
@@ -128,10 +128,14 @@ export const data = {
     'HTML5',
     'CSS3',
     'React',
+    'React Router',
     'Relay',
     'NextJS',
     'GraphQL',
     'AngularJs',
+    'Chakra UI',
+    'Material UI',
+    'tailwindcss',
     'RxJs',
     'NgRx',
     'Nx',
@@ -140,6 +144,7 @@ export const data = {
     'PHP',
     'C#',
     'Node.js',
+    'Express.js',
     'Ionic',
     'JQuery',
     'JQuery UI',
@@ -155,7 +160,9 @@ export const data = {
     'MySQL',
     'MSSQL',
     'Entity Framework',
-    'DBORM',
+    'ORM',
+    'Nightwatch.js',
+    'Cypress',
     'Cucumber',
     'Selenium',
     'Ruby',
@@ -163,10 +170,8 @@ export const data = {
     'Google Cloud',
     'Azure',
     'Linux',
-    'LAMP',
     'Apache HTTPd',
     'Apache Solr',
-    'Windows Server',
     'IIS',
     'Octopus Deploy',
     'TeamCity',
@@ -174,18 +179,21 @@ export const data = {
   ],
   projects: [
     {
+      id: 'eeka',
       name: 'eekä',
       image: { src: '/img/eeka-home.png', height: 300 },
       description:
         'An lightweight Angular web app to visualize "everything I care about" (eekä). Using Angular & ExpressJs along with Google Cloud Datastore this app is a passion project to put many disconnected things in one place. Aggregating data from IoT smart devices (Personal Weather Station, HVAC, etc) with GCP Cloud Functions, I am then able to retrieve and display meaningful real-time data using Apache ECharts. Integrating many other 3rd party services such as DarkSky, The Weather Channel, YouTube, Google Maps, TradingView, and many others I am able to consolidate the sheer number of apps and services all in one place–constantly evolving.',
     },
     {
+      id: 'crash-cart-app',
       name: 'CrashCart App',
       image: { src: '/img/crash-cart-frame.png', height: 300 },
       description:
         'Another hybrid mobile app built using Ionic v4 (Angular 8, Wk WebView) built for HealthFirst to augment ordering CrashCarts by scanning medical labels and using OCR technology to extract and lookup drugs with an NDC code on the label.',
     },
     {
+      id: 'iot-events-app',
       name: 'IoT Events App',
       image: {
         src: '/img/iot-mobile-app.png',
@@ -196,6 +204,7 @@ export const data = {
       link: 'https://web.archive.org/web/20200512091719/https://apps.apple.com/us/app/iot-in-action-events/id1478820746',
     },
     {
+      id: 'iot-in-action-events',
       name: 'IoT In Action Events',
       image: {
         src: '/img/iot-web.png',
@@ -206,6 +215,7 @@ export const data = {
       link: 'https://web.archive.org/web/20200816235044/https:/iotinactionevents.com/',
     },
     {
+      id: 'iris',
       name: 'IRIS',
       image: { src: '/img/iris.jpg', height: 300, width: 300 },
       description:
@@ -213,18 +223,21 @@ export const data = {
       link: 'https://web.archive.org/web/20171027211006/https://iris.yorkrsg.com/gateway',
     },
     {
+      id: 'york-styleguide',
       name: 'York Styleguide',
       image: { src: '/img/york-styleguide.jpg', height: 300, width: 300 },
       description:
         'The York Styleguide was built to help maintain a corporate web-based styleguide govern corporate web-based application look and feel. Also provide brand guidance, resources, and code snippets to developers at York.',
     },
     {
+      id: 'monocle',
       name: 'Monocle',
       image: { src: '/img/monocle.jpg', height: 169, width: 300 },
       description:
         'Using Google Glass, Monocle was a proof of concept project using Android Dev Studio for York Innovation to push the boundaries of the Risk Assessment process.',
     },
     {
+      id: 'focus-help-portal',
       name: 'FOCUS Help Portal',
       image: { src: '/img/focus-help.jpg', height: 300, width: 300 },
       description:
@@ -232,6 +245,7 @@ export const data = {
       link: 'https://help.focus.yorkrsg.com/',
     },
     {
+      id: 'email-signature-generator',
       name: 'Email Signature Generator',
       image: { src: '/img/emailsig.jpg', height: 296, width: 300 },
       description:
@@ -239,18 +253,14 @@ export const data = {
       link: 'https://emailsig.yorkrisk.com/',
     },
     {
+      id: 'provider-gateway',
       name: 'Provider Gateway',
       image: { src: '/img/provider.jpg', height: 300, width: 300 },
       description:
         'Provider Gateway is a self-service tool to assist providers in looking up payment statuses from claims submitted through York. Built on ASP.Net MVC, ASP.Net WebAPI, and Bootstrap v3.',
     },
     {
-      name: 'DataX Cheatsheet',
-      image: { src: '/img/datax.jpg', height: 300 },
-      description:
-        'Data X Cheatsheet is a companion tool to help educate claim system users on different areas of various claim systems. It was built using a highly customized version of HTML5 Boilerplate.',
-    },
-    {
+      id: 'wc-payment-options',
       name: 'WC Payment Options',
       image: { src: '/img/wcpay.jpg', height: 300 },
       description:
@@ -258,6 +268,7 @@ export const data = {
       link: 'https://wcpaymentoptions.com/',
     },
     {
+      id: 'York-loader',
       name: 'York Loader',
       image: { src: '/img/york-loader.svg', height: 200, class: 'york-loader' },
       description:
