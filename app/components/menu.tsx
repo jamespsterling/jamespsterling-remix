@@ -1,3 +1,7 @@
+import { faBars, faMoon, faSun, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from '@remix-run/react';
+
 type Props = {
   toggleDarkMode(): void;
   darkModeEnabled: boolean;
@@ -6,37 +10,44 @@ type Props = {
 export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
   return (
     <>
-      <div id="mobile-menu-open" className="shadow-large" onClick={() => {
-        document.querySelector('body')?.classList.add('active');
-        document.querySelector('header')?.classList.add('active');
-      }}>
-        <i className="fa fa-bars" aria-hidden="true"></i>
+      <div
+        id="mobile-menu-open"
+        className="shadow-large"
+        onClick={() => {
+          document.querySelector('body')?.classList.add('active');
+          document.querySelector('header')?.classList.add('active');
+        }}
+      >
+        <FontAwesomeIcon icon={faBars} />
       </div>
       <header>
-        <div id="mobile-menu-close" onClick={() => {
-          document.querySelector('body')?.classList.remove('active');
-          document.querySelector('header')?.classList.remove('active');
-        }}>
-          <span>Close</span> <i className="fa fa-times" aria-hidden="true"></i>
+        <div
+          id="mobile-menu-close"
+          onClick={() => {
+            document.querySelector('body')?.classList.remove('active');
+            document.querySelector('header')?.classList.remove('active');
+          }}
+        >
+          <span>Close</span> <FontAwesomeIcon icon={faTimes} />
         </div>
         <ul id="menu" className="shadow">
           <li>
-            <a href="#about">About</a>
+            <Link to="/">About</Link>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <Link to="/#experience" preventScrollReset={true}>Experience</Link>
           </li>
           <li>
-            <a href="#education">Education</a>
+            <Link to="/#education" preventScrollReset={true}>Education</Link>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <Link to="/#skills" preventScrollReset={true}>Skills</Link>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li className="dark-mode-toggle">
             <input
@@ -47,8 +58,8 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
               checked={darkModeEnabled}
             />
             <label htmlFor="checkbox" className="checkbox-label">
-              <i className="fas fa-moon"></i>
-              <i className="fas fa-sun"></i>
+              <FontAwesomeIcon icon={faMoon} />
+              <FontAwesomeIcon icon={faSun} />
               <span className="ball"></span>
             </label>
           </li>

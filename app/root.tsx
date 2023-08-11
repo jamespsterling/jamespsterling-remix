@@ -1,4 +1,4 @@
-import { LoaderArgs, json, type LinksFunction } from '@remix-run/cloudflare';
+import { LoaderArgs, json, type LinksFunction, ActionArgs, redirect } from '@remix-run/cloudflare';
 import { cssBundleHref } from '@remix-run/css-bundle';
 import {
   Links,
@@ -19,7 +19,7 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ];
 
-type ContextHack = { context: { [key: string]: any; } };
+type ContextHack = { context: { [key: string]: any } };
 
 export const loader = async ({ request, context }: LoaderArgs & ContextHack) => {
   const cookieHeader = request.headers.get('Cookie');
@@ -29,6 +29,20 @@ export const loader = async ({ request, context }: LoaderArgs & ContextHack) => 
     env: context.env.ENV,
     gaTrackingId: context.env.GA_TRACKING_ID,
     darkMode: cookie.darkMode,
+  });
+};
+
+export const action = async ({ request }: ActionArgs) => {
+  const cookieHeader = request.headers.get('Cookie');
+  const cookie = (await userPrefs.parse(cookieHeader)) || {};
+  const bodyParams = await request.formData();
+  cookie.darkMode = bodyParams.get('darkMode') ?? 'disabled';
+  const path = bodyParams.get('pathname')?.toString() ?? '/';
+
+  return redirect(path, {
+    headers: {
+      'Set-Cookie': await userPrefs.serialize(cookie),
+    },
   });
 };
 

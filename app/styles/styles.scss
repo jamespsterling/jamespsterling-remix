@@ -10,23 +10,30 @@
     that don't come from third party libraries. This file gets compiled using
     Gulp and send to the /css folder which is then loaded on the page.
 */
-/*
-    File Contents:
 
-        1. Variables
-        2. Mixins
-        3. Global Styles
-        4. Lead Styles
-        5. About Styles
-        6. Experience Styles
-        7. Education Styles
-        8. Project Styles
-        9. Skills Styles
-        10. Contact Styles
-        11. Media Queries
-*/
+// https://getbootstrap.com/docs/5.3/customize/sass/
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/variables-dark';
+
+@import '../../node_modules/bootstrap/scss/maps';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/root';
+
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/images';
+@import '../../node_modules/bootstrap/scss/containers';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/helpers';
+@import '../../node_modules/bootstrap/scss/buttons';
 
 @import 'colors.scss';
+@import 'header.scss';
+@import 'fireflies.scss';
+@import 'dark.scss';
 
 /*
     ---------------------
@@ -64,15 +71,30 @@
     ----------------------------
 */
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   transition: 0.2s all;
+  display: flex;
+  flex-direction: column;
 
   &.active {
     overflow: hidden;
     z-index: -1;
   }
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 a {
@@ -201,10 +223,10 @@ header {
       border-radius: 4px;
     }
 
-    &:focus {
-      color: var(--base-color);
-      text-decoration: none;
-    }
+    // &:focus {
+    //   color: var(--base-color);
+    //   text-decoration: none;
+    // }
   }
 
   &.active {
@@ -283,7 +305,7 @@ footer {
     }
   }
 
-  i {
+  svg {
     color: $text;
     top: 3px;
     position: relative;
@@ -726,10 +748,8 @@ footer {
   z-index: 99;
   margin-left: 280px;
 
-  i {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 14px;
+  svg {
+    vertical-align: -20px !important;
   }
 }
 
@@ -837,7 +857,6 @@ footer {
 */
 
 #projects {
-  padding: 50px 15px;
   border-bottom: 1px solid $border;
   text-align: center;
 
@@ -845,39 +864,84 @@ footer {
     color: $heading;
     margin-bottom: 50px;
   }
-}
 
-.project {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 4px;
-  display: grid;
-  grid-template-columns: 300px auto;
-  grid-column-gap: 2rem;
-  padding: 1rem;
-}
+  .project-link {
+    &:hover {
+      background: none;
 
-.project-image {
-  img {
-    max-height: 300px;
-  }
-}
-
-.project-info {
-  h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: $heading;
-    margin: 0 0 15px 0;
+      .project {
+        transition: 0.2s all;
+        background: #292929;
+        border: 1px solid #000000;
+        border: 1px solid var(--accent-color);
+      }
+    }
   }
 
-  p {
-    color: $text;
-    margin: 0 0 15px 0;
-    font-size: 0.9em;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    &.single {
+      padding: 4rem 3rem;
+      grid-template-columns: 1fr 2fr;
+      .project-image {
+        img {
+          max-height: 20em;
+        }
+      }
+      p {
+        font-size: 1.05rem;
+      }
+    }
+  }
+
+  .project {
+    position: relative;
+    height: 100%;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2rem;
+    padding: 1rem;
+  }
+
+  .project-image {
+    img {
+      max-height: 15em;
+    }
+  }
+
+  .project-info {
+    h3 {
+      font-size: 1.5em;
+      font-weight: 300;
+      color: $heading;
+      margin: 0 0 15px 0;
+    }
+
+    p {
+      color: $text;
+      margin: 0 0 15px 0;
+      font-size: 0.9em;
+    }
+
+    .overflow {
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .subtle-link {
+      padding: 4px 8px;
+      background: $dark-color;
+      border-radius: 2px;
+    }
   }
 }
 
@@ -913,7 +977,7 @@ footer {
     border: 1px solid #0000001c;
     list-style: none;
     cursor: default;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 }
 
@@ -924,7 +988,7 @@ footer {
 */
 
 #contact {
-  padding: 50px 15px;
+  padding: 8rem 0 10rem;
   background: $contact-base;
   text-align: center;
 
@@ -1012,6 +1076,14 @@ footer {
 
   .vtimeline-content {
     margin-left: 70px;
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  #projects {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
@@ -1133,6 +1205,16 @@ footer {
       }
     }
   }
+
+  #projects {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      &.single {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
 }
 
 // Extra Small Devices
@@ -1168,6 +1250,13 @@ footer {
       i {
         font-size: 0.75rem;
       }
+    }
+  }
+
+  #projects {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
   }
 }

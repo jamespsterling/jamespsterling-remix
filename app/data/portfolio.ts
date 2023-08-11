@@ -1,5 +1,3 @@
-import { CSSProperties } from 'react';
-
 export const data = {
   jobs: [
     {
@@ -268,7 +266,7 @@ export const data = {
       link: 'https://wcpaymentoptions.com/',
     },
     {
-      id: 'York-loader',
+      id: 'york-loader',
       name: 'York Loader',
       image: { src: '/img/york-loader.svg', height: 200, class: 'york-loader' },
       description:

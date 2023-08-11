@@ -8,11 +8,11 @@ export default function About() {
           </div>
           <div className="col-md-8">
             <p>
-              Full-stack software engineer with 14+ years experience crafting software for SaaS
+              Full-stack software engineer with 14+ years of experience crafting software for SaaS
               platforms, enterprise deployments, and everything in between. My focus is to leverage
               the entire stack, back-end, middleware, and front-end to deliver thoughtful UI/UX
               experiences. My passion for self-documenting, scalable, and robust software
-              orchestrations drive me to learn from and coach other engineers in best practices,
+              orchestrations drives me to learn from and coach other engineers in best practices,
               refine developer experience (DX) tooling, and continuously hone my craft as a curious
               engineer.
             </p>

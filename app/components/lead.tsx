@@ -1,13 +1,15 @@
-export default function Lead() {
+export default function Lead({ bgOnly = false }: { bgOnly?: boolean }) {
   const fireflies: Array<number> = new Array(15).fill('');
 
   return (
     <div id="lead">
-      <div id="lead-content">
-        <img src="/img/headshot.jpg" />
-        <h1 className="animate-pop-in">James Sterling</h1>
-        <h2 className="animate-pop-in">Software Engineer</h2>
-      </div>
+      {!bgOnly && (
+        <div id="lead-content">
+          <img src="/img/headshot.jpg" alt="headshot" />
+          <h1 className="animate-pop-in">James Sterling</h1>
+          <h2 className="animate-pop-in">Software Engineer</h2>
+        </div>
+      )}
 
       <div id="lead-overlay">
         {fireflies.map((_, i) => (

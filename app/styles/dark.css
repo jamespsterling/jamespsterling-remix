@@ -18,9 +18,15 @@ body.dark {
 }
 body.dark header a:hover {
   background: rgba(0, 0, 0, 0.75);
+  color: #ff7200;
 }
 body.dark a:hover {
   background: #7f3eff;
+  transition: 0.2s all;
+}
+body.dark .icon-link:hover {
+  color: #7f3eff;
+  background: none;
   transition: 0.2s all;
 }
 body.dark #experience a.external-link {

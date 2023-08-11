@@ -11,7 +11,7 @@ export default function Contact() {
           <input
             type="hidden"
             name="_subject"
-            value="Contact request from personal website"
+            value="Contact request from portfolio website"
           />
           <input
             type="email"

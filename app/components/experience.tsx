@@ -1,3 +1,5 @@
+import { IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactSVG } from 'react-svg';
 import { data } from '~/data/portfolio';
 
@@ -11,7 +13,7 @@ export default function Experience({ darkMode }: { darkMode: boolean }) {
         {data.jobs.map((job, i) => (
           <div className="vtimeline-point" key={i}>
             <div className="vtimeline-icon">
-              <i className={job.icon}></i>
+              <FontAwesomeIcon icon={job.icon as unknown as [IconPrefix, IconName]} size="xl" />
             </div>
             <div className="vtimeline-block">
               <span className="vtimeline-date">{job.time}</span>
@@ -45,14 +47,13 @@ export default function Experience({ darkMode }: { darkMode: boolean }) {
 
                 {job.clientLogos && (
                   <div className="client-logos">
-                    {(darkMode
-                      ? job.clientLogos.dark
-                      : job.clientLogos.light
-                    ).map((clientLogo, k) => (
-                      <div key={k}>
-                        <img src={clientLogo} />
-                      </div>
-                    ))}
+                    {(darkMode ? job.clientLogos.dark : job.clientLogos.light).map(
+                      (clientLogo, k) => (
+                        <div key={k}>
+                          <img src={clientLogo} />
+                        </div>
+                      )
+                    )}
                   </div>
                 )}
               </div>

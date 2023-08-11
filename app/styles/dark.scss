@@ -17,11 +17,18 @@ body.dark {
   header {
     a:hover {
       background: rgb(0 0 0 / 75%);
+      color: $accent-color;
     }
   }
 
   a:hover {
     background: $base-color;
+    transition: 0.2s all;
+  }
+
+  .icon-link:hover {
+    color: $base-color;
+    background: none;
     transition: 0.2s all;
   }
 
