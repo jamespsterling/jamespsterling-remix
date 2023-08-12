@@ -89,6 +89,10 @@ body {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 .content {
   flex: 1 0 auto;
 }
@@ -279,6 +283,7 @@ footer {
 
 .copyright {
   padding-top: 20px;
+  font-size: 14px;
 
   p {
     margin: 0;
@@ -998,8 +1003,7 @@ footer {
 }
 
 #contact-form {
-  max-width: 500px;
-  margin: 0 auto;
+  margin: auto 25vw;
 
   input,
   textarea {
@@ -1165,6 +1169,10 @@ footer {
     display: none;
   }
 
+  #contact-form {
+    margin: auto 10%;
+  }
+
   .education-block {
     h3,
     span {
@@ -1258,6 +1266,10 @@ footer {
       grid-template-columns: 1fr;
       gap: 1rem;
     }
+  }
+
+  #contact-form {
+    margin: auto 7.5%;
   }
 }
 

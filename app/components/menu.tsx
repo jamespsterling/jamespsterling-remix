@@ -8,46 +8,50 @@ type Props = {
 };
 
 export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
+  const toggleMobileMenu = () => {
+    document.querySelector('body')?.classList.toggle('active');
+    document.querySelector('header')?.classList.toggle('active');
+  };
+
   return (
     <>
-      <div
-        id="mobile-menu-open"
-        className="shadow-large"
-        onClick={() => {
-          document.querySelector('body')?.classList.add('active');
-          document.querySelector('header')?.classList.add('active');
-        }}
-      >
+      <div id="mobile-menu-open" className="shadow-large" onClick={() => toggleMobileMenu()}>
         <FontAwesomeIcon icon={faBars} />
       </div>
       <header>
-        <div
-          id="mobile-menu-close"
-          onClick={() => {
-            document.querySelector('body')?.classList.remove('active');
-            document.querySelector('header')?.classList.remove('active');
-          }}
-        >
-          <span>Close</span> <FontAwesomeIcon icon={faTimes} />
+        <div id="mobile-menu-close" onClick={() => toggleMobileMenu()}>
+          <FontAwesomeIcon icon={faTimes} />
         </div>
         <ul id="menu" className="shadow">
           <li>
-            <Link to="/">About</Link>
+            <Link to="/" onClick={() => toggleMobileMenu()}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/#experience" preventScrollReset={true}>Experience</Link>
+            <Link to="/#experience" onClick={() => toggleMobileMenu()} preventScrollReset={true}>
+              Experience
+            </Link>
           </li>
           <li>
-            <Link to="/#education" preventScrollReset={true}>Education</Link>
+            <Link to="/#education" onClick={() => toggleMobileMenu()} preventScrollReset={true}>
+              Education
+            </Link>
           </li>
           <li>
-            <Link to="/#skills" preventScrollReset={true}>Skills</Link>
+            <Link to="/#skills" onClick={() => toggleMobileMenu()} preventScrollReset={true}>
+              Skills
+            </Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" onClick={() => toggleMobileMenu()}>
+              Projects
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={() => toggleMobileMenu()}>
+              Contact
+            </Link>
           </li>
           <li className="dark-mode-toggle">
             <input
@@ -56,6 +60,7 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
               id="checkbox"
               onChange={toggleDarkMode}
               checked={darkModeEnabled}
+              onClick={() => toggleMobileMenu()}
             />
             <label htmlFor="checkbox" className="checkbox-label">
               <FontAwesomeIcon icon={faMoon} />

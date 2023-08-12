@@ -25,6 +25,12 @@ export const links: LinksFunction = () => [
     as: 'image',
     type: 'image/jpeg',
   },
+  {
+    rel: 'preload',
+    href: '/img/headshot.jpg',
+    as: 'image',
+    type: 'image/jpg',
+  },
   { rel: 'stylesheet', href: Styles },
   {
     rel: 'stylesheet',
