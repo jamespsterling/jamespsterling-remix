@@ -1,6 +1,7 @@
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from '@remix-run/react';
+// TODO: https://remix.run/docs/en/1.19.3/guides/migrating-react-router-app#svg-imports
 import { ReactSVG } from 'react-svg';
 import { data } from '~/data/portfolio';
 

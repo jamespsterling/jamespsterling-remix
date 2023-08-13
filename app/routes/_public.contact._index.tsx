@@ -1,4 +1,4 @@
-import { Lead, Contact, Footer } from '~/components';
+import { Lead, Contact } from '~/components';
 
 export default function Index() {
   return (

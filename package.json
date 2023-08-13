@@ -17,6 +17,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@nivo/core": "^0.83.0",
+    "@nivo/network": "^0.83.0",
     "@remix-run/cloudflare": "^1.18.1",
     "@remix-run/cloudflare-pages": "^1.18.1",
     "@remix-run/css-bundle": "^1.18.1",
@@ -26,7 +28,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-svg": "^16.1.18",
-    "remix-utils": "^6.6.0"
+    "remix-utils": "^6.6.0",
+    "sigma": "^3.0.0-alpha3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.19.0",

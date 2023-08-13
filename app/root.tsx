@@ -36,8 +36,9 @@ export const action = async ({ request }: ActionArgs) => {
   const cookieHeader = request.headers.get('Cookie');
   const cookie = (await userPrefs.parse(cookieHeader)) || {};
   const bodyParams = await request.formData();
-  cookie.darkMode = bodyParams.get('darkMode') ?? 'disabled';
   const path = bodyParams.get('pathname')?.toString() ?? '/';
+
+  cookie.darkMode = bodyParams.get('darkMode') ?? 'disabled';
 
   return redirect(path, {
     headers: {

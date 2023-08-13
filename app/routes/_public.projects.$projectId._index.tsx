@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from '@remix-run/react';
-import { Lead, Project, Footer } from '~/components';
+import { Lead, Project } from '~/components';
 
 export default function Index() {
   const navigate = useNavigate();
