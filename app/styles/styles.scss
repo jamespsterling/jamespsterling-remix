@@ -970,19 +970,33 @@ footer {
     margin: 0 auto;
     padding: 0;
     max-width: 800px;
-  }
 
-  li {
-    display: inline-block;
-    margin: 7px;
-    padding: 5px 10px;
-    color: $heading;
-    background: darken($background-alt, 5%);
-    box-shadow: 0 2px 4px #4d4d4d1c;
-    border: 1px solid #0000001c;
-    list-style: none;
-    cursor: default;
-    font-size: 1.1em;
+    li {
+      display: inline-block;
+      margin: 7px;
+      color: $heading;
+      background: darken($background-alt, 5%);
+      box-shadow: 0 2px 4px #4d4d4d1c;
+      border: 1px solid #0000001c;
+      list-style: none;
+      cursor: default;
+      font-size: 1.1em;
+      transition: 0.2s all;
+
+      &:hover {
+        background: var(--base-color);
+        border: 1px solid #939393;
+      }
+      &:active {
+        background: var(--accent-color);
+        border: 1px solid #939393;
+      }
+      a {
+        display: block;
+        padding: 5px 10px;
+        background: none;
+      }
+    }
   }
 }
 
