@@ -4,31 +4,40 @@
     ------------------------
 */
 
-// Define base and accent colors
 $base-color: #096ca7;
 $accent-color: #71c900;
 $dark-color: #2a2a2a;
+
+$base-color-hover: lighten($dark-color, 10%);
+
+$background: #2a2a2a;
+$background-dark: #0a0a0a;
+$background-alt: #f2f2f5;
+
+$border: #dcd9d9;
+
+$heading: #464646;
+$text: #676767;
+
+$link: #464646;
+$link-hover: $base-color;
+
+$contact-base: #d7d7d7;
+$contact-accent: #096ca7;
 
 :root {
   --base-color: #{$base-color};
   --accent-color: #{$accent-color};
   --dark-color: #{$dark-color};
+  --base-color-hover: #{$base-color-hover};
+  --background: #{$background};
+  --background-dark: #{$background-dark};
+  --background-alt: #{$background-alt};
+  --border: #{$border};
+  --heading: #{$heading};
+  --text: #{$text};
+  --link: #{$link};
+  --link-hover: #{$link-hover};
+  --contact-base: #{$contact-base};
+  --contact-accent: #{$contact-accent};
 }
-
-// $base-color-hover: darken($base-color, 10%);
-$base-color-hover: lighten($dark-color, 10%);
-
-// Define background colors
-$background: #2a2a2a;
-$background-dark: #0a0a0a;
-$background-alt: #f2f2f5;
-
-// Define border colors
-$border: #dcd9d9;
-
-// Define text colors
-$heading: #464646;
-$text: #676767;
-
-$contact-base: #d7d7d7;
-$contact-accent: #096ca7;

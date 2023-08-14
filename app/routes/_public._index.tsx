@@ -1,4 +1,4 @@
-import { About, Education, Experience, Footer, Lead, Skills } from '~/components';
+import { About, Education, Experience, Lead, Skills } from '~/components';
 
 export default function Index() {
   const darkMode = 'enabled';

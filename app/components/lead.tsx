@@ -6,7 +6,6 @@ export default function Lead({
   narrow?: boolean;
 }) {
   const fireflies: Array<number> = new Array(15).fill('');
-
   return (
     <div id="lead" className={narrow ? 'narrow' : ''}>
       {!bgOnly && (

@@ -8,3 +8,4 @@ export { default as Menu } from './menu';
 export { default as Project } from './project';
 export { default as Projects } from './projects';
 export { default as Skills } from './skills';
+export { default as Breadcrumbs } from './breadcrumbs';

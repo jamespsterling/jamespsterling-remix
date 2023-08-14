@@ -7,6 +7,17 @@
   --base-color: #096ca7;
   --accent-color: #71c900;
   --dark-color: #2a2a2a;
+  --base-color-hover: #444444;
+  --background: #2a2a2a;
+  --background-dark: #0a0a0a;
+  --background-alt: #f2f2f5;
+  --border: #dcd9d9;
+  --heading: #464646;
+  --text: #676767;
+  --link: #464646;
+  --link-hover: #096ca7;
+  --contact-base: #d7d7d7;
+  --contact-accent: #096ca7;
 }
 
 .checkbox {

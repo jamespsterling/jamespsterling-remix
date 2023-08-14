@@ -1,11 +1,26 @@
-import { useNavigate, useParams } from '@remix-run/react';
-import { Lead, Project, Footer } from '~/components';
+import { Link, RouteMatch, useNavigate, useParams } from '@remix-run/react';
+import { Lead, Project, Breadcrumbs } from '~/components';
+import { data } from '~/data/portfolio';
+
+export const handle = {
+  breadcrumb: (_match: RouteMatch, currentPage: string) => (
+    <>
+      <Link to="/">About</Link>
+      <span className="separator">/</span>
+      <Link to="/projects">Projects</Link>
+      <span className="separator">/</span>
+      <span>{currentPage}</span>
+    </>
+  ),
+};
 
 export default function Index() {
   const navigate = useNavigate();
   const { projectId } = useParams();
 
-  if (!projectId) {
+  const project = data.projects.find((p) => p.id === projectId);
+
+  if (!project) {
     navigate('/projects');
     return null;
   }
@@ -13,7 +28,8 @@ export default function Index() {
   return (
     <>
       <Lead bgOnly={true} narrow={true} />
-      <Project id={projectId} />
+      <Breadcrumbs currentPage={project.name} />
+      <Project project={project} />
     </>
   );
 }

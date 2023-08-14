@@ -115,12 +115,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 a {
-  color: #212529;
+  color: var(--text);
   text-decoration: none;
 
   &:hover {
-    color: $background-alt;
-    background: $accent-color;
+    color: var(--base-color);
+    background: var(--accent-color);
     transition: 0.2s all;
   }
 }
@@ -128,7 +128,7 @@ a {
 #experience {
   a {
     &.external-link {
-      text-decoration: underline $accent-color;
+      text-decoration: underline var(--accent-color);
     }
   }
 }
@@ -249,6 +249,33 @@ header {
   &.active {
     display: block;
     transition: 0.2s all;
+  }
+}
+
+#breadcrumbs {
+  width: 100%;
+  background: #f4f4f4;
+  padding: 0.5rem;
+
+  a {
+    padding: 0.5rem;
+    color: var(--link);
+    transition: 0.2s all;
+
+    &:hover {
+      color: var(--link-hover);
+      background: none;
+    }
+  }
+
+  span {
+    padding: 0.5rem;
+    color: var(--text);
+  }
+
+  .separator {
+    padding: 0 0.2rem;
+    color: #636363;
   }
 }
 
@@ -889,14 +916,16 @@ footer {
   }
 
   .project-link {
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    transition: 0.2s all;
+
     &:hover {
-      background: none;
+      border: 1px solid var(--accent-color);
 
       .project {
         transition: 0.2s all;
-        background: #292929;
-        border: 1px solid #000000;
-        border: 1px solid var(--accent-color);
+        background: #f2f2f2;
       }
     }
   }
@@ -906,7 +935,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     &.single {
-      padding: 4rem 3rem;
+      padding: 0rem 3rem 4rem;
       grid-template-columns: 1fr 2fr;
       .project-image {
         img {

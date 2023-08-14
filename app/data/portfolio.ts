@@ -383,14 +383,14 @@ export const data = {
     {
       id: 'eeka',
       name: 'eekä',
-      image: { src: '/img/eeka-home.png', height: 300 },
+      image: { src: '/img/eeka-home.png', type: 'image/png', height: 300 },
       description:
         'An lightweight Angular web app to visualize "everything I care about" (eekä). Using Angular & ExpressJs along with Google Cloud Datastore this app is a passion project to put many disconnected things in one place. Aggregating data from IoT smart devices (Personal Weather Station, HVAC, etc) with GCP Cloud Functions, I am then able to retrieve and display meaningful real-time data using Apache ECharts. Integrating many other 3rd party services such as DarkSky, The Weather Channel, YouTube, Google Maps, TradingView, and many others I am able to consolidate the sheer number of apps and services all in one place–constantly evolving.',
     },
     {
       id: 'crash-cart-app',
       name: 'CrashCart App',
-      image: { src: '/img/crash-cart-frame.png', height: 300 },
+      image: { src: '/img/crash-cart-frame.png', type: 'image/png', height: 300 },
       description:
         'Another hybrid mobile app built using Ionic v4 (Angular 8, Wk WebView) built for HealthFirst to augment ordering CrashCarts by scanning medical labels and using OCR technology to extract and lookup drugs with an NDC code on the label.',
     },
@@ -399,6 +399,7 @@ export const data = {
       name: 'IoT Events App',
       image: {
         src: '/img/iot-mobile-app.png',
+        type: 'image/png',
         height: 300,
       },
       description:
@@ -410,6 +411,7 @@ export const data = {
       name: 'IoT In Action Events',
       image: {
         src: '/img/iot-web.png',
+        type: 'image/png',
         height: 300,
       },
       description:
@@ -419,7 +421,7 @@ export const data = {
     {
       id: 'iris',
       name: 'IRIS',
-      image: { src: '/img/iris.jpg', height: 300, width: 300 },
+      image: { src: '/img/iris.jpg', type: 'image/jpg', height: 300, width: 300 },
       description:
         'IRIS is an web-based safety library with industry and state driven content with a focus on preventing claims and offering a vast searchable library of safety and training content. Completely home-grown and built on open source technology, LAMP coupled with Apache Solr; and features a highly developed content management administrative toolset.',
       link: 'https://web.archive.org/web/20171027211006/https://iris.yorkrsg.com/gateway',
@@ -427,21 +429,21 @@ export const data = {
     {
       id: 'york-styleguide',
       name: 'York Styleguide',
-      image: { src: '/img/york-styleguide.jpg', height: 300, width: 300 },
+      image: { src: '/img/york-styleguide.jpg', type: 'image/jpg', height: 300, width: 300 },
       description:
         'The York Styleguide was built to help maintain a corporate web-based styleguide govern corporate web-based application look and feel. Also provide brand guidance, resources, and code snippets to developers at York.',
     },
     {
       id: 'monocle',
       name: 'Monocle',
-      image: { src: '/img/monocle.jpg', height: 169, width: 300 },
+      image: { src: '/img/monocle.jpg', type: 'image/jpg', height: 169, width: 300 },
       description:
         'Using Google Glass, Monocle was a proof of concept project using Android Dev Studio for York Innovation to push the boundaries of the Risk Assessment process.',
     },
     {
       id: 'focus-help-portal',
       name: 'FOCUS Help Portal',
-      image: { src: '/img/focus-help.jpg', height: 300, width: 300 },
+      image: { src: '/img/focus-help.jpg', type: 'image/jpg', height: 300, width: 300 },
       description:
         "Built as a companion to York's RIMS system, FOCUS Help Portal provide training material, and other useful information to help FOCUS users. It was built using a highly customized version of HTML5 Boilerplate.",
       link: 'https://help.focus.yorkrsg.com/',
@@ -449,7 +451,7 @@ export const data = {
     {
       id: 'email-signature-generator',
       name: 'Email Signature Generator',
-      image: { src: '/img/emailsig.jpg', height: 296, width: 300 },
+      image: { src: '/img/emailsig.jpg', type: 'image/jpg', height: 296, width: 300 },
       description:
         'Built with bootstrap v4, PHP, and Micro-service Offices API to assist users create their email signatures at York and helps maintain a consistent look-and-field across the organization.',
       link: 'https://emailsig.yorkrisk.com/',
@@ -457,14 +459,14 @@ export const data = {
     {
       id: 'provider-gateway',
       name: 'Provider Gateway',
-      image: { src: '/img/provider.jpg', height: 300, width: 300 },
+      image: { src: '/img/provider.jpg', type: 'image/jpg', height: 300, width: 300 },
       description:
         'Provider Gateway is a self-service tool to assist providers in looking up payment statuses from claims submitted through York. Built on ASP.Net MVC, ASP.Net WebAPI, and Bootstrap v3.',
     },
     {
       id: 'wc-payment-options',
       name: 'WC Payment Options',
-      image: { src: '/img/wcpay.jpg', height: 300 },
+      image: { src: '/img/wcpay.jpg', type: 'image/jpg', height: 300 },
       description:
         "WC Payment Options is a companion website to FARA's claim system at the time and was built in the early days before responsive web design really took a hold. It was designed to be dead simple to use for claimants to choose how they receive their Worker's Compensation benefits.",
       link: 'https://wcpaymentoptions.com/',
@@ -472,7 +474,12 @@ export const data = {
     {
       id: 'york-loader',
       name: 'York Loader',
-      image: { src: '/img/york-loader.svg', height: 200, class: 'york-loader' },
+      image: {
+        src: '/img/york-loader.svg',
+        type: 'image/svg+xml',
+        height: 200,
+        class: 'york-loader',
+      },
       description:
         "York loader is a SVG animated loader created for optimized loading with some York flare. It's done using CSS stroke-dasharray and stroke-dashoffset with keyframes CSS animation.",
     },

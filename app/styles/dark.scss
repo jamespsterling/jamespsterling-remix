@@ -5,6 +5,7 @@ $accent-color: #ff7200;
 $dark-color: #2a2a2a;
 $text-color: #e9e9e9;
 $header-color: #f2f2f2;
+$link-color: #f2f2f2;
 
 // Dark mode
 body.dark {
@@ -44,6 +45,20 @@ body.dark {
     background-image: url(/img/lead-bg-8.jpg);
     background-position: bottom;
     transition: 0.2s all;
+  }
+
+  #breadcrumbs {
+    background: #1e1e1e;
+    a {
+      color: $text-color;
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    .separator {
+      color: #636363;
+    }
   }
 
   h1,
@@ -92,6 +107,20 @@ body.dark {
 
     h3 {
       color: $header-color;
+    }
+
+    .project-link {
+      border: 1px solid #292929;
+      transition: 0.2s all;
+
+      &:hover {
+        border: 1px solid var(--accent-color);
+
+        .project {
+          transition: 0.2s all;
+          background: #292929;
+        }
+      }
     }
   }
 
