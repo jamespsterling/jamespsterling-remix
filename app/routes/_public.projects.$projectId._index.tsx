@@ -12,7 +12,7 @@ export default function Index() {
 
   return (
     <>
-      <Lead bgOnly={true} />
+      <Lead bgOnly={true} narrow={true} />
       <Project id={projectId} />
     </>
   );

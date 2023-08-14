@@ -1,8 +1,14 @@
-export default function Lead({ bgOnly = false }: { bgOnly?: boolean }) {
+export default function Lead({
+  bgOnly = false,
+  narrow = false,
+}: {
+  bgOnly?: boolean;
+  narrow?: boolean;
+}) {
   const fireflies: Array<number> = new Array(15).fill('');
 
   return (
-    <div id="lead">
+    <div id="lead" className={narrow ? 'narrow' : ''}>
       {!bgOnly && (
         <div id="lead-content">
           <img src="/img/headshot.jpg" alt="headshot" />

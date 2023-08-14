@@ -9,6 +9,9 @@ type Props = {
 
 export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
   const toggleMobileMenu = () => {
+    if (window.innerWidth > 768) {
+      return;
+    }
     document.querySelector('body')?.classList.toggle('active');
     document.querySelector('header')?.classList.toggle('active');
   };

@@ -7,9 +7,13 @@ export default function Projects() {
   const kebabCase = (name: string) => name.toLocaleLowerCase().replaceAll(' ', '-');
 
   return (
-    <div id="projects" className="background-alt" style={{
-      paddingTop: '3rem'
-    }}>
+    <div
+      id="projects"
+      className="background-alt"
+      style={{
+        paddingTop: '3rem',
+      }}
+    >
       <h2 className="heading">Projects</h2>
       <div className="container">
         <div className="grid">
@@ -29,7 +33,7 @@ export default function Projects() {
                 </div>
                 <div className="project-info">
                   <h3>{project.name}</h3>
-                  <p className='overflow'>{project.description}</p>
+                  <p className="overflow">{project.description}</p>
                 </div>
               </div>
             </Link>

@@ -7,8 +7,8 @@ export default function Skills() {
       <h2 className="heading">Skills</h2>
       <ul>
         {data.skills.map((skill, i) => (
-          <li>
-            <Link to={skill.link} target="_blank" key={i}>
+          <li key={i}>
+            <Link to={skill.link} target="_blank">
               {skill.label}
             </Link>
           </li>
