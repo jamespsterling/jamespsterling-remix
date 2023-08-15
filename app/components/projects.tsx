@@ -26,7 +26,7 @@ export default function Projects() {
                         <ReactSVG src={project.image.src} />
                       </div>
                     ) : (
-                      <img src={project.image.src} />
+                      <img src={project.image.src} alt={`${project.name} primary image`} />
                     )}
                   </div>
                 </div>

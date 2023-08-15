@@ -34,7 +34,7 @@ export default function Experience({ darkMode }: { darkMode: boolean }) {
                       <ReactSVG src={job.logo} />
                     </div>
                   ) : (
-                    <img src={job.logo} />
+                    <img src={job.logo} alt={`${job.employer} logo`} />
                   )}
                 </div>
 
@@ -51,7 +51,7 @@ export default function Experience({ darkMode }: { darkMode: boolean }) {
                     {(darkMode ? job.clientLogos.dark : job.clientLogos.light).map(
                       (clientLogo, k) => (
                         <div key={k}>
-                          <img src={clientLogo} />
+                          <img src={clientLogo} alt={`${clientLogo} logo`} />
                         </div>
                       )
                     )}

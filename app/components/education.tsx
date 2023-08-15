@@ -4,7 +4,7 @@ export default function Education() {
       <h2 className="heading">Education</h2>
       <div className="education-block shadow-large">
         <div className="education-header">
-          <img src="/img/athletics-lion-spirit.png" />
+          <img src="/img/athletics-lion-spirit.png" alt="SELU Logo" />
           <div className="education-text-header">
             <h3>Southeastern Louisiana University</h3>
             <h4>Bachelor of Science in Computer Science</h4>
