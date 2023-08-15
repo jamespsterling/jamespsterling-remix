@@ -1,4 +1,5 @@
 export const data = {
+  updated: '2023-08-15T13:44:06.871Z',
   jobs: [
     {
       employer: 'Lattice',
