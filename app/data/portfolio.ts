@@ -9,7 +9,7 @@ export const data = {
         'Full stack development on new product initiatives and next-gen platform focused engineering empowering experiences using <b>React</b>, <b>Next.js</b>, <b>Chakra UI</b>, <b>Zod</b>, <b>Relay</b>, <b>GraphQL</b>, <b>NestJS</b>, <b>Sequelize</b>, <b>gRPC</b>, & <b>Node.js</b>.',
         'Leads effort to establish patterns for internationalization and localization (i18n) using <b>react-intl</b> as well as improving DX tooling by leveraging custom linting configuration.',
         'Plays a key role in delivering new features by working closely with Product & Design–translating requirements into technical specifications, atomic tasks, and organizing the effort for large epics.',
-        'Champions <b>type-safety</b> and data-model simplicity across the stack to help reduce cognitive load, reduce tech debt, and reduce issues in production.',
+        'Champions <b>type-safety</b> and data-model simplicity across the stack to help reduce cognitive load, mitigate tech debt, and minimize issues in production.',
         'Leads the effort to merge two disparate software orchestrations by working closely with DX colleagues–delivering cost reduction and helping to standardize DX tooling.',
         'Authors technical specifications, participates in technical RFCs, and architecture round-table reviews.',
       ],
@@ -404,7 +404,8 @@ export const data = {
       },
       description:
         'Ionic v4 Angular 8 hybrid built as a companion to iotinactionevents.com, with quick access to event details, ticket for event entry, event-centric push notifications, QR contact scan & share, and dynamic content publishing platform. This app is deployed to Android and iOS using Ionic and Apache Cordova.',
-      link: 'https://web.archive.org/web/20200512091719/https://apps.apple.com/us/app/iot-in-action-events/id1478820746',
+      // link: 'https://web.archive.org/web/20200512091719/https://apps.apple.com/us/app/iot-in-action-events/id1478820746',
+      link: 'https://easci.com/case-study/microsoft-iot/',
     },
     {
       id: 'iot-in-action-events',

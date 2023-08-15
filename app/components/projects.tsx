@@ -9,7 +9,6 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="background-alt"
       style={{
         paddingTop: '3rem',
       }}

@@ -1,4 +1,5 @@
 import { IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactSVG } from 'react-svg';
 import { data } from '~/data/portfolio';
@@ -23,7 +24,7 @@ export default function Experience({ darkMode }: { darkMode: boolean }) {
                     <h3>
                       <a href={job.link} target="_blank">
                         {job.employer}
-                        <i className="fas fa-external-link-alt"></i>
+                        <FontAwesomeIcon icon={faExternalLinkAlt} size="2xs" />
                       </a>
                     </h3>
                     <h4>{job.title}</h4>
