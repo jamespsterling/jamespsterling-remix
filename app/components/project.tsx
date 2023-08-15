@@ -1,12 +1,11 @@
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from '@remix-run/react';
-import { ReactSVG } from 'react-svg';
 import { data } from '~/data/portfolio';
+import { ProjectImage } from '.';
 
 export default function Project({ project }: { project: (typeof data.projects)[number] }) {
   const navigate = useNavigate();
-  const imageExtension = (src: string) => src.split('.').pop();
 
   if (!project) {
     navigate('/projects');
@@ -25,13 +24,7 @@ export default function Project({ project }: { project: (typeof data.projects)[n
       <div className="grid single">
         <div className="project-image">
           <div className={project.image.class}>
-            {imageExtension(project.image.src) === 'svg' ? (
-              <div className="svg-wrapper">
-                <ReactSVG src={project.image.src} />
-              </div>
-            ) : (
-              <img src={project.image.src} alt={`${project.name} primary image`} />
-            )}
+            <ProjectImage image={project.image} />
           </div>
         </div>
         <div className="project-info">
