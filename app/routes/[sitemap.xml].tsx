@@ -1,6 +1,6 @@
 import { data } from '~/data/portfolio';
 
-const BASE_URL = 'jamespsterling.com';
+const BASE_URL = 'https://jamespsterling.com';
 
 export const staticRoutes = [
   { to: '/', text: 'About' },
@@ -12,12 +12,10 @@ export const toXmlSitemap = (urls: string[]) => {
   const urlsAsXml = urls
     .map(
       (url: string) => `
-  <url>
-    <loc>
-      ${url}
-    </loc>
-    <lastmod>${data.updated}</lastmod>
-  </url>
+<url>
+  <loc>${url}</loc>
+  <lastmod>${data.updated}</lastmod>
+</url>
   `
     )
     .join('\n');
