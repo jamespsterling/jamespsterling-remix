@@ -1,4 +1,4 @@
-import { fa500px, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { fa500px, faGithub, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLocation, useNavigate } from '@remix-run/react';
@@ -43,6 +43,16 @@ export default function Footer() {
                   className="icon-link"
                 >
                   <FontAwesomeIcon icon={faGithub} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://stackoverflow.com/users/4092449/jamespsterling"
+                  target="_blank"
+                  rel="noopener"
+                  className="icon-link"
+                >
+                  <FontAwesomeIcon icon={faStackOverflow} />
                 </a>
               </li>
               <li>

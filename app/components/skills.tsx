@@ -8,7 +8,7 @@ export default function Skills({ skills }: { skills: Skills }) {
       <ul>
         {skills.map((skill, i) => (
           <li key={i}>
-            <Link to={skill.link} target="_blank">
+            <Link to={skill.link} target="_blank" rel="noopener">
               {skill.label}
             </Link>
           </li>

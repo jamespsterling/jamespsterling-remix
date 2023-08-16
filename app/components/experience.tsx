@@ -28,7 +28,7 @@ export default function Experience({
                 <div className="heading-grid">
                   <div>
                     <h3>
-                      <a href={job.link} target="_blank">
+                      <a href={job.link} target="_blank" rel="noopener">
                         {job.employer}
                         <FontAwesomeIcon icon={faExternalLinkAlt} size="2xs" />
                       </a>

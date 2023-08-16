@@ -411,6 +411,7 @@ footer {
     vertical-align: middle;
   }
 }
+
 .button--wayra {
   overflow: hidden;
   width: 245px;
@@ -1123,6 +1124,24 @@ footer {
 
     &:hover {
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+
+  .linked-in-button {
+    margin: 1rem auto;
+    background-color: #0a66c2 !important;
+    color: #fff;
+
+    &:hover {
+      background-color: darken(#0a66c2, 7.5%) !important;
+    }
+
+    img {
+      height: 1.1rem;
+      filter: brightness(0) invert(1);
+      top: -2px;
+      position: relative;
+      margin-left: 4px;
     }
   }
 }

@@ -31,7 +31,7 @@ export default function Project({ project }: { project: (typeof data.projects)[n
           <p className="justify">{project.description}</p>
           {project.link && (
             <div style={{ marginTop: '4rem' }}>
-              <Link to={project.link} target="_blank">
+              <Link to={project.link} target="_blank" rel="noopener">
                 <button className="btn btn-secondary">
                   View
                   <FontAwesomeIcon
