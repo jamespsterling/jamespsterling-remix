@@ -22,6 +22,12 @@ body.dark {
     }
   }
 
+  .loading {
+    img {
+      filter: invert(1);
+    }
+  }
+
   .footer {
     border-top: 1px solid lighten($dark-color, 5%);
     background: $dark-color;

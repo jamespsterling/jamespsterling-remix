@@ -149,6 +149,13 @@ a {
 
 .loading {
   height: 20vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  img {
+    height: 10vh;
+  }
 }
 
 // No JS styles

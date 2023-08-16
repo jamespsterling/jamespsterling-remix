@@ -146,7 +146,7 @@ export const data = {
     },
     {
       label: 'React Router',
-      id: 'react router',
+      id: 'react-router',
       link: 'https://reactrouter.com/',
     },
     {
@@ -160,6 +160,11 @@ export const data = {
       link: 'https://nextjs.org/',
     },
     {
+      label: 'Remix',
+      id: 'react-router',
+      link: 'https://remix.run/',
+    },
+    {
       label: 'GraphQL',
       id: 'graphql',
       link: 'https://graphql.org/',
@@ -171,12 +176,12 @@ export const data = {
     },
     {
       label: 'Chakra UI',
-      id: 'chakra ui',
+      id: 'chakra-ui',
       link: 'https://chakra-ui.com/',
     },
     {
       label: 'Material UI',
-      id: 'material ui',
+      id: 'material-ui',
       link: 'https://mui.com/',
     },
     {
@@ -261,7 +266,7 @@ export const data = {
     },
     {
       label: 'Zurb Foundation',
-      id: 'zurb foundation',
+      id: 'zurb-foundation',
       link: 'https://get.foundation/',
     },
     {
@@ -271,12 +276,12 @@ export const data = {
     },
     {
       label: 'Zend Framework',
-      id: 'zend framework',
+      id: 'zend-framework',
       link: 'https://framework.zend.com/',
     },
     {
       label: 'ASP.Net MVC',
-      id: 'asp.net mvc',
+      id: 'asp.net-mvc',
       link: 'https://dotnet.microsoft.com/en-us/apps/aspnet/mvc',
     },
     {
@@ -301,13 +306,13 @@ export const data = {
     },
     {
       label: 'Entity Framework',
-      id: 'entity framework',
+      id: 'entity-framework',
       link: 'https://learn.microsoft.com/en-us/aspnet/entity-framework',
     },
     {
       label: 'ORM',
       id: 'orm',
-      link: '',
+      link: 'https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping',
     },
     {
       label: 'Nightwatch.js',
@@ -341,7 +346,7 @@ export const data = {
     },
     {
       label: 'Google Cloud',
-      id: 'google cloud',
+      id: 'google-cloud',
       link: 'https://cloud.google.com/',
     },
     {
@@ -356,12 +361,12 @@ export const data = {
     },
     {
       label: 'Apache HTTPd',
-      id: 'apache httpd',
+      id: 'apache-httpd',
       link: 'https://httpd.apache.org/',
     },
     {
       label: 'Apache Solr',
-      id: 'apache solr',
+      id: 'apache-solr',
       link: 'https://solr.apache.org/',
     },
     {
@@ -371,7 +376,7 @@ export const data = {
     },
     {
       label: 'Octopus Deploy',
-      id: 'octopus deploy',
+      id: 'octopus-deploy',
       link: 'https://octopus.com/',
     },
     {
@@ -386,6 +391,14 @@ export const data = {
     },
   ],
   projects: [
+    {
+      id: 'portfolio',
+      name: 'Portfolio',
+      image: { src: '/img/projects/portfolio.png', type: 'image/png', height: 300 },
+      technologies: ['remix', 'react', 'cloudflare', 'fontsource'],
+      description:
+        "Portfolio re-imagined using Remix using data-driven rendering, continuously deployed to Cloudflare Pages. Optimized with self-hosting using Fontsource and React's SSG functionality of Cloudflare Experimental Edge.",
+    },
     {
       id: 'eeka',
       name: 'eekä',
