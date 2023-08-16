@@ -1,5 +1,6 @@
-import { Link, RouteMatch, useNavigate, useParams } from '@remix-run/react';
-import { Lead, Project, Breadcrumbs } from '~/components';
+import { json } from '@remix-run/cloudflare';
+import { Link, RouteMatch, useLoaderData, useNavigate, useParams } from '@remix-run/react';
+import { Breadcrumbs, Lead, Project } from '~/components';
 import { data } from '~/data/portfolio';
 
 export const handle = {
@@ -14,7 +15,12 @@ export const handle = {
   ),
 };
 
+export const loader = async () => {
+  return json(data);
+};
+
 export default function Index() {
+  const data = useLoaderData<typeof loader>();
   const navigate = useNavigate();
   const { projectId } = useParams();
 
@@ -27,7 +33,7 @@ export default function Index() {
 
   return (
     <>
-      <Lead bgOnly={true} narrow={true} />
+      <Lead about={data.about} bgOnly={true} narrow={true} />
       <Breadcrumbs currentPage={project.name} />
       <Project project={project} />
     </>

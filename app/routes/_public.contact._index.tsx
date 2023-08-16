@@ -1,5 +1,7 @@
-import { Link, RouteMatch } from '@remix-run/react';
-import { Lead, Contact, Breadcrumbs } from '~/components';
+import { json } from '@remix-run/cloudflare';
+import { Link, RouteMatch, useLoaderData } from '@remix-run/react';
+import { Breadcrumbs, Contact, Lead } from '~/components';
+import { data } from '~/data/portfolio';
 
 export const handle = {
   breadcrumb: (_match: RouteMatch, currentPage: string) => (
@@ -11,10 +13,16 @@ export const handle = {
   ),
 };
 
+export const loader = async () => {
+  return json(data);
+};
+
 export default function Index() {
+  const data = useLoaderData<typeof loader>();
+
   return (
     <>
-      <Lead bgOnly={true} />
+      <Lead about={data.about} bgOnly={true} />
       <Breadcrumbs currentPage="Contact" />
       <Contact />
     </>

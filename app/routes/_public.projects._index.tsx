@@ -1,6 +1,6 @@
-import { LinksFunction } from '@remix-run/cloudflare';
-import { Link, RouteMatch } from '@remix-run/react';
-import { Lead, Projects, Breadcrumbs } from '~/components';
+import { LinksFunction, json } from '@remix-run/cloudflare';
+import { Link, RouteMatch, useLoaderData } from '@remix-run/react';
+import { Breadcrumbs, Lead, Projects } from '~/components';
 import { data } from '~/data/portfolio';
 
 export const links: LinksFunction = () =>
@@ -21,10 +21,16 @@ export const handle = {
   ),
 };
 
+export const loader = async () => {
+  return json(data);
+};
+
 export default function Index() {
+  const data = useLoaderData<typeof loader>();
+
   return (
     <>
-      <Lead bgOnly={true} />
+      <Lead about={data.about} bgOnly={true} />
       <Breadcrumbs currentPage="Projects" />
       <Projects />
     </>

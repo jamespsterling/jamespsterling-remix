@@ -1,12 +1,12 @@
 import { Link } from '@remix-run/react';
-import { data } from '~/data/portfolio';
+import { Skills } from '~/data/types';
 
-export default function Skills() {
+export default function Skills({ skills }: { skills: Skills }) {
   return (
     <div id="skills">
       <h2 className="heading">Skills</h2>
       <ul>
-        {data.skills.map((skill, i) => (
+        {skills.map((skill, i) => (
           <li key={i}>
             <Link to={skill.link} target="_blank">
               {skill.label}

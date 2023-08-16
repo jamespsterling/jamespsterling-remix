@@ -1,6 +1,21 @@
 export const data = {
   updated: '2023-08-15T13:44:06.871Z',
-  jobs: [
+  about: {
+    name: 'James Sterling',
+    title: 'Software Engineer',
+    body: 'Full-stack software engineer with 14+ years of experience crafting software for SaaS platforms, enterprise deployments, and everything in between. My focus is to leverage the entire stack, back-end, middleware, and front-end to deliver thoughtful UI/UX experiences. My passion for self-documenting, scalable, and robust software orchestrations drives me to learn from and coach other engineers in best practices, refine developer experience (DX) tooling, and continuously hone my craft as a curious engineer.',
+  },
+  education: {
+    university: {
+      name: 'Southeastern Louisiana University',
+      degree: 'Bachelor of Science in Computer Science',
+      concentration: 'Scientific Concentration',
+    },
+    dates: 'Aug 2005 - Dec 2010',
+    project:
+      'Create a ride-sharing app to help link communities of students with others to work out riding sharing for economical purposes.',
+  },
+  experience: [
     {
       employer: 'Lattice',
       title: 'Staff Software Engineer',
@@ -111,16 +126,6 @@ export const data = {
       ],
       link: 'https://www.sedgwick.com/acquisition-news',
       logo: '/img/companies/yorkrsg.webp',
-    },
-  ],
-  education: [
-    {
-      university: 'Southeastern Louisiana University',
-      degree: 'Bachelor of Science in Computer Science',
-      tenure: 'Aug 2005 - Dec 2010',
-      concentration: 'Scientific concentration',
-      project:
-        'Create a ride-sharing app to help link communities of students with others to work out riding sharing for economical purposes.',
     },
   ],
   skills: [

@@ -2,16 +2,22 @@ import { IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactSVG } from 'react-svg';
-import { data } from '~/data/portfolio';
+import { Experience } from '~/data/types';
 
-export default function Experience({ darkMode }: { darkMode: boolean }) {
+export default function Experience({
+  experience,
+  darkMode,
+}: {
+  experience: Experience;
+  darkMode: boolean;
+}) {
   const imageExtension = (src: string) => src.split('.').pop();
 
   return (
     <div id="experience" className="background-alt">
       <h2 className="heading">Experience</h2>
       <div id="experience-timeline">
-        {data.jobs.map((job, i) => (
+        {experience.map((job, i) => (
           <div className="vtimeline-point" key={i}>
             <div className="vtimeline-icon">
               <FontAwesomeIcon icon={job.icon as unknown as [IconPrefix, IconName]} size="xl" />
