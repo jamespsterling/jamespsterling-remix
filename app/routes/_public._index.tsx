@@ -1,5 +1,5 @@
 import { json } from '@remix-run/cloudflare';
-import { useLoaderData } from '@remix-run/react';
+import { useLoaderData, useMatches } from '@remix-run/react';
 import { About, Education, Experience, Lead, Skills } from '~/components';
 import { data } from '~/data/portfolio';
 
@@ -9,7 +9,8 @@ export const loader = async () => {
 
 export default function Index() {
   const data = useLoaderData<typeof loader>();
-  const darkMode = 'enabled';
+  const [{ data: rootData }] = useMatches();
+  const darkMode = rootData.darkMode;
 
   return (
     <>
