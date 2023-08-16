@@ -439,6 +439,29 @@ export const data = {
       link: 'https://web.archive.org/web/20200816235044/https:/iotinactionevents.com/',
     },
     {
+      id: 'godaddy-signature',
+      name: 'GoDaddy Email Signature Generator',
+      image: {
+        src: '/img/projects/godaddy-email-sig/main.png',
+        type: 'image/png',
+        height: 300,
+        width: 300,
+      },
+      description:
+        'Built with Bootstrap v4 & PHP to help aid GoDaddy Guides, Registry, and Corporate employees to create their email signatures and help maintain a consistent look and feel across the organization.',
+    },
+    {
+      id: 'easci-signature',
+      name: 'EASCI Email Signature Generator',
+      image: {
+        src: '/img/projects/easci-email-sig/signature-fold.png',
+        type: 'image/png',
+        height: 300,
+      },
+      description:
+        'Built with Bootstrap v4 & PHP to help users create their email signatures at Extreme Arts + Sciences and helps maintain a consistent look and feel across the organization.',
+    },
+    {
       id: 'iris',
       name: 'IRIS',
       image: { src: '/img/projects/iris.jpg', type: 'image/jpg', height: 300, width: 300 },
@@ -490,7 +513,7 @@ export const data = {
       name: 'Email Signature Generator',
       image: { src: '/img/projects/emailsig.jpg', type: 'image/jpg', height: 296, width: 300 },
       description:
-        'Built with bootstrap v4, PHP, and Micro-service Offices API to assist users create their email signatures at York and helps maintain a consistent look-and-field across the organization.',
+        'Built with Bootstrap v4, PHP, and Micro-service Offices API to assist users create their email signatures at York and helps maintain a consistent look and feel across the organization.',
       link: 'https://emailsig.yorkrisk.com/',
     },
     {

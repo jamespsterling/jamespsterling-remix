@@ -29,6 +29,11 @@ export default function Project({ project }: { project: (typeof data.projects)[n
         </div>
         <div className="project-info">
           <p className="justify">{project.description}</p>
+          {/* <div className="project-tech grid">
+            {(project.technologies ?? []).map((technology) => {
+              return <div>{technology}</div>;
+            })}
+          </div> */}
           {project.link && (
             <div style={{ marginTop: '4rem' }}>
               <Link to={project.link} target="_blank" rel="noopener">
