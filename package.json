@@ -8,7 +8,7 @@
     "dev": "concurrently \"npm run sass\" \"npm run dev:remix\"",
     "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
     "typecheck": "tsc",
-    "sass": "sass --watch app/:app/"
+    "sass": "sass --watch app/styles/sass/styles.scss app/styles/styles.css --style compressed"
   },
   "dependencies": {
     "@fontsource/open-sans": "^5.0.8",

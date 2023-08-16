@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // https://codepen.io/mikegolus/pen/Jegvym
 $quantity: 15;
 $glow: #00ff37;
@@ -58,10 +60,10 @@ $glow-3: #fdffc8;
 
   @keyframes move#{$i} {
     @for $step from 0 through $steps {
-      #{$step * 100 / $steps}% {
+      #{math.div($step * 100, $steps)}% {
         transform: translateX(random(100) - 50vw)
           translateY(random(100) - 50vh)
-          scale(random(75) / 100 + 0.25);
+          scale(math.div(random(75), 100) + 0.25);
       }
     }
   }
