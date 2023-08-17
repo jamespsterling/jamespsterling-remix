@@ -61,6 +61,7 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
               type="checkbox"
               className="checkbox"
               id="checkbox"
+              aria-label="toggle dark mode"
               onChange={toggleDarkMode}
               checked={darkModeEnabled}
               onClick={() => toggleMobileMenu()}

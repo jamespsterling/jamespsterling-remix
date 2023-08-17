@@ -41,6 +41,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener"
                   className="icon-link"
+                  aria-label="Github Link"
                 >
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
@@ -51,6 +52,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener"
                   className="icon-link"
+                  aria-label="StackOverflow Link"
                 >
                   <FontAwesomeIcon icon={faStackOverflow} />
                 </a>
@@ -61,6 +63,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener"
                   className="icon-link"
+                  aria-label="LinkedIn Link"
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
@@ -71,6 +74,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener"
                   className="icon-link"
+                  aria-label="500px Link"
                 >
                   <FontAwesomeIcon icon={fa500px} />
                 </a>
