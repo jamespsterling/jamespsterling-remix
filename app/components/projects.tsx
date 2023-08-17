@@ -25,7 +25,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
                 </div>
                 <div className="project-info">
                   <h3>{project.name}</h3>
-                  <p className="overflow">{project.description}</p>
+                  <p className="overflow thumbnail">{project.description}</p>
                 </div>
               </div>
             </Link>

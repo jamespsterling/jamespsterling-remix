@@ -11,7 +11,6 @@ import {
   useLocation,
 } from '@remix-run/react';
 import { useEffect } from 'react';
-import { ExternalScripts } from 'remix-utils';
 import { userPrefs } from '~/cookies';
 import * as gtag from '~/utils/gtags.client';
 
@@ -87,7 +86,6 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        <ExternalScripts />
         <LiveReload />
       </body>
     </html>

@@ -81,11 +81,16 @@
       color: $text;
       margin: 0 0 15px 0;
       font-size: 0.9em;
+      text-align: left;
 
       pre {
         display: inline;
         color: var(--accent-color);
       }
+    }
+
+    .thumbnail {
+      text-align: center;
     }
 
     .overflow {
