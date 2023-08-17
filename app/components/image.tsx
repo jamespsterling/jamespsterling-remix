@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ReactSVG } from 'react-svg';
 import { data } from '~/data/portfolio';
+import Loading from '~/components/icons/Loading';
 
 export default function Image({ image }: { image: (typeof data.projects)[0]['image'] }) {
   const [loading, setLoading] = useState(true);
@@ -27,7 +28,7 @@ export default function Image({ image }: { image: (typeof data.projects)[0]['ima
           />
           {loading && (
             <div className="loading">
-              <img src="/img/loading.svg" alt="loading..." />
+              <Loading />
             </div>
           )}
         </>

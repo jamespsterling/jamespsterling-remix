@@ -1,4 +1,5 @@
 import { Link } from '@remix-run/react';
+import LinkedInLogo from '~/components/icons/brands/LinkedInLogo';
 
 export default function Contact() {
   return (
@@ -8,7 +9,7 @@ export default function Contact() {
       <div id="contact-form">
         <Link to="https://www.linkedin.com/in/jamespsterling/" target="_blank" rel="noopener">
           <button className="linked-in-button">
-            Message me on <img src="/img/brands/LinkedIn-Logo.svg" />
+            Message me on <LinkedInLogo />
           </button>
         </Link>
         <form method="POST" action="https://formspree.io/jamespsterling@gmail.com">
