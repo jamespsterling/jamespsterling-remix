@@ -13,7 +13,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
       }}
     >
       <h2 className="heading">Projects</h2>
-      <div className="container">
+      <div className="grid-container">
         <div className="grid">
           {projects.map((project, i) => (
             <Link to={`/projects/${kebabCase(project.id)}`} className="project-link" key={i}>

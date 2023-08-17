@@ -950,6 +950,10 @@ footer {
     }
   }
 
+  .grid-container {
+    margin: 0 2vw;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1194,8 +1198,12 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 1142px) {
   #projects {
+    .grid-container {
+      margin: 0 10vw;
+    }
+
     .grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -1215,6 +1223,12 @@ footer {
 
     h2 {
       font-size: 1.75em;
+    }
+  }
+
+  #projects {
+    .grid {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
