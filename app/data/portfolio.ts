@@ -390,14 +390,22 @@ export const data = {
       link: 'https://www.docker.com/',
     },
   ],
+  technologies: [
+    {
+      id: 'cloudflare-pages',
+      name: 'Cloudflare Pages',
+      link: 'https://pages.cloudflare.com/',
+      logo: '',
+    },
+  ],
   projects: [
     {
       id: 'portfolio',
       name: 'Portfolio',
       image: { src: '/img/projects/portfolio.png', type: 'image/png', height: 300 },
-      technologies: ['remix', 'react', 'cloudflare', 'fontsource'],
+      technologies: ['remix', 'react', 'cloudflare', 'fontsource', 'cloudflare'],
       description:
-        "Portfolio re-imagined using Remix using data-driven rendering, continuously deployed to Cloudflare Pages. Optimized with self-hosting using Fontsource and React's SSG functionality of Cloudflare Experimental Edge.",
+        "Portfolio re-imagined with Remix using data-driven SSR, continuously deployed to Cloudflare Pages. Optimized with self-hosted Fontsource fonts and React's SSG functionality leveraging lightning fast Cloudflare's Edge network.",
     },
     {
       id: 'eeka',
