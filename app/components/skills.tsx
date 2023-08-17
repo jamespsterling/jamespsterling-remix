@@ -1,5 +1,5 @@
 import { Link } from '@remix-run/react';
-import { Skills } from '~/data/types';
+import type { Skills } from '~/data/types';
 
 export default function Skills({ skills }: { skills: Skills }) {
   return (

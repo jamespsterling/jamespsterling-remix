@@ -1,16 +1,11 @@
 import FontStyles from '@fontsource/open-sans/index.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import IconStyles from '@fortawesome/fontawesome-svg-core/styles.css';
-import { faAngular, faNodeJs, faPhp, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faCode, faLaptopCode, fas } from '@fortawesome/free-solid-svg-icons';
 import { type LinksFunction, type V2_MetaFunction } from '@remix-run/cloudflare';
 import { Outlet, useFetcher, useLoaderData, useLocation } from '@remix-run/react';
 import { useEffect } from 'react';
 import { Footer, Menu } from '~/components';
 import { loader as darkMode } from '~/data/loader/dark-mode';
 import Styles from '~/styles/styles.css';
-
-library.add(fas, faReact, faAngular, faPhp, faNodeJs, faCode, faLaptopCode);
 
 export const links: LinksFunction = () => [
   {

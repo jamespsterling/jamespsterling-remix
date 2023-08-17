@@ -1,4 +1,4 @@
-import { Education } from '~/data/types';
+import type { Education } from '~/data/types';
 
 export default function Education({ education }: { education: Education }) {
   return (

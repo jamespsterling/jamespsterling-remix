@@ -1,7 +1,7 @@
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from '@remix-run/react';
-import { Project } from '~/data/types';
+import type { Project } from '~/data/types';
 import { ProjectImage } from '.';
 
 export default function Project({ project }: { project: Project }) {

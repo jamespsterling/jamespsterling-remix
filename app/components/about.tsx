@@ -1,4 +1,4 @@
-import { About } from '~/data/types';
+import type { About } from '~/data/types';
 
 export default function About({ about }: { about: About }) {
   return (

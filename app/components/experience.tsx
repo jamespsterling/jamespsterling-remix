@@ -1,8 +1,19 @@
-import { IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { IconName, IconPrefix, library } from '@fortawesome/fontawesome-svg-core';
+
+import { faAngular } from '@fortawesome/free-brands-svg-icons/faAngular';
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons/faNodeJs';
+import { faPhp } from '@fortawesome/free-brands-svg-icons/faPhp';
+import { faReact } from '@fortawesome/free-brands-svg-icons/faReact';
+
+import { faCode } from '@fortawesome/free-solid-svg-icons/faCode';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons/faLaptopCode';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactSVG } from 'react-svg';
-import { Experience } from '~/data/types';
+import type { Experience } from '~/data/types';
+
+library.add(faReact, faAngular, faPhp, faNodeJs, faCode, faLaptopCode);
 
 export default function Experience({
   experience,
