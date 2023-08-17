@@ -402,6 +402,7 @@ export const data = {
     {
       id: 'portfolio',
       name: 'Portfolio',
+      date: new Date('Aug, 2023'),
       image: { src: '/img/projects/portfolio.png', type: 'image/png', height: 300 },
       technologies: ['remix', 'react', 'cloudflare', 'fontsource', 'cloudflare'],
       description:
@@ -410,6 +411,7 @@ export const data = {
     {
       id: 'eeka',
       name: 'eekä',
+      date: new Date('Dec, 2019'),
       image: { src: '/img/projects/eeka-home.png', type: 'image/png', height: 300 },
       description:
         'An lightweight Angular web app to visualize "everything I care about" (eekä). Using Angular & ExpressJs along with Google Cloud Datastore this app is a passion project to put many disconnected things in one place. Aggregating data from IoT smart devices (Personal Weather Station, HVAC, etc) with GCP Cloud Functions, I am then able to retrieve and display meaningful real-time data using Apache ECharts. Integrating many other 3rd party services such as DarkSky, The Weather Channel, YouTube, Google Maps, TradingView, and many others I am able to consolidate the sheer number of apps and services all in one place–constantly evolving.',
@@ -417,6 +419,7 @@ export const data = {
     {
       id: 'crash-cart-app',
       name: 'CrashCart App',
+      date: new Date('Nov, 2019'),
       image: { src: '/img/projects/crash-cart-frame.png', type: 'image/png', height: 300 },
       description:
         'Another hybrid mobile app built using Ionic v4 (Angular 8, Wk WebView) built for HealthFirst to augment ordering CrashCarts by scanning medical labels and using OCR technology to extract and lookup drugs with an NDC code on the label.',
@@ -424,6 +427,7 @@ export const data = {
     {
       id: 'iot-events-app',
       name: 'IoT Events App',
+      date: new Date('Jan, 2020'),
       image: {
         src: '/img/projects/iot-mobile-app.png',
         type: 'image/png',
@@ -437,6 +441,7 @@ export const data = {
     {
       id: 'iot-in-action-events',
       name: 'IoT In Action Events',
+      date: new Date('Oct, 2018'),
       image: {
         src: '/img/projects/iot-web.png',
         type: 'image/png',
@@ -449,6 +454,7 @@ export const data = {
     {
       id: 'godaddy-signature',
       name: 'GoDaddy Email Signature Generator',
+      date: new Date('Dec, 2018'),
       image: {
         src: '/img/projects/godaddy-email-sig/main.png',
         type: 'image/png',
@@ -461,6 +467,7 @@ export const data = {
     {
       id: 'easci-signature',
       name: 'EASCI Email Signature Generator',
+      date: new Date('Dec, 2018'),
       image: {
         src: '/img/projects/easci-email-sig/signature-fold.png',
         type: 'image/png',
@@ -472,6 +479,7 @@ export const data = {
     {
       id: 'iris',
       name: 'IRIS',
+      date: new Date('Sep, 2016'),
       image: { src: '/img/projects/iris.jpg', type: 'image/jpg', height: 300, width: 300 },
       description:
         'IRIS is an web-based safety library with industry and state driven content with a focus on preventing claims and offering a vast searchable library of safety and training content. Completely home-grown and built on open source technology, LAMP coupled with Apache Solr; and features a highly developed content management administrative toolset.',
@@ -480,6 +488,7 @@ export const data = {
     {
       id: 'york-styleguide',
       name: 'York Styleguide',
+      date: new Date('Jun, 2015'),
       image: {
         src: '/img/projects/york-styleguide.jpg',
         type: 'image/jpg',
@@ -492,6 +501,7 @@ export const data = {
     {
       id: 'careworks-styleguide',
       name: 'Careworks Styleguide',
+      date: new Date('Jun, 2015'),
       image: {
         src: '/img/projects/careworks-styleguide/primary.png',
         type: 'image/png',
@@ -504,6 +514,7 @@ export const data = {
     {
       id: 'monocle',
       name: 'Monocle',
+      date: new Date('Sep, 2016'),
       image: { src: '/img/projects/monocle.jpg', type: 'image/jpg', height: 169, width: 300 },
       description:
         'Using Google Glass, Monocle was a proof of concept project using Android Dev Studio for York Innovation to push the boundaries of the Risk Assessment process.',
@@ -511,6 +522,7 @@ export const data = {
     {
       id: 'focus-help-portal',
       name: 'FOCUS Help Portal',
+      date: new Date('Jun, 2015'),
       image: { src: '/img/projects/focus-help.jpg', type: 'image/jpg', height: 300, width: 300 },
       description:
         "Built as a companion to York's RIMS system, FOCUS Help Portal provide training material, and other useful information to help FOCUS users. It was built using a highly customized version of HTML5 Boilerplate.",
@@ -519,14 +531,16 @@ export const data = {
     {
       id: 'email-signature-generator',
       name: 'Email Signature Generator',
+      date: new Date('Aug, 2016'),
       image: { src: '/img/projects/emailsig.jpg', type: 'image/jpg', height: 296, width: 300 },
       description:
         'Built with Bootstrap v4, PHP, and Micro-service Offices API to assist users create their email signatures at York and helps maintain a consistent look and feel across the organization.',
-      link: 'https://emailsig.yorkrisk.com/',
+      // link: 'https://emailsig.yorkrisk.com/',
     },
     {
       id: 'provider-gateway',
       name: 'Provider Gateway',
+      date: new Date('Jul, 2017'),
       image: { src: '/img/projects/provider.jpg', type: 'image/jpg', height: 300, width: 300 },
       description:
         'Provider Gateway is a self-service tool to assist providers in looking up payment statuses from claims submitted through York. Built on ASP.Net MVC, ASP.Net WebAPI, and Bootstrap v3.',
@@ -534,6 +548,7 @@ export const data = {
     {
       id: 'wc-payment-options',
       name: 'WC Payment Options',
+      date: new Date('Mar, 2014'),
       image: { src: '/img/projects/wcpay.jpg', type: 'image/jpg', height: 300 },
       description:
         "WC Payment Options is a companion website to FARA's claim system at the time and was built in the early days before responsive web design really took a hold. It was designed to be dead simple to use for claimants to choose how they receive their Worker's Compensation benefits.",
@@ -542,6 +557,7 @@ export const data = {
     {
       id: 'york-loader',
       name: 'York Loader',
+      date: new Date('Apr, 2017'),
       image: {
         src: '/img/projects/york-loader.svg',
         type: 'image/svg+xml',

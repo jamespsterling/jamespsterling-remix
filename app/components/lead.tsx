@@ -14,7 +14,9 @@ export default function Lead({
     <div id="lead" className={narrow ? 'narrow' : ''}>
       {!bgOnly && (
         <div id="lead-content">
-          <img src="/img/headshot.jpg" alt="headshot" />
+          <div className="headshot">
+            <img src="/img/headshot.jpg" alt="headshot" loading="eager" />
+          </div>
           <h1 className="animate-pop-in">{about.name}</h1>
           <h2 className="animate-pop-in">{about.title}</h2>
         </div>

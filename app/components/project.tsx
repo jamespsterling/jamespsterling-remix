@@ -1,8 +1,8 @@
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from '@remix-run/react';
-import { ProjectImage } from '.';
 import { Project } from '~/data/types';
+import { ProjectImage } from '.';
 
 export default function Project({ project }: { project: Project }) {
   const navigate = useNavigate();
@@ -46,6 +46,15 @@ export default function Project({ project }: { project: Project }) {
                   />
                 </button>
               </Link>
+            </div>
+          )}
+
+          {project.date && (
+            <div className="date" style={{ textAlign: 'right' }}>
+              {new Date(project.date).toLocaleDateString('en-us', {
+                year: 'numeric',
+                month: 'short',
+              })}
             </div>
           )}
         </div>

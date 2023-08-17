@@ -18,10 +18,16 @@
   z-index: 10;
   text-align: center;
 
-  img {
-    width: 12vw;
-    border-radius: 50%;
-    margin: 1rem;
+  .headshot {
+    height: 12vw;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    img {
+      height: 12vw;
+      width: 12vw;
+      border-radius: 50%;
+    }
   }
 
   h1,
