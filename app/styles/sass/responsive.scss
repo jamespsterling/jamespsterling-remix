@@ -39,7 +39,7 @@
 // Medium Devices
 @media only screen and (max-width: 992px) {
   #lead {
-    padding: 100px 15px 100px;
+    padding: 160px 15px 100px;
   }
 
   #lead-content {
@@ -61,11 +61,16 @@
 
 // Small Devices
 @media only screen and (max-width: 768px) {
+  #lead {
+    padding: 100px 15px 120px;
+  }
+
   #lead-content {
+    height: 15vw;
+
     img {
       height: 15vw;
       width: 15vw;
-      margin: 1rem;
     }
   }
 
@@ -189,10 +194,11 @@
   }
 
   #lead-content {
+    height: 25vw;
+
     img {
       width: 25vw;
       height: 25vw;
-      margin: 1rem;
     }
 
     a {
