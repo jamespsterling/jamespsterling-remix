@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { ReactSVG } from 'react-svg';
-import { data } from '~/data/portfolio';
 import Loading from '~/components/icons/Loading';
+import { Project } from '~/data/types';
 
-export default function Image({ image }: { image: (typeof data.projects)[0]['image'] }) {
+export default function Image({ image }: { image: Project['image'] }) {
   const [loading, setLoading] = useState(true);
   const imageExtension = (src: string) => src.split('.').pop();
 

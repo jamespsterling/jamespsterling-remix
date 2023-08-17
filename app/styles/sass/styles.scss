@@ -953,7 +953,8 @@ footer {
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-gap: 1rem;
+
     &.single {
       padding: 0rem 3rem 4rem;
       grid-template-columns: 1fr 2fr;
@@ -1000,6 +1001,11 @@ footer {
       color: $text;
       margin: 0 0 15px 0;
       font-size: 0.9em;
+
+      pre {
+        display: inline;
+        color: var(--accent-color);
+      }
     }
 
     .overflow {
@@ -1374,7 +1380,7 @@ footer {
   #projects {
     .grid {
       grid-template-columns: 1fr;
-      gap: 1rem;
+      grid-gap: 1rem;
     }
   }
 

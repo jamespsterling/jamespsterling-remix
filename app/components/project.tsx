@@ -1,10 +1,10 @@
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from '@remix-run/react';
-import { data } from '~/data/portfolio';
 import { ProjectImage } from '.';
+import { Project } from '~/data/types';
 
-export default function Project({ project }: { project: (typeof data.projects)[number] }) {
+export default function Project({ project }: { project: Project }) {
   const navigate = useNavigate();
 
   if (!project) {
@@ -28,7 +28,7 @@ export default function Project({ project }: { project: (typeof data.projects)[n
           </div>
         </div>
         <div className="project-info">
-          <p className="justify">{project.description}</p>
+          <p className="justify" dangerouslySetInnerHTML={{ __html: project.description }}></p>
           {/* <div className="project-tech grid">
             {(project.technologies ?? []).map((technology) => {
               return <div>{technology}</div>;

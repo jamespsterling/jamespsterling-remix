@@ -1,8 +1,8 @@
 import { Link } from '@remix-run/react';
-import { data } from '~/data/portfolio';
+import { Project } from '~/data/types';
 import { ProjectImage } from '.';
 
-export default function Projects() {
+export default function Projects({ projects }: { projects: Project[] }) {
   const kebabCase = (name: string) => name.toLocaleLowerCase().replaceAll(' ', '-');
 
   return (
@@ -15,7 +15,7 @@ export default function Projects() {
       <h2 className="heading">Projects</h2>
       <div className="container">
         <div className="grid">
-          {data.projects.map((project, i) => (
+          {projects.map((project, i) => (
             <Link to={`/projects/${kebabCase(project.id)}`} className="project-link" key={i}>
               <div className="project shadow-large">
                 <div className="project-image">

@@ -32,7 +32,7 @@ export default function Index() {
     <>
       <Lead about={data.about} bgOnly={true} />
       <Breadcrumbs currentPage="Projects" />
-      <Projects />
+      <Projects projects={data.projects} />
     </>
   );
 }

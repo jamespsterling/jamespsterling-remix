@@ -549,7 +549,7 @@ export const data = {
         class: 'york-loader',
       },
       description:
-        "York loader is a SVG animated loader created for optimized loading with some York flare. It's done using CSS stroke-dasharray and stroke-dashoffset with keyframes CSS animation.",
+        "York loader is a SVG animated loader created for optimized loading with some York flare. It's done using CSS <pre>stroke-dasharray</pre> and <pre>stroke-dashoffset</pre> with keyframes CSS animation.",
     },
   ],
 };
