@@ -1,0 +1,230 @@
+@media only screen and (max-width: 750px) {
+  #experience-timeline {
+    &:before,
+    &:after {
+      left: 23px;
+    }
+  }
+
+  .vtimeline-date {
+    width: auto;
+    text-align: left;
+    position: relative;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: 70px;
+  }
+
+  .vtimeline-icon {
+    margin-left: 0;
+  }
+
+  .vtimeline-content {
+    margin-left: 70px;
+  }
+}
+
+@media only screen and (max-width: 1142px) {
+  #projects {
+    .grid-container {
+      margin: 0 10vw;
+    }
+
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+// Medium Devices
+@media only screen and (max-width: 992px) {
+  #lead {
+    padding: 100px 15px 100px;
+  }
+
+  #lead-content {
+    h1 {
+      font-size: 3em;
+    }
+
+    h2 {
+      font-size: 1.75em;
+    }
+  }
+
+  #projects {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+// Small Devices
+@media only screen and (max-width: 768px) {
+  #lead-content {
+    img {
+      width: 15vw;
+      margin: 1rem;
+    }
+  }
+
+  header {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    animation: none;
+    bottom: 0;
+    height: 100%;
+  }
+
+  #mobile-menu-open,
+  #mobile-menu-close {
+    display: block;
+  }
+
+  #menu {
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+
+    li {
+      display: block;
+      margin-bottom: 10px;
+      a {
+        font-size: 1.25rem;
+        background: #1c1c1c;
+        border: 1px solid #363636;
+      }
+    }
+
+    .dark-mode-toggle {
+      display: inline-block;
+      padding: unset;
+      right: unset;
+      position: relative;
+    }
+  }
+
+  #lead-content {
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    a {
+      padding: 10px 20px;
+    }
+  }
+
+  #lead-down {
+    display: none;
+  }
+
+  #contact-form {
+    margin: auto 10%;
+  }
+
+  .education-block {
+    h3,
+    span {
+      float: none;
+    }
+  }
+
+  .project {
+    grid-template-columns: auto;
+    grid-column-gap: 2rem;
+  }
+
+  .project-info {
+    position: relative;
+    margin: 0;
+    top: auto;
+    transform: none;
+    padding-top: 20px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .social {
+    text-align: center;
+  }
+
+  .education-block {
+    grid-template-columns: auto;
+  }
+
+  .vtimeline-content {
+    h3 {
+      font-size: 1.33em;
+      i {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  #projects {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      &.single {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+// Extra Small Devices
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14.5px;
+  }
+
+  #lead-content {
+    img {
+      width: 25vw;
+      margin: 1rem;
+    }
+
+    a {
+      font-size: 0.9em;
+      padding: 5px 10px;
+    }
+  }
+
+  .project {
+    grid-template-columns: auto;
+    grid-column-gap: 2rem;
+  }
+
+  .vtimeline-content {
+    .heading-grid img {
+      max-width: 50px;
+    }
+
+    h3 {
+      font-size: 1.25em;
+      i {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  #projects {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+    }
+  }
+
+  #contact-form {
+    margin: auto 7.5%;
+  }
+}

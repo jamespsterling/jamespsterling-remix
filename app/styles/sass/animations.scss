@@ -1,0 +1,125 @@
+.svg-wrapper {
+  height: 0;
+  margin: 0 auto;
+  position: relative;
+  top: 10%;
+  width: 320px;
+
+  .yellow {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 10 40;
+    stroke: #ffcf2b;
+    animation: 3s 0.2s draw-yellow infinite;
+  }
+
+  .blue {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke-dashoffset: 40;
+    stroke-dasharray: 100 40;
+    stroke: #0076bf;
+    animation: 3s 0.1s draw-blue infinite;
+  }
+
+  .green {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 10 40;
+    stroke: #00c081;
+    animation: 3s 0.3s draw-green infinite;
+  }
+
+  .shadow {
+    animation: 3s 0.5s draw-shadow infinite;
+  }
+}
+
+@keyframes draw-yellow {
+  0% {
+    stroke-dasharray: 0 540;
+    stroke-dashoffset: -75;
+  }
+
+  50% {
+    fill: #ffcf2b;
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    fill: transparent;
+    stroke-dasharray: 0 540;
+    stroke-dashoffset: 5;
+  }
+}
+
+@keyframes draw-blue {
+  0% {
+    stroke-dasharray: 0 540;
+    stroke-dashoffset: -75;
+  }
+
+  50% {
+    fill: #0076bf;
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    fill: transparent;
+    stroke-dasharray: 0 540;
+    stroke-dashoffset: -45;
+  }
+}
+
+@keyframes draw-green {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -75;
+  }
+
+  50% {
+    fill: #00c081;
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    fill: transparent;
+    stroke-dasharray: 0 540;
+    stroke-dashoffset: -175;
+  }
+}
+
+@keyframes draw-shadow {
+  0% {
+    fill: transparent;
+  }
+
+  35% {
+    fill: #bbbdbf;
+  }
+
+  100% {
+    fill: transparent;
+  }
+}
+
+@keyframes blur {
+  0%,
+  90% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+  }
+  50% {
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -o-filter: blur(50px);
+    -ms-filter: blur(50px);
+  }
+}

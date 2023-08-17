@@ -1,0 +1,15 @@
+#about {
+  padding: 3rem 1rem;
+  border-bottom: 1px solid $border;
+
+  h2 {
+    color: $heading;
+  }
+
+  p {
+    color: $text;
+    margin: 0;
+    font-size: 12.5pt;
+    line-height: 1.33;
+  }
+}

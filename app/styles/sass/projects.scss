@@ -1,0 +1,101 @@
+#projects {
+  text-align: center;
+  padding-bottom: 5rem;
+
+  h2 {
+    color: $heading;
+    margin-bottom: 50px;
+  }
+
+  .project-link {
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    transition: 0.2s all;
+
+    &:hover {
+      border: 1px solid var(--accent-color);
+
+      .project {
+        transition: 0.2s all;
+        background: #f2f2f2;
+      }
+    }
+  }
+
+  .grid-container {
+    margin: 0 2vw;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+    &.single {
+      padding: 0rem 3rem 4rem;
+      grid-template-columns: 1fr 2fr;
+      .project-image {
+        img {
+          max-height: 20em;
+        }
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .project {
+    position: relative;
+    height: 100%;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2rem;
+    padding: 1rem;
+  }
+
+  .project-image {
+    img {
+      max-height: 15em;
+      max-width: 20em;
+    }
+  }
+
+  .project-info {
+    h3 {
+      font-size: 1.5em;
+      font-weight: 300;
+      color: $heading;
+      margin: 0 0 15px 0;
+    }
+
+    p {
+      color: $text;
+      margin: 0 0 15px 0;
+      font-size: 0.9em;
+
+      pre {
+        display: inline;
+        color: var(--accent-color);
+      }
+    }
+
+    .overflow {
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .subtle-link {
+      padding: 4px 8px;
+      background: $dark-color;
+      border-radius: 2px;
+    }
+  }
+}
