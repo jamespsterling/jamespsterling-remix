@@ -4,21 +4,29 @@ import { About, Education, Experience, Lead, Skills } from '~/components';
 import { data } from '~/data/portfolio';
 
 export const loader = async () => {
-  return json(data);
+  const { about, experience, education, skills } = data;
+  return json({
+    about,
+    experience,
+    education,
+    technologies: skills
+      ?.map((skillId) => data.technologies.find((technology) => skillId === technology.id) ?? null)
+      .filter((f) => f !== null),
+  });
 };
 
 export default function Index() {
-  const data = useLoaderData<typeof loader>();
+  const { about, experience, education, technologies } = useLoaderData<typeof loader>();
   const [{ data: rootData }] = useMatches();
   const darkMode = rootData.darkMode;
 
   return (
     <>
-      <Lead about={data.about} />
-      <About about={data.about} />
-      <Experience experience={data.experience} darkMode={darkMode === 'enabled'} />
-      <Education education={data.education} />
-      <Skills skills={data.skills} />
+      <Lead about={about} />
+      <About about={about} />
+      <Experience experience={experience} darkMode={darkMode === 'enabled'} />
+      <Education education={education} />
+      <Skills technologies={technologies} />
     </>
   );
 }

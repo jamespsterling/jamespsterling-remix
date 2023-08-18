@@ -1,6 +1,6 @@
 import { json } from '@remix-run/cloudflare';
-import { Link, RouteMatch, useLoaderData, useNavigate, useParams } from '@remix-run/react';
-import { Breadcrumbs, Lead, Project } from '~/components';
+import { Link, RouteMatch, useLoaderData, useNavigate } from '@remix-run/react';
+import { Project, Breadcrumbs, Lead } from '~/components';
 import { data } from '~/data/portfolio';
 
 export const handle = {
@@ -15,18 +15,22 @@ export const handle = {
   ),
 };
 
-export const loader = async () => {
-  return json(data);
+export const loader = async ({ params }) => {
+  const { projectId } = params;
+  const project = data.projects.find((p) => p.id === projectId);
+  const technologies =
+    project?.technologies
+      ?.map((techKey) => data.technologies.find((s) => s.id === techKey) ?? null)
+      .filter((f) => f !== null) ?? [];
+
+  return json({ project, technologies });
 };
 
 export default function Index() {
-  const data = useLoaderData<typeof loader>();
+  const { project, technologies } = useLoaderData<typeof loader>();
   const navigate = useNavigate();
-  const { projectId } = useParams();
 
-  const project = data.projects.find((p) => p.id === projectId);
-
-  if (!project) {
+  if (!project || !technologies) {
     navigate('/projects');
     return null;
   }
