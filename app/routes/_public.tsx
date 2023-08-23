@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { Footer, Menu } from '~/components';
 import { loader as darkMode } from '~/data/loader/dark-mode';
 import Styles from '~/styles/styles.css';
+import Tailwind from '~/styles/tailwind.css';
 
 export const links: LinksFunction = () => [
   {
@@ -25,6 +26,10 @@ export const links: LinksFunction = () => [
     href: '/img/headshot.jpg',
     as: 'image',
     type: 'image/jpg',
+  },
+  {
+    rel: 'stylesheet',
+    href: Tailwind,
   },
   { rel: 'stylesheet', href: Styles },
   {
@@ -65,7 +70,7 @@ export default function Index() {
           toggleDarkMode={async () => {
             fetcher.submit(
               { darkMode: darkMode === 'enabled' ? 'disabled' : 'enabled', pathname },
-              { method: 'post' }
+              { method: 'post' },
             );
           }}
         />

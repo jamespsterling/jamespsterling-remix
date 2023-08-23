@@ -17,8 +17,8 @@ export default function Lead({
           <div className="headshot">
             <img src="/img/headshot.jpg" alt="headshot" loading="eager" />
           </div>
-          <h1 className="animate-pop-in">{about.name}</h1>
-          <h2 className="animate-pop-in">{about.title}</h2>
+          <h1 className="">{about.name}</h1>
+          <h2 className="text-2xl">{about.title}</h2>
         </div>
       )}
 

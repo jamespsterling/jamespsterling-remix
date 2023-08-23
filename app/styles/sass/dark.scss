@@ -39,7 +39,7 @@ body.dark {
   }
 
   .icon-link:hover {
-    color: $base-color;
+    color: darken($base-color, 20%);
     background: none;
     transition: 0s all;
   }

@@ -3,7 +3,13 @@ import { ReactSVG } from 'react-svg';
 import Loading from '~/components/icons/Loading';
 import { Project } from '~/data/types';
 
-export default function Image({ image }: { image: Project['image'] }) {
+export default function Image({
+  image,
+  classes = '',
+}: {
+  image: Project['image'];
+  classes: string;
+}) {
   const [loading, setLoading] = useState(true);
   const imageExtension = (src: string) => src.split('.').pop();
 
@@ -11,7 +17,7 @@ export default function Image({ image }: { image: Project['image'] }) {
     <>
       {imageExtension(image.src) === 'svg' ? (
         <div className="svg-wrapper">
-          <ReactSVG src={image.src} />
+          <ReactSVG src={image.src} className={classes} />
         </div>
       ) : (
         <>
@@ -25,6 +31,7 @@ export default function Image({ image }: { image: Project['image'] }) {
             alt={`${image.src} image`}
             onLoad={() => setLoading(false)}
             loading="lazy"
+            className={`${classes} ${image.classes}`}
           />
           {loading && (
             <div className="loading">

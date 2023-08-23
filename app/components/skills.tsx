@@ -1,16 +1,14 @@
-import { Link } from '@remix-run/react';
-import type { Skills } from '~/data/types';
+import type { Technology } from '~/data/types';
+import { Technology as Tech } from '.';
 
-export default function Skills({ skills }: { skills: Skills }) {
+export default function Skills({ technologies }: { technologies: Technology[] }) {
   return (
     <div id="skills">
       <h2 className="heading">Skills</h2>
       <ul>
-        {skills.map((skill, i) => (
-          <li key={i}>
-            <Link to={skill.link} target="_blank" rel="noopener">
-              {skill.label}
-            </Link>
+        {technologies.map((technology, i) => (
+          <li key={technology.id}>
+            <Tech technology={technology} />
           </li>
         ))}
       </ul>
