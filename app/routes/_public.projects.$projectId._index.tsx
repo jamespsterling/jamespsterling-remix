@@ -1,6 +1,6 @@
 import { json } from '@remix-run/cloudflare';
 import { Link, RouteMatch, useLoaderData, useNavigate } from '@remix-run/react';
-import { Project, Breadcrumbs, Lead } from '~/components';
+import { Article, Breadcrumbs, Lead, Project } from '~/components';
 import { data } from '~/data/portfolio';
 
 export const handle = {
@@ -39,7 +39,8 @@ export default function Index() {
     <>
       <Lead about={data.about} bgOnly={true} narrow={true} />
       <Breadcrumbs currentPage={project.name} />
-      <Project project={project} />
+      <Project project={project} technologies={technologies} />
+      {project?.hasArticle && <Article component={project.id} />}
     </>
   );
 }

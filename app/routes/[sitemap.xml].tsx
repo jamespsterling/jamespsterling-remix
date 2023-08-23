@@ -16,7 +16,7 @@ export const toXmlSitemap = (urls: string[]) => {
   <loc>${url}</loc>
   <lastmod>${data.updated}</lastmod>
 </url>
-  `
+  `,
     )
     .join('\n');
 

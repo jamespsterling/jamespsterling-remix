@@ -1,4 +1,10 @@
-import { fa500px, faGithub, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import {
+  fa500px,
+  faCodepen,
+  faGithub,
+  faLinkedin,
+  faStackOverflow,
+} from '@fortawesome/free-brands-svg-icons';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useLocation, useNavigate } from '@remix-run/react';
@@ -33,6 +39,10 @@ export default function Footer() {
     {
       link: 'https://stackoverflow.com/users/4092449/jamespsterling',
       icon: faStackOverflow,
+    },
+    {
+      link: 'https://codepen.io/jamespsterling',
+      icon: faCodepen,
     },
     {
       link: 'https://www.linkedin.com/in/jamespsterling/',
@@ -85,12 +95,13 @@ export default function Footer() {
       </button>
       <div className="container pt-6 mx-auto">
         <div className="mb-6 flex justify-center">
-          {links.map((entry) => (
+          {links.map((entry, i) => (
             <a
               className="text-neutral-800 dark:text-neutral-200 icon-link mx-2"
               href={entry.link}
               target="_blank"
               rel="noopener"
+              key={i}
             >
               <FontAwesomeIcon icon={entry.icon} size="lg" />
             </a>

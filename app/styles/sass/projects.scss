@@ -109,4 +109,12 @@
       border-radius: 2px;
     }
   }
+
+  .svg-wrapper {
+    height: 0;
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+    width: 320px;
+  }
 }

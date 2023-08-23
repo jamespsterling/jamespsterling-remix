@@ -1,10 +1,16 @@
-import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, useNavigate } from '@remix-run/react';
-import type { Project } from '~/data/types';
+import { useNavigate } from '@remix-run/react';
+import { clsx } from 'clsx';
+import type { Project, Technology } from '~/data/types';
 import { ProjectImage } from '.';
 
-export default function Project({ project }: { project: Project }) {
+export default function Blog({
+  project,
+  technologies,
+}: {
+  project: Project;
+  technologies: Technology[];
+}) {
   const navigate = useNavigate();
 
   if (!project) {
@@ -13,43 +19,68 @@ export default function Project({ project }: { project: Project }) {
   }
 
   return (
-    <div
-      id="projects"
-      className="single"
-      style={{
-        paddingTop: '3rem',
-      }}
-    >
-      <h2 className="heading">{project.name}</h2>
-      <div className="grid single">
-        <div className="project-image">
-          <div className={project.image.class}>
-            <ProjectImage image={project.image} />
-          </div>
-        </div>
-        <div className="project-info">
-          <p className="justify" dangerouslySetInnerHTML={{ __html: project.description }}></p>
-          {project.link && (
-            <div style={{ marginTop: '4rem' }}>
-              <Link to={project.link} target="_blank" rel="noopener">
-                <button className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                  View
-                  <FontAwesomeIcon icon={faExternalLink} size="xs" style={{ paddingLeft: '4px' }} />
-                </button>
-              </Link>
-            </div>
-          )}
+    <article className="max-w-1xl px-6 py-6 mx-auto space-y-16 dark:text-gray-50">
+      <div className="md:container my-2 md:my-24 mx-auto md:px-6">
+        <section className="mb-8 md:mb-32">
+          <div className="mx-auto text-center lg:text-left xl:px-32">
+            <div className="flex grid items-center lg:grid-cols-2">
+              <div className="mb-12 lg:mb-0">
+                <div
+                  className={clsx([
+                    'relative',
+                    'z-[1]',
+                    'block',
+                    'rounded-lg',
+                    'bg-[hsla(0,0%,100%,0.55)]',
+                    'px-6',
+                    'py-12',
+                    'shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]',
+                    'backdrop-blur-[30px]',
+                    'dark:bg-[hsla(0,0%,5%,0.55)]',
+                    'dark:shadow-black/20',
+                    'md:px-12',
+                    'lg:-mr-14',
+                  ])}
+                >
+                  <h2 className="mb-8 text-3xl font-bold">{project.name}</h2>
+                  <h6 className="mb-2 mt-0 text-base font-medium leading-tight text-secondary">
+                    {new Date(project.date).toLocaleDateString('en-us', {
+                      year: 'numeric',
+                      month: 'short',
+                    })}
+                  </h6>
+                  <p
+                    className="mb-8 pb-2 text-neutral-500 dark:text-neutral-300 lg:pb-0"
+                    dangerouslySetInnerHTML={{ __html: project.description }}
+                  ></p>
+                  <div className="mx-auto mb-8 flex flex-col flex-wrap md:flex-row md:justify-evenly lg:space-evenly">
+                    {technologies.map((technology, i) => (
+                      <a
+                        className="mx-auto mb-2 flex items-center md:mx-1 md:mb-2 lg:mb-0"
+                        href={technology.link}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FontAwesomeIcon icon={technology.icon} className="mr-1 h-5 w-5" />
+                        {technology.label}
+                      </a>
+                    ))}
+                  </div>
 
-          {project.date && (
-            <div className="date" style={{ textAlign: 'right' }}>
-              {new Date(project.date).toLocaleDateString('en-us', {
-                year: 'numeric',
-                month: 'short',
-              })}
+                  <p className="mb-0 text-neutral-500 dark:text-neutral-300"></p>
+                </div>
+              </div>
+
+              <div>
+                <ProjectImage
+                  image={project.image}
+                  classes="w-full rounded-lg shadow-lg dark:shadow-black/20"
+                />
+              </div>
             </div>
-          )}
-        </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </article>
   );
 }

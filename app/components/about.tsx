@@ -4,7 +4,7 @@ export default function About({ about }: { about: About }) {
   return (
     <div id="about">
       <div className="container mx-auto">
-        <div className="grid grid-cols-[30vw_1fr] xs:grid-cols-1 gap-1">
+        <div className="grid xs:grid-cols-1 md:grid-cols-[30vw_1fr] gap-1">
           <div className="text-center">
             <h2 className="heading">About Me</h2>
           </div>

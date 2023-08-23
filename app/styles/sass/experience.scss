@@ -116,6 +116,14 @@
     margin: 0;
   }
 
+  a {
+    text-decoration: none;
+
+    &:hover {
+      background: var(--accent-color);
+    }
+  }
+
   .client-logos {
     margin: 8px;
     align-items: center;
