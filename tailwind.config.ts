@@ -1,14 +1,10 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss';
+
+export default {
   content: ['./app/**/*.{js,jsx,ts,tsx}', './node_modules/tw-elements/dist/js/**/*.js'],
   theme: {
-    container: {
-      minWidth: {
-        sm: '460px',
-      },
-    },
     extend: {},
   },
   darkMode: 'class',
   plugins: [require('tw-elements/dist/plugin.cjs')],
-};
+} satisfies Config;

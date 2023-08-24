@@ -1,7 +1,14 @@
+/** @type {import('postcss-load-config').Config} */
 export default {
   plugins: {
-    tailwindcss: {},
+    'postcss-import': {},
     autoprefixer: {},
-    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}),
+    cssnano: {},
+
+    ...(process.env.NODE_ENV === 'production'
+      ? {
+          cssnano: {},
+        }
+      : {}),
   },
 };

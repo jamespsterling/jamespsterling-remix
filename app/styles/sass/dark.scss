@@ -166,7 +166,9 @@ body.dark {
     }
 
     .shadow-large {
-      box-shadow: 0 3px 10px #00000014, 0 3px 6px #00000026;
+      box-shadow:
+        0 3px 10px #00000014,
+        0 3px 6px #00000026;
     }
   }
 

@@ -4,7 +4,7 @@ import { clsx } from 'clsx';
 import type { Project, Technology } from '~/data/types';
 import { ProjectImage } from '.';
 
-export default function Blog({
+export default function Project({
   project,
   technologies,
 }: {

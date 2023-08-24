@@ -1,3 +1,7 @@
+@import '@fontsource/open-sans/index.css';
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+@import './styles.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

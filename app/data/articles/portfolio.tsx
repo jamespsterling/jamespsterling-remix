@@ -33,16 +33,18 @@ export default function Portfolio() {
             <h1 className="mb-4 text-3xl font-bold">Refactor</h1>
 
             <p className="mb-6">
-              Wanting to use my expertise in React and having a colleague mention{' '}
+              Wanting to use my recent admiration for React frameworks and recalling a colleague
+              suggest{' '}
               <a href="https://remix.run/" rel="noreferrer" target="_blank">
                 Remix
               </a>
               , I took to diving head deep into seeing what performance optimizations it might
-              afford over a vanilla React content site.
+              afford over a vanilla React or Next.js content site.
             </p>
 
             <p className="mb-6">
-              Cloudflare publishes some{' '}
+              Getting up and running with Cloudflare Pages takes just a couple minutes–cloudflare
+              publishes some{' '}
               <a
                 href="ttps://developers.cloudflare.com/pages/framework-guides/deploy-a-remix-site/"
                 rel="noreferrer"
@@ -56,10 +58,11 @@ export default function Portfolio() {
             <h1 className="mb-4 text-3xl font-bold">Setup</h1>
 
             <p className="mb-6">
-              Since V1 was built on mostly HTML & CSS, migrating the bulk of the content was simple
-              using Remix. After creating a new repo and linking that repo to Cloudflare via Github,
-              CI/CD is basically setup thereafter and by default will auto-deploy anything pushed to{' '}
-              <span className="font-mono text-orange-700 dark:text-orange-500">main</span>.
+              Since version 1 was built on mostly HTML & CSS, migrating the bulk of the content was
+              simple using Remix. After creating a new repo and linking that repo to Cloudflare via
+              Github, CI/CD is basically setup thereafter and by default will auto-deploy anything
+              pushed to <span className="font-mono text-orange-700 dark:text-orange-500">main</span>
+              .
             </p>
 
             <h1 className="mb-4 text-3xl font-bold">Optimization</h1>
@@ -67,18 +70,20 @@ export default function Portfolio() {
             <h1 className="mb-4 text-2xl font-bold">Styles</h1>
 
             <p className="mb-6">
-              Since most of my CSS was written in a single SASS file, I wanted to leverage better
-              organization by modularizing my SASS. Doing this helps tremendously with the cognitive
-              load of find and updating parts of my styles that apply to only a single component or
-              page of your app.
+              Since most of my styles were written in a single SASS file, I wanted to leverage
+              better organization by modularizing my SASS. Doing this helps tremendously with the
+              cognitive load of find and updating styles that apply to only a single component or
+              page of my app.
             </p>
 
             <h1 className="mb-4 text-2xl font-bold">Assets</h1>
 
             <p className="mb-6">
-              Asset loading fonts & icons can be greatly improved by self-hosting said assets. By
-              moving assets like fonts local to your application, not only can this help reduce
-              external requests during or after rendering, it can aid in eliminating{' '}
+              Asset loading has long been something you might link out to as a 3rd-party CDN host
+              which comes with security concerns and risk for downtime. Asset loading fonts & icons
+              can be greatly improved by self-hosting said assets. By moving assets like fonts local
+              to your application, not only can this help reduce external requests during or after
+              rendering, it can aid in eliminating{' '}
               <a
                 href="https://www.afasterweb.com/2015/08/29/what-the-jank/"
                 rel="noreferrer"
@@ -166,9 +171,10 @@ export default function Portfolio() {
             <h1 className="mb-4 text-2xl font-bold">Wrapping up</h1>
 
             <p className="mb-6">
-              Testing with lighthouse shows eliminating reducing network requests, improved
-              bundling, and reducing network requests have a very real impact on scoring, which in
-              turn is important when search engines rank your site.
+              Testing with lighthouse shows eliminating render-blocking requests, improved bundling,
+              and reducing the number of network requests has a very real impact on scoring, which
+              has a user perceived impact on performance as well as weighing heavily on how search
+              engines rank your site.
             </p>
 
             <img
@@ -182,7 +188,7 @@ export default function Portfolio() {
               Overall the initial migration to Remix, self-hosted assets, and the Cloudflare Pages
               platform makes maintaining my portfolio a positive practice and treating the project
               as I would any other web application means I can continue to iterate with the latest
-              technology & optimizations while learning new things.
+              technology & optimizations while learning new skills and techniques.
             </p>
           </div>
         </section>

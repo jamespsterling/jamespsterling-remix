@@ -1,11 +1,8 @@
-import FontStyles from '@fontsource/open-sans/index.css';
-import IconStyles from '@fortawesome/fontawesome-svg-core/styles.css';
 import { type LinksFunction, type V2_MetaFunction } from '@remix-run/cloudflare';
 import { Outlet, useFetcher, useLoaderData, useLocation } from '@remix-run/react';
 import { useEffect } from 'react';
 import { Footer, Menu } from '~/components';
 import { loader as darkMode } from '~/data/loader/dark-mode';
-import Styles from '~/styles/styles.css';
 import Tailwind from '~/styles/tailwind.css';
 
 export const links: LinksFunction = () => [
@@ -30,15 +27,6 @@ export const links: LinksFunction = () => [
   {
     rel: 'stylesheet',
     href: Tailwind,
-  },
-  { rel: 'stylesheet', href: Styles },
-  {
-    rel: 'stylesheet',
-    href: FontStyles,
-  },
-  {
-    rel: 'stylesheet',
-    href: IconStyles,
   },
 ];
 

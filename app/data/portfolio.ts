@@ -624,7 +624,7 @@ export const data = {
         src: '/img/projects/crash-cart-frame.png',
         type: 'image/png',
         height: 300,
-        classes: 'mx-auto max-w-sm',
+        classes: 'mx-auto max-w-sm shadow-none',
       },
       technologies: ['angular-js', 'ionic-framework', 'ocr'],
       description:
@@ -638,7 +638,7 @@ export const data = {
         src: '/img/projects/iot-mobile-app.png',
         type: 'image/png',
         height: 300,
-        classes: 'mx-auto max-w-sm',
+        classes: 'mx-auto max-w-sm shadow-none',
       },
       technologies: ['angular-js', 'ionic-framework', 'twilio'],
       description:
@@ -786,7 +786,7 @@ export const data = {
         class: 'york-loader',
       },
       description:
-        "York loader is a SVG animated loader created for optimized loading with some York flare. It's done using CSS <pre>stroke-dasharray</pre> and <pre>stroke-dashoffset</pre> with keyframes CSS animation.",
+        'York loader is a SVG animated loader created for optimized loading with some York flare. It\'s done using CSS <span class="font-mono text-orange-700 dark:text-orange-500">stroke-dasharray</span> and <span class="font-mono text-orange-700 dark:text-orange-500">stroke-dashoffset</span> with keyframes CSS animation.',
     },
   ],
 };
