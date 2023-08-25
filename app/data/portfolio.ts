@@ -40,6 +40,7 @@ import {
   faWandMagicSparkles,
 } from '@fortawesome/free-solid-svg-icons';
 import { lazy } from 'react';
+import { linkStyles } from '~/styles/constants';
 
 export const data = {
   updated: '2023-08-15T13:44:06.871Z',
@@ -84,9 +85,8 @@ export const data = {
         'Front-end & Microservice focused engineering of enterprise web experiences using <b>Angular</b> 12-13, <b>Nx</b>, <b>NgRx</b> (Angular Redux), <b>RxJs</b>, <b>Jest</b>, <b>Spectator</b>, <b>HAPI</b>, and Adobe Adobe Experience Manager (AEM).',
         'Leads colleagues in technology best practices for core technologies & processes with in-depth code reviews, coaching, and pair programming.',
         'Works closely with Product, Architecture, Backend, Security, and UI/UX teams to ensure delivery of highly usable, secure customer-facing e-commerce experiences across desktop and mobile.',
-        "Partners across teams to deliver T-Mobile's TVision <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://web.archive.org/web/20220604032641/https:/www.t-mobile.com/tv-streaming'>marketing and upper-funnel</a> user-facing application.",
-        "Partners across teams to deliver T-Mobile's TVision marketing and upper-funnel e-commerce experience.",
-        "Leads the development effort for migration to next-gen <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://www.metrobyt-mobile.com/cart'>cart and checkout experiences</a> for Metro by T-Mobile.",
+        `Partners across teams to deliver T-Mobile's TVision <a class="${linkStyles}" target='_blank' rel='noopener noreferrer' href='https://web.archive.org/web/20220604032641/https:/www.t-mobile.com/tv-streaming'>marketing and upper-funnel</a> user-facing application.`,
+        `Leads the development effort for migration to next-gen <a class="${linkStyles}" target='_blank' rel='noopener noreferrer' href='https://www.metrobyt-mobile.com/cart'>cart and checkout experiences</a> for Metro by T-Mobile.`,
         'Leads the team development effort to migration of cart and checkout experiences on next-gen platform for Metro by T-Mobile.',
       ],
       link: 'https://nortal.com/',
@@ -104,8 +104,8 @@ export const data = {
       description: [
         'Full-stack development focused on building unique solutions for our clients that includes PHP (<b>Laravel</b> & custom), HTML5, CSS Preprocessors (<b>SASS</b>), Front-end/Back-end Node/JS (<b>Ractive.js</b>, <b>React-native</b>, jQuery, <b>TypeScript</b>, <b>HAPI</b>, <b>Joi</b>, <b>ExpressJs</b>, ES6, and more), Build & Task runners (<b>Grunt</b>, <b>Webpack</b>), UI Unit and Automation testing (<b>PHPUnit</b>, <b>Ruby</b>, <b>Cucumber</b>, <b>Selenium</b>), <b>Ionic</b> (Angular 7/8) hybrid mobile app development, and Sitecore (C# XP 9) development and support, containerization using <b>Docker</b>/Docker-compose, cloud platform operations support and configuration on <b>Azure</b> and <b>AWS</b>.',
         'Spearheads <b>test-driven development</b> configuration and paved roads by leveraging Unit testing as well as QA Automation testing with Ruby, Cucumber and Selenium.',
-        "Played a key role in advancing <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://web.archive.org/web/20200816235044/https:/iotinactionevents.com'>Microsoft's Iot in Action Events</a> technology orchestration including Matchmaking platform, <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://easci.com/case-study/microsoft-iot/'>Electron based check-in app</a>, and high-volume email campaigns. ",
-        "Designed, built, and deployed <a class='external-link' target='_blank' rel='noopener noreferrer' href='https://steprimo.com/iphone/br/app/1478820746/IoT-in-Action-Events/'>Ionic (AngularJS) hybrid mobile app</a> from the ground up for Microsoft as a companion for IoT in Action Event conference series.",
+        `Played a key role in advancing <a class="${linkStyles}" target='_blank' rel='noopener noreferrer' href='https://web.archive.org/web/20200816235044/https:/iotinactionevents.com'>Microsoft's Iot in Action Events</a> technology orchestration including Matchmaking platform, <a class="${linkStyles}" target='_blank' rel='noopener noreferrer' href='https://easci.com/case-study/microsoft-iot/'>Electron based check-in app</a>, and high-volume email campaigns. `,
+        `Designed, built, and deployed <a class="${linkStyles}" target='_blank' rel='noopener noreferrer' href='https://steprimo.com/iphone/br/app/1478820746/IoT-in-Action-Events/'>Ionic (AngularJS) hybrid mobile app</a> from the ground up for Microsoft as a companion for IoT in Action Event conference series.`,
         'Maintained and updated web-based presentation platform for Bing using reveal.js and Ractive.js.',
         'Designed, built, and deployed web-based Email platform-agnostic signature generator for GoDaddy and GoDaddy Guides.',
       ],
@@ -640,6 +640,7 @@ export const data = {
         height: 300,
         classes: 'mx-auto max-w-sm shadow-none',
       },
+      hasArticle: true,
       technologies: ['angular-js', 'ionic-framework', 'twilio'],
       description:
         'Ionic v4 Angular 8 hybrid built as a companion to iotinactionevents.com, with quick access to event details, ticket for event entry, event-centric push notifications, QR contact scan & share, and dynamic content publishing platform. This app is deployed to Android and iOS using Ionic and Apache Cordova.',

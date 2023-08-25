@@ -81,14 +81,6 @@ a {
   }
 }
 
-#experience {
-  a {
-    &.external-link {
-      text-decoration: underline var(--accent-color);
-    }
-  }
-}
-
 .justify {
   text-align: justify;
 }

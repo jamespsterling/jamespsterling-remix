@@ -44,14 +44,6 @@ body.dark {
     transition: 0s all;
   }
 
-  #experience {
-    a {
-      &.external-link {
-        text-decoration: underline $base-color;
-      }
-    }
-  }
-
   #lead {
     background-image: url(/img/lead-bg-8.jpg);
     background-position: bottom;

@@ -1,10 +1,12 @@
+import { linkStyles } from '~/styles/constants';
+
 export default function Portfolio() {
   // https://tailwind-elements.com/docs/standard/designblocks/content
   return (
     <article className="max-w-1xl px-6 py-6 mx-auto space-y-16 dark:text-gray-50">
       <div className="md:container my-2 mx-auto md:px-6">
         <section className="mb-8 md:mb-32">
-          <div className="mx-auto text-left lg:text-left xl:px-32">
+          <div className="mx-auto text-left lg:text-left xl:px-32 text-neutral-700">
             <h1 className="mb-4 text-4xl font-bold">Case Study</h1>
 
             <p className="mb-6">
@@ -13,6 +15,7 @@ export default function Portfolio() {
                 href="https://github.com/jamespsterling/jamespsterling.github.io/blob/master/index.html"
                 rel="noreferrer"
                 target="_blank"
+                className={linkStyles}
               >
                 HTML, JavaScript, & CSS
               </a>{' '}
@@ -21,6 +24,7 @@ export default function Portfolio() {
                 href="https://github.com/jamespsterling/jamespsterling.github.io/blob/master/gulpfile.js"
                 rel="noreferrer"
                 target="_blank"
+                className={linkStyles}
               >
                 Grunt
               </a>{' '}
@@ -35,7 +39,7 @@ export default function Portfolio() {
             <p className="mb-6">
               Wanting to use my recent admiration for React frameworks and recalling a colleague
               suggest{' '}
-              <a href="https://remix.run/" rel="noreferrer" target="_blank">
+              <a href="https://remix.run/" rel="noreferrer" target="_blank" className={linkStyles}>
                 Remix
               </a>
               , I took to diving head deep into seeing what performance optimizations it might
@@ -49,6 +53,7 @@ export default function Portfolio() {
                 href="ttps://developers.cloudflare.com/pages/framework-guides/deploy-a-remix-site/"
                 rel="noreferrer"
                 target="_blank"
+                className={linkStyles}
               >
                 excellent documentation{' '}
               </a>{' '}
@@ -88,6 +93,7 @@ export default function Portfolio() {
                 href="https://www.afasterweb.com/2015/08/29/what-the-jank/"
                 rel="noreferrer"
                 target="_blank"
+                className={linkStyles}
               >
                 "screen jank"
               </a>
@@ -109,6 +115,7 @@ export default function Portfolio() {
                 href="https://fontsource.org/docs/getting-started/introduction#1-performance"
                 rel="noreferrer"
                 target="_blank"
+                className={linkStyles}
               >
                 optimization with self-hosting fonts
               </a>
@@ -141,7 +148,12 @@ export default function Portfolio() {
 
             <p className="mb-6">
               Using{' '}
-              <a href="https://esbuild.github.io/analyze/" rel="noreferrer" target="_blank">
+              <a
+                href="https://esbuild.github.io/analyze/"
+                rel="noreferrer"
+                target="_blank"
+                className={linkStyles}
+              >
                 esbuild Bundle Size Analyzer
               </a>{' '}
               we can see where the largest modules might be impacting the overall bundle size. One

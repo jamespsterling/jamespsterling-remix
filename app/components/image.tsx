@@ -8,7 +8,7 @@ export default function Image({
   classes = '',
 }: {
   image: Project['image'];
-  classes: string;
+  classes?: string;
 }) {
   const [loading, setLoading] = useState(true);
   const imageExtension = (src: string) => src.split('.').pop();

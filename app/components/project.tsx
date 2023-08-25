@@ -56,6 +56,7 @@ export default function Project({
                   <div className="mx-auto mb-8 flex flex-col flex-wrap md:flex-row md:justify-evenly lg:space-evenly">
                     {technologies.map((technology, i) => (
                       <a
+                        key={i}
                         className="mx-auto mb-2 flex items-center md:mx-1 md:mb-2 lg:mb-0"
                         href={technology.link}
                         target="_blank"

@@ -12,6 +12,7 @@ import { faLaptopCode } from '@fortawesome/free-solid-svg-icons/faLaptopCode';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactSVG } from 'react-svg';
 import type { Experience } from '~/data/types';
+import { linkStyles } from '~/styles/constants';
 
 library.add(faReact, faAngular, faPhp, faNodeJs, faCode, faLaptopCode);
 
@@ -39,7 +40,7 @@ export default function Experience({
                 <div className="heading-grid">
                   <div>
                     <h3>
-                      <a href={job.link} target="_blank" rel="noopener">
+                      <a href={job.link} target="_blank" rel="noopener" className={linkStyles}>
                         {job.employer}
                         <FontAwesomeIcon icon={faExternalLinkAlt} size="2xs" />
                       </a>
@@ -55,10 +56,10 @@ export default function Experience({
                   )}
                 </div>
 
-                <ul>
+                <ul className="list-disc list-outside ml-6">
                   {job.description.map((entry, j) => (
                     <li key={j}>
-                      <div dangerouslySetInnerHTML={{ __html: entry }} />
+                      <span dangerouslySetInnerHTML={{ __html: entry }} />
                     </li>
                   ))}
                 </ul>
@@ -70,7 +71,7 @@ export default function Experience({
                         <div key={k}>
                           <img src={clientLogo} alt={`${clientLogo} logo`} />
                         </div>
-                      )
+                      ),
                     )}
                   </div>
                 )}
