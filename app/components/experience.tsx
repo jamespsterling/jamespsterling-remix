@@ -11,6 +11,7 @@ import { faLaptopCode } from '@fortawesome/free-solid-svg-icons/faLaptopCode';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactSVG } from 'react-svg';
+import { Image } from 'remix-image';
 import type { Experience } from '~/data/types';
 import { linkStyles } from '~/styles/constants';
 
@@ -69,7 +70,19 @@ export default function Experience({
                     {(darkMode ? job.clientLogos.dark : job.clientLogos.light).map(
                       (clientLogo, k) => (
                         <div key={k}>
-                          <img src={clientLogo} alt={`${clientLogo} logo`} />
+                          {/* <img src={clientLogo} alt={`${clientLogo} logo`} /> */}
+                          <Image
+                            src={clientLogo}
+                            loaderUrl="/api/image"
+                            responsive={[
+                              {
+                                size: {
+                                  width: 100,
+                                  height: 100,
+                                },
+                              },
+                            ]}
+                          />
                         </div>
                       ),
                     )}
