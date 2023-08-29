@@ -109,7 +109,7 @@ export const data = {
     {
       employer: 'Nortal',
       title: 'Lead Software Development Engineer',
-      time: 'October 2020 - May 2022',
+      time: 'Oct 2020 - May 2022',
       icon: 'fab fa-angular',
       description: [
         'Front-end & Microservice focused engineering of enterprise web experiences using <b>Angular</b> 12-13, <b>Nx</b>, <b>NgRx</b> (Angular Redux), <b>RxJs</b>, <b>Jest</b>, <b>Spectator</b>, <b>HAPI</b>, and Adobe Adobe Experience Manager (AEM).',
@@ -129,7 +129,7 @@ export const data = {
     {
       employer: 'Extreme Arts + Sciences',
       title: 'Senior Full Stack Developer',
-      time: 'October 2018 - October 2020',
+      time: 'Oct 2018 - Oct 2020',
       icon: 'fab fa-node-js',
       description: [
         'Full-stack development focused on building unique solutions for our clients that includes PHP (<b>Laravel</b> & custom), HTML5, CSS Preprocessors (<b>SASS</b>), Front-end/Back-end Node/JS (<b>Ractive.js</b>, <b>React-native</b>, jQuery, <b>TypeScript</b>, <b>HAPI</b>, <b>Joi</b>, <b>ExpressJs</b>, ES6, and more), Build & Task runners (<b>Grunt</b>, <b>Webpack</b>), UI Unit and Automation testing (<b>PHPUnit</b>, <b>Ruby</b>, <b>Cucumber</b>, <b>Selenium</b>), <b>Ionic</b> (Angular 7/8) hybrid mobile app development, and Sitecore (C# XP 9) development and support, containerization using <b>Docker</b>/Docker-compose, cloud platform operations support and configuration on <b>Azure</b> and <b>AWS</b>.',
@@ -161,7 +161,7 @@ export const data = {
     {
       employer: 'York',
       title: 'Full Stack Developer',
-      time: 'January 2014 - October 2018',
+      time: 'Jan 2014 - Oct 2018',
       icon: 'fas fa-laptop-code',
       description: [
         'Works with web technologies such as <b>HTML5</b>, <b>CSS3</b>, Responsive Web Design, <b>PHP</b> (Laravel, Joomla, Wordpress), JavaScript (<b>AngularJS</b> 1-2, <b>jQuery</b>, <b>jQuery UI</b>,  <b>RivetsJS</b>, MVVM concepts), <b>LAMP Stack</b> administration, <b>MySQL</b>, <b>MSSQL</b>, <b>MongoDB</b>, <b>Apache Solr</b>, Task Runners (<b>Grunt</b>, <b>Gulp</b>, <b>Yarn</b>), <b>ASP.Net</b> Webforms, MVC, & <b>Entity Framework</b>.',
@@ -178,7 +178,7 @@ export const data = {
     {
       employer: 'MEDTRON',
       title: 'Application Programmer / Analyst',
-      time: 'April 2013 - January 2014',
+      time: 'Apr 2013 - Jan 2014',
       icon: 'fab fa-php',
       description: [
         'Works with leading edge web technologies such as <b>HTML5</b>, <b>CSS3</b>, <b>PHP</b>, <b>Zend MVC</b>, <b>MySQL</b>, PDO DB Abstraction with <b>Doctrine 2 ORM</b>/DBAL.',
@@ -190,7 +190,7 @@ export const data = {
     {
       employer: 'York Risk Services Group, Inc.',
       title: 'Software Engineer I & II',
-      time: 'February 2009 - April 2013',
+      time: 'Feb 2009 - Apr 2013',
       icon: 'fas fa-code',
       description: [
         'Works with Open Source technologies such as <b>JavaScript</b>, <b>jQuery</b>, <b>jQueryUI</b>, <b>PHP</b>, <b>MySQL</b>, <b>XML</b>, <b>HTML</b>, <b>CSS</b>, and champions DX command-line tooling & scripting with <b>Perl</b>.',
