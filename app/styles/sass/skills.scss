@@ -4,7 +4,6 @@
 
   h2 {
     color: $heading;
-    margin-bottom: 50px;
   }
 
   ul {
@@ -42,5 +41,11 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #skills ul li a {
+    font-size: 0.9rem;
   }
 }

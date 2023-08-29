@@ -84,7 +84,7 @@ export const data = {
         >
           Amazon Web Services Training and Certification
         </a>`,
-      date: 'September 22, 2021',
+      date: 'Sept 2021',
       description:
         'Earners of this badge are AWS Partners who have developed fundamental, technical knowledge of AWS cloud computing, global infrastructure, services, solutions, migration and security.',
     },

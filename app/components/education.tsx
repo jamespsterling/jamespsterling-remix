@@ -3,7 +3,7 @@ import type { Education } from '~/data/types';
 export default function Education({ education }: { education: Education }) {
   return (
     <div id="education">
-      <h2 className="heading">Education</h2>
+      <h2 className="heading mb-8 md:mb-10">Education</h2>
       <div className="education-block shadow-large">
         <div className="education-header">
           <img src={education.university.logo.src} alt={education.university.logo.alt} />

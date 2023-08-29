@@ -3,7 +3,7 @@ import type { Certifications } from '~/data/types';
 export default function Certifications({ certifications }: { certifications: Certifications }) {
   return (
     <div id="certifications">
-      <h2 className="heading">Certifications</h2>
+      <h2 className="heading mb-8 md:mb-10">Certifications</h2>
       {certifications.map((certification, i) => (
         <div className="certification-block shadow-large" key={i}>
           <div className="certification-header">

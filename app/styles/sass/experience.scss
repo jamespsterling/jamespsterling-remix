@@ -139,8 +139,8 @@
 .vtimeline-icon {
   position: relative;
   color: #fff;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   background: var(--base-color);
   border-radius: 50%;
   float: left;
@@ -148,7 +148,7 @@
   margin-left: 167px;
 
   svg {
-    vertical-align: -20px !important;
+    margin-top: 0.7rem;
   }
 }
 
@@ -161,4 +161,52 @@
   font-weight: 300;
   font-size: 0.9rem;
   color: #374054;
+}
+
+@media only screen and (max-width: 750px) {
+  #experience-timeline {
+    padding-right: 0;
+
+    &:before,
+    &:after {
+      left: 14px;
+    }
+
+    .client-logos {
+      div {
+        flex: 0 0 calc(25% - 1vw);
+        margin: 4px 12px;
+      }
+    }
+  }
+
+  .vtimeline-date {
+    width: auto;
+    text-align: left;
+    position: relative;
+    margin-bottom: 14px;
+    display: block;
+    margin-left: 42px;
+    top: 5px;
+  }
+
+  .vtimeline-icon {
+    margin-left: 0;
+  }
+
+  .vtimeline-content {
+    margin-left: 40px;
+    padding: 12px;
+  }
+
+  .vtimeline-icon {
+    width: 2rem;
+    height: 2rem;
+
+    svg {
+      height: 1rem;
+      width: 1rem;
+      margin-top: 0.3rem;
+    }
+  }
 }

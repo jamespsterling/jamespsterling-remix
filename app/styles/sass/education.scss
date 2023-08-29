@@ -8,7 +8,6 @@
   h2 {
     color: #fff;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
 
     &:after {
       background: #454545;
@@ -25,7 +24,7 @@
   background: #fff;
   border-radius: 3px;
   display: grid;
-  grid-template-columns: auto 20%;
+  grid-template-columns: auto min-content;
 
   h3 {
     font-weight: 300;
@@ -33,9 +32,11 @@
     color: $heading;
   }
 
-  span {
+  .education-date {
     color: $text;
+    font-size: 0.9rem;
     text-align: right;
+    width: max-content;
   }
 
   h4 {
@@ -77,6 +78,28 @@
       display: inline-block;
       vertical-align: top;
       padding-left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .education-block {
+    .education-header img {
+      height: 96px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .education-block {
+    grid-template-columns: auto;
+
+    .education-header img {
+      height: 64px;
+    }
+    .education-date {
+      width: initial;
+      margin-top: 12px;
     }
   }
 }
