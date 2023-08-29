@@ -1,9 +1,9 @@
-#education {
+#certifications {
   padding: 50px 15px 20px 15px;
-  border-bottom: 1px solid #585858;
+  border-bottom: 1px solid $border;
   text-align: center;
-  background: #2b4f3a;
-  background: linear-gradient(355deg, #45a07a 0%, #2b4f3a 100%);
+  background: #004056;
+  background: linear-gradient(189deg, #004056 0%, #dadada 100%);
 
   h2 {
     color: #fff;
@@ -16,7 +16,7 @@
   }
 }
 
-.education-block {
+.certification-block {
   max-width: 800px;
   margin: 0 auto 30px auto;
   padding: 15px;
@@ -29,12 +29,14 @@
 
   h3 {
     font-weight: 300;
+    font-size: 1.15rem;
     margin: 0;
     color: $heading;
   }
 
   span {
     color: $text;
+    font-size: 0.9rem;
     text-align: right;
   }
 
@@ -42,15 +44,15 @@
     color: $text;
     clear: both;
     font-weight: 300;
-    font-size: 1.15rem;
-  }
-
-  h5 {
-    color: lighten($text, 10%);
 
     a {
       color: inherit;
     }
+  }
+
+  h5 {
+    font-size: 0.9rem;
+    color: lighten($text, 10%);
   }
 
   p,
@@ -64,7 +66,7 @@
     padding: 0 0 0 15px;
   }
 
-  .education-header {
+  .certification-header {
     display: grid;
     align-items: center;
     grid-template-columns: auto 1fr;
@@ -74,7 +76,7 @@
       height: 128px;
     }
 
-    .education-text-header {
+    .certification-text-header {
       display: inline-block;
       vertical-align: top;
       padding-left: 10px;

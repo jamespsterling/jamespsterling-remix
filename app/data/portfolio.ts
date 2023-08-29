@@ -39,7 +39,6 @@ import {
   faVial,
   faWandMagicSparkles,
 } from '@fortawesome/free-solid-svg-icons';
-import { lazy } from 'react';
 import { linkStyles } from '~/styles/constants';
 
 export const data = {
@@ -52,13 +51,44 @@ export const data = {
   education: {
     university: {
       name: 'Southeastern Louisiana University',
+      link: 'https://www.southeastern.edu',
+      logo: {
+        src: '/img/education/athletics-lion-spirit.png',
+        alt: 'SELU Logo',
+      },
       degree: 'Bachelor of Science in Computer Science',
-      concentration: 'Scientific Concentration',
+      concentration: `Scientific Concentration / <a 
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.abet.org/"
+        >
+          ABET-Accredited
+        </a>`,
     },
-    dates: 'Aug 2005 - Dec 2010',
+    dates: '2005 - 2010',
     project:
-      'Create a ride-sharing app to help link communities of students with others to work out riding sharing for economical purposes.',
+      'Create a ride-sharing app to help link communities of students with others students to organize ride-sharing to save money and alleviate strain on the environment. ',
   },
+  certifications: [
+    {
+      name: 'AWS Partner: Accreditation (Technical)',
+      link: 'https://www.credly.com/badges/903f4009-a4cc-4c7f-921d-1ef9e4279387',
+      badge: {
+        src: '/img/certifications/aws-partner-accreditation-technical.png',
+        alt: 'AWS Partner Badge',
+      },
+      issued: `Issued by <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.credly.com/org/amazon-web-services"
+        >
+          Amazon Web Services Training and Certification
+        </a>`,
+      date: 'September 22, 2021',
+      description:
+        'Earners of this badge are AWS Partners who have developed fundamental, technical knowledge of AWS cloud computing, global infrastructure, services, solutions, migration and security.',
+    },
+  ],
   experience: [
     {
       employer: 'Lattice',
@@ -146,7 +176,7 @@ export const data = {
       },
     },
     {
-      employer: 'MEDTRON Software Intelligence Corporation',
+      employer: 'MEDTRON',
       title: 'Application Programmer / Analyst',
       time: 'April 2013 - January 2014',
       icon: 'fab fa-php',

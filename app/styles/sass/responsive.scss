@@ -136,8 +136,7 @@
   }
 
   .education-block {
-    h3,
-    span {
+    h3 {
       float: none;
     }
   }
@@ -161,10 +160,6 @@
 
   .social {
     text-align: center;
-  }
-
-  .education-block {
-    grid-template-columns: auto;
   }
 
   .vtimeline-content {

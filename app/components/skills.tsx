@@ -7,7 +7,7 @@ export default function Skills({ technologies }: { technologies: Technology[] })
       <h2 className="heading">Skills</h2>
       <ul>
         {technologies.map((technology, i) => (
-          <li key={technology.id}>
+          <li key={i}>
             <Tech technology={technology} />
           </li>
         ))}

@@ -7,7 +7,7 @@ export default function Portfolio() {
       <div className="md:container my-2 mx-auto md:px-6">
         <section className="mb-8 md:mb-32">
           <div className="mx-auto text-left lg:text-left xl:px-32 text-neutral-700">
-            <h1 className="mb-4 text-4xl font-bold">Case Study</h1>
+            <h1 className="mb-4 text-4xl font-normal">Case Study</h1>
 
             <p className="mb-6">
               Version 1 of my portfolio site was built on traditional{' '}
@@ -34,7 +34,7 @@ export default function Portfolio() {
               Cloudflare and the Edge Network.
             </p>
 
-            <h1 className="mb-4 text-3xl font-bold">Refactor</h1>
+            <h1 className="mb-4 text-3xl font-normal">Refactor</h1>
 
             <p className="mb-6">
               Wanting to use my recent admiration for React frameworks and recalling a colleague
@@ -60,7 +60,7 @@ export default function Portfolio() {
               on setting up a new Remix app ready for Cloudflare Pages.
             </p>
 
-            <h1 className="mb-4 text-3xl font-bold">Setup</h1>
+            <h1 className="mb-4 text-3xl font-normal">Setup</h1>
 
             <p className="mb-6">
               Since version 1 was built on mostly HTML & CSS, migrating the bulk of the content was
@@ -70,9 +70,9 @@ export default function Portfolio() {
               .
             </p>
 
-            <h1 className="mb-4 text-3xl font-bold">Optimization</h1>
+            <h1 className="mb-4 text-3xl font-normal">Optimization</h1>
 
-            <h1 className="mb-4 text-2xl font-bold">Styles</h1>
+            <h1 className="mb-4 text-2xl font-normal">Styles</h1>
 
             <p className="mb-6">
               Since most of my styles were written in a single SASS file, I wanted to leverage
@@ -81,7 +81,7 @@ export default function Portfolio() {
               page of my app.
             </p>
 
-            <h1 className="mb-4 text-2xl font-bold">Assets</h1>
+            <h1 className="mb-4 text-2xl font-normal">Assets</h1>
 
             <p className="mb-6">
               Asset loading has long been something you might link out to as a 3rd-party CDN host
@@ -131,7 +131,7 @@ export default function Portfolio() {
               </p>
             </blockquote>
 
-            <h1 className="mb-4 text-2xl font-bold">Bundling</h1>
+            <h1 className="mb-4 text-2xl font-normal">Bundling</h1>
 
             <p className="mb-6">
               Many front-end engineers understanding the importance of reducing the number and size
@@ -144,7 +144,7 @@ export default function Portfolio() {
               app is deployed in production.
             </p>
 
-            <h1 className="mb-4 text-1xl font-bold">Webpack compilation</h1>
+            <h1 className="mb-4 text-1xl font-normal">Webpack compilation</h1>
 
             <p className="mb-6">
               Using{' '}
@@ -180,7 +180,7 @@ export default function Portfolio() {
               alt=""
             />
 
-            <h1 className="mb-4 text-2xl font-bold">Wrapping up</h1>
+            <h1 className="mb-4 text-2xl font-normal">Wrapping up</h1>
 
             <p className="mb-6">
               Testing with lighthouse shows eliminating render-blocking requests, improved bundling,
@@ -195,7 +195,7 @@ export default function Portfolio() {
               alt=""
             />
 
-            <h1 className="mb-4 text-3xl font-bold">Closing</h1>
+            <h1 className="mb-4 text-3xl font-normal">Closing</h1>
             <p>
               Overall the initial migration to Remix, self-hosted assets, and the Cloudflare Pages
               platform makes maintaining my portfolio a positive practice and treating the project

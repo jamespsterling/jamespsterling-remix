@@ -11,20 +11,21 @@
     Gulp and send to the /css folder which is then loaded on the page.
 */
 
-@import 'colors.scss';
-@import 'mixins.scss';
-@import 'dark.scss';
-@import 'header.scss';
-@import 'fireflies.scss';
-@import 'lead.scss';
-@import 'about.scss';
-@import 'experience.scss';
-@import 'education.scss';
-@import 'skills.scss';
-@import 'projects.scss';
-@import 'contact.scss';
-@import 'animations.scss';
-@import 'responsive.scss';
+@import 'colors';
+@import 'mixins';
+@import 'dark';
+@import 'header';
+@import 'fireflies';
+@import 'lead';
+@import 'about';
+@import 'experience';
+@import 'education';
+@import 'certifications';
+@import 'skills';
+@import 'projects';
+@import 'contact';
+@import 'animations';
+@import 'responsive';
 
 html,
 body {
@@ -34,6 +35,7 @@ body {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
 
