@@ -117,12 +117,13 @@
     justify-content: center;
 
     div {
-      flex: 0 0 calc(25% - 20px);
-      margin: 4px 10px;
+      flex: 0 0 calc(25% - 3vw);
+      margin: 4px;
 
       img {
         max-height: 50px;
         max-width: 100px;
+        margin: auto;
       }
     }
   }
@@ -155,7 +156,8 @@
   text-align: right;
   position: absolute;
   left: 0;
-  top: 13px;
+  top: 14px;
   font-weight: 300;
+  font-size: 0.9rem;
   color: #374054;
 }

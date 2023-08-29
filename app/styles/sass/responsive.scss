@@ -4,13 +4,20 @@
     &:after {
       left: 23px;
     }
+
+    .client-logos {
+      div {
+        flex: 0 0 calc(25% - 1vw);
+        margin: 4px 12px;
+      }
+    }
   }
 
   .vtimeline-date {
     width: auto;
     text-align: left;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     display: block;
     margin-left: 70px;
   }
