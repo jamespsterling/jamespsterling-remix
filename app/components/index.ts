@@ -13,3 +13,4 @@ export { default as Technology } from './technology';
 export { default as Breadcrumbs } from './breadcrumbs';
 export { default as ProjectImage } from './image';
 export { default as Article } from './article';
+export { default as Error } from './error.tsx';
