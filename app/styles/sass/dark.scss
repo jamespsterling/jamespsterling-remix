@@ -34,7 +34,8 @@ body.dark {
   }
 
   a:hover {
-    background: $base-color;
+    // background: $base-color;
+    color: lighten($base-color, 10%);
     transition: 0.2s all;
   }
 
@@ -70,7 +71,6 @@ body.dark {
   #experience h2,
   #projects h2,
   #skills h2,
-  a,
   p,
   #about p,
   #projects p,
@@ -92,11 +92,13 @@ body.dark {
   #about,
   #experience,
   #education,
+  #certifications,
   #projects {
     transition: 0.2s all;
   }
 
-  #education {
+  #education,
+  #certifications {
     border-bottom: 1px solid #292929;
   }
 
@@ -188,6 +190,37 @@ body.dark {
 
     h5 {
       color: #b1b1b1;
+    }
+
+    ul {
+      color: $header-color;
+    }
+  }
+
+  #certifications {
+    background: #171717;
+    background: linear-gradient(153deg, #004056 0%, #171717 100%);
+
+    .certification-block {
+      background: #373737;
+      color: $text-color;
+      border: 1px solid #232323;
+    }
+
+    .certification-date {
+      color: #afafaf;
+    }
+
+    h3 {
+      color: $text-color;
+    }
+
+    h4 {
+      color: #c1c1c1;
+    }
+
+    h5 {
+      color: #ededed;
     }
 
     ul {

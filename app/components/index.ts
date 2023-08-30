@@ -1,6 +1,7 @@
 export { default as About } from './about';
 export { default as Contact } from './contact';
 export { default as Education } from './education';
+export { default as Certifications } from './certifications';
 export { default as Experience } from './experience';
 export { default as Footer } from './footer';
 export { default as Lead } from './lead';
@@ -12,3 +13,4 @@ export { default as Technology } from './technology';
 export { default as Breadcrumbs } from './breadcrumbs';
 export { default as ProjectImage } from './image';
 export { default as Article } from './article';
+export { default as Error } from './error.tsx';

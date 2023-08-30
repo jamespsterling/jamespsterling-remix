@@ -4,7 +4,6 @@
 
   h2 {
     color: $heading;
-    margin-bottom: 50px;
   }
 
   ul {
@@ -39,6 +38,19 @@
 
         &:hover {
           color: $background-alt;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #skills {
+    ul {
+      li {
+        margin: 4px;
+        a {
+          font-size: 0.9rem;
         }
       }
     }

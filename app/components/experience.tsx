@@ -28,7 +28,7 @@ export default function Experience({
 
   return (
     <div id="experience" className="background-alt">
-      <h2 className="heading">Experience</h2>
+      <h2 className="heading mb-0 md:mb-6">Experience</h2>
       <div id="experience-timeline">
         {experience.map((job, i) => (
           <div className="vtimeline-point" key={i}>
@@ -57,7 +57,7 @@ export default function Experience({
                   )}
                 </div>
 
-                <ul className="list-disc list-outside ml-6">
+                <ul className="list-disc list-outside ml-4 md:ml-6">
                   {job.description.map((entry, j) => (
                     <li key={j}>
                       <span dangerouslySetInnerHTML={{ __html: entry }} />

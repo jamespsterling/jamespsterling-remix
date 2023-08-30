@@ -36,7 +36,7 @@ export const loader = async () => {
 
     const sitemap = toXmlSitemap([
       ...staticRoutes.map(({ to }) => `${BASE_URL}${to}`),
-      ...projects.map(({ id }) => `${BASE_URL}/project/${id}`),
+      ...projects.map(({ id }) => `${BASE_URL}/projects/${id}`),
     ]);
 
     return new Response(sitemap, {

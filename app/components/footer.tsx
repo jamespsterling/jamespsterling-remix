@@ -35,22 +35,27 @@ export default function Footer() {
     {
       link: 'https://github.com/jamespsterling',
       icon: faGithub,
+      label: 'GitHub',
     },
     {
       link: 'https://stackoverflow.com/users/4092449/jamespsterling',
       icon: faStackOverflow,
+      label: 'StackOverflow',
     },
     {
       link: 'https://codepen.io/jamespsterling',
       icon: faCodepen,
+      label: 'Codepen',
     },
     {
       link: 'https://www.linkedin.com/in/jamespsterling/',
       icon: faLinkedin,
+      label: 'Linkedin',
     },
     {
       link: 'https://500px.com/jpspyro',
       icon: fa500px,
+      label: '500px',
     },
   ];
 
@@ -101,6 +106,7 @@ export default function Footer() {
               href={entry.link}
               target="_blank"
               rel="noopener"
+              aria-label={entry.label}
               key={i}
             >
               <FontAwesomeIcon icon={entry.icon} size="lg" />

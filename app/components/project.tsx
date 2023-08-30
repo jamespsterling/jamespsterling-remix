@@ -3,6 +3,7 @@ import { useNavigate } from '@remix-run/react';
 import { clsx } from 'clsx';
 import type { Project, Technology } from '~/data/types';
 import { ProjectImage } from '.';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Project({
   project,
@@ -42,15 +43,33 @@ export default function Project({
                     'lg:-mr-14',
                   ])}
                 >
-                  <h2 className="mb-8 text-3xl font-bold">{project.name}</h2>
-                  <h6 className="mb-2 mt-0 text-base font-medium leading-tight text-secondary">
+                  <h2 className="mb-2 text-3xl font-normal">{project.name}</h2>
+                  <h6 className="mb-6 mt-0 text-base leading-tight text-neutral-500">
                     {new Date(project.date).toLocaleDateString('en-us', {
                       year: 'numeric',
                       month: 'short',
                     })}
+                    {project.link && (
+                      <>
+                        <a
+                          href={project.link}
+                          className="ml-2 text-neutral-600"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Link
+                          <FontAwesomeIcon
+                            icon={faExternalLinkAlt}
+                            size="2xs"
+                            color="525252"
+                            style={{ marginLeft: '4px' }}
+                          />
+                        </a>
+                      </>
+                    )}
                   </h6>
                   <p
-                    className="mb-8 pb-2 text-neutral-500 dark:text-neutral-300 lg:pb-0"
+                    className="mb-8 pb-2 text-neutral-700 dark:text-neutral-300 lg:pb-0"
                     dangerouslySetInnerHTML={{ __html: project.description }}
                   ></p>
                   <div className="mx-auto mb-8 flex flex-col flex-wrap md:flex-row md:justify-evenly lg:space-evenly">
@@ -62,16 +81,17 @@ export default function Project({
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <FontAwesomeIcon icon={technology.icon} className="mr-1 h-5 w-5" />
+                        <FontAwesomeIcon
+                          icon={technology.icon}
+                          className="mr-1 text-neutral-500"
+                          shapeRendering="geometricprecision"
+                        />
                         {technology.label}
                       </a>
                     ))}
                   </div>
-
-                  <p className="mb-0 text-neutral-500 dark:text-neutral-300"></p>
                 </div>
               </div>
-
               <div>
                 <ProjectImage
                   image={project.image}

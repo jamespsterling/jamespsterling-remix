@@ -12,6 +12,13 @@ export default {
   serverPlatform: 'neutral',
   tailwind: true,
   postcss: true,
+  optimize: {
+    bundle: {
+      external: {
+        include: ['./node_modules/@fontsource/open-sans/files/**/*'],
+      },
+    },
+  },
   future: {
     v2_dev: true,
     v2_errorBoundary: true,
