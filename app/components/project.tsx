@@ -3,6 +3,7 @@ import { useNavigate } from '@remix-run/react';
 import { clsx } from 'clsx';
 import type { Project, Technology } from '~/data/types';
 import { ProjectImage } from '.';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Project({
   project,
@@ -48,6 +49,24 @@ export default function Project({
                       year: 'numeric',
                       month: 'short',
                     })}
+                    {project.link && (
+                      <>
+                        <a
+                          href={project.link}
+                          className="ml-2 text-neutral-600"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Link
+                          <FontAwesomeIcon
+                            icon={faExternalLinkAlt}
+                            size="2xs"
+                            color="525252"
+                            style={{ marginLeft: '4px' }}
+                          />
+                        </a>
+                      </>
+                    )}
                   </h6>
                   <p
                     className="mb-8 pb-2 text-neutral-700 dark:text-neutral-300 lg:pb-0"
@@ -71,10 +90,8 @@ export default function Project({
                       </a>
                     ))}
                   </div>
-                  <p className="mb-0 text-neutral-500 dark:text-neutral-300"></p>
                 </div>
               </div>
-
               <div>
                 <ProjectImage
                   image={project.image}

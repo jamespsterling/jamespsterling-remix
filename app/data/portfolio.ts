@@ -36,6 +36,7 @@ import {
   faSearch,
   faServer,
   faTerminal,
+  faUsersRectangle,
   faVial,
   faWandMagicSparkles,
 } from '@fortawesome/free-solid-svg-icons';
@@ -234,7 +235,7 @@ export const data = {
     'zurb-foundation',
     'laravel',
     'zend-framework',
-    'asp.net-mvc',
+    'asp-net-mvc',
     'rivets-js',
     'mongodb',
     'mysql',
@@ -398,15 +399,15 @@ export const data = {
     },
     {
       id: 'jquery',
-      label: 'JQuery',
+      label: 'jQuery',
       link: 'https://jquery.com/',
       icon: faDisplay,
     },
     {
       id: 'jquery-ui',
-      label: 'JQuery UI',
+      label: 'jQuery UI',
       link: 'https://jqueryui.com/',
-      icon: faDisplay,
+      icon: faUsersRectangle,
     },
     {
       id: 'ractive-js',
@@ -723,7 +724,7 @@ export const data = {
       id: 'iris',
       name: 'IRIS',
       date: new Date('Sep, 2016'),
-      image: { src: '/img/projects/iris.jpg', type: 'image/jpg', height: 300, width: 300 },
+      image: { src: '/img/projects/iris.webp', type: 'image/webp', height: 300, width: 300 },
       technologies: ['php', 'jquery', 'jquery-ui', 'javascript', 'apache-solr', 'mysql'],
       description:
         'IRIS is an web-based safety library with industry and state driven content with a focus on preventing claims and offering a vast searchable library of safety and training content. Completely home-grown and built on open source technology, LAMP coupled with Apache Solr; and features a highly developed content management administrative toolset.',
@@ -734,7 +735,7 @@ export const data = {
       name: 'York Styleguide',
       date: new Date('Jun, 2015'),
       image: {
-        src: '/img/projects/york-styleguide.jpg',
+        src: '/img/projects/york-styleguide/assets.png',
         type: 'image/jpg',
         height: 300,
         width: 300,
@@ -772,7 +773,7 @@ export const data = {
       id: 'focus-help-portal',
       name: 'FOCUS Help Portal',
       date: new Date('Jun, 2015'),
-      image: { src: '/img/projects/focus-help.jpg', type: 'image/jpg', height: 300, width: 300 },
+      image: { src: '/img/projects/focus-help.png', type: 'image/png', height: 300, width: 300 },
       technologies: ['html5', 'css3', 'php', 'javascript', 'sass'],
       description:
         "Built as a companion to York's RIMS system, FOCUS Help Portal provide training material, and other useful information to help FOCUS users. It was built using a highly customized version of HTML5 Boilerplate.",
@@ -792,15 +793,17 @@ export const data = {
       id: 'provider-gateway',
       name: 'Provider Gateway',
       date: new Date('Jul, 2017'),
-      image: { src: '/img/projects/provider.jpg', type: 'image/jpg', height: 300, width: 300 },
+      image: { src: '/img/projects/provider.png', type: 'image/png', height: 300, width: 300 },
+      technologies: ['html5', 'css3', 'javascript', 'asp-net-mvc', 'font-awesome', 'bootstrap'],
       description:
         'Provider Gateway is a self-service tool to assist providers in looking up payment statuses from claims submitted through York. Built on ASP.Net MVC, ASP.Net WebAPI, and Bootstrap v3.',
+      link: 'https://providergateway.sedgwick.com/Account/Register',
     },
     {
       id: 'wc-payment-options',
       name: 'WC Payment Options',
       date: new Date('Mar, 2014'),
-      image: { src: '/img/projects/wcpay.jpg', type: 'image/jpg', height: 300 },
+      image: { src: '/img/projects/wcpay.png', type: 'image/png', height: 300 },
       technologies: ['javascript', 'html5', 'css3'],
       description:
         "WC Payment Options is a companion website to FARA's claim system at the time and was built in the early days before responsive web design really took a hold. It was designed to be dead simple to use for claimants to choose how they receive their Worker's Compensation benefits.",
