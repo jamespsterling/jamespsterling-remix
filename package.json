@@ -6,7 +6,7 @@
     "build": "remix build",
     "dev:remix": "remix dev --no-restart -c \"npm run start\"",
     "dev": "concurrently \"npm run sass\" \"npm run dev:remix\"",
-    "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
+    "start": "wrangler pages dev --live-reload --compatibility-date=2023-08-14 ./public ",
     "typecheck": "tsc",
     "sass": "sass --watch app/styles/sass/styles.scss app/styles/styles.css --style compressed",
     "sass:build": "sass app/styles/sass/styles.scss app/styles/styles.css --style compressed",
@@ -54,7 +54,7 @@
     "sass": "^1.63.6",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.0.4",
-    "wrangler": "^3.3.0"
+    "wrangler": "^3.6.0"
   },
   "engines": {
     "node": ">=18.16.1"
