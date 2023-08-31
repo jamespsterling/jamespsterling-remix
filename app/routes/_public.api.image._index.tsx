@@ -1,6 +1,7 @@
-import type { LoaderFunction } from '@remix-run/cloudflare';
+import type { LoaderArgs, LoaderFunction } from '@remix-run/cloudflare';
 import type { MimeType, Resolver } from 'remix-image/serverPure';
 import { MemoryCache, RemixImageError, fetchResolver, imageLoader } from 'remix-image/serverPure';
+import { ContextHack } from '~/data/types';
 
 const cache = new MemoryCache({
   maxSize: 5e7,
@@ -8,11 +9,9 @@ const cache = new MemoryCache({
 
 const SELF_URL = 'http://localhost:8788';
 
-export const loader: LoaderFunction = ({ request, context }) => {
+export const loader: LoaderFunction = ({ request, context }: LoaderArgs & ContextHack) => {
   const resolver: Resolver = async (asset, url, options, basePath) => {
     if (asset.startsWith('/') && (asset.length === 1 || asset[1] !== '/')) {
-      console.log(JSON.stringify(context));
-      // @ts-ignore
       const imageResponse = await context.ASSETS.fetch(url, request.clone());
       const arrBuff = await imageResponse.arrayBuffer();
 

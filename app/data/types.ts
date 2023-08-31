@@ -10,3 +10,5 @@ export type Project = Projects[number];
 export type Technologies = typeof data.technologies;
 export type Technology = Technologies[number];
 export type Skill = typeof data.skills;
+
+export type ContextHack = { context: { [key: string]: any } };

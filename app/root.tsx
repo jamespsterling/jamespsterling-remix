@@ -13,12 +13,11 @@ import {
 import { useEffect } from 'react';
 import { userPrefs } from '~/cookies';
 import * as gtag from '~/utils/gtags.client';
+import { ContextHack } from './data/types';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ];
-
-type ContextHack = { context: { [key: string]: any } };
 
 export const loader = async ({ request, context }: LoaderArgs & ContextHack) => {
   const cookieHeader = request.headers.get('Cookie');
