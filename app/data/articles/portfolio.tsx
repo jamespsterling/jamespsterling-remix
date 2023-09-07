@@ -7,7 +7,9 @@ export default function Portfolio() {
       <div className="md:container my-2 mx-auto md:px-6">
         <section className="mb-8 md:mb-32">
           <div className="mx-auto text-left lg:text-left xl:px-32 text-neutral-700">
-            <h1 className="mb-4 text-4xl font-normal">Case Study</h1>
+            <h1 className="mb-4 text-4xl font-normal" id="case-study">
+              Case Study
+            </h1>
 
             <p className="mb-6">
               Version 1 of my portfolio site was built on traditional{' '}

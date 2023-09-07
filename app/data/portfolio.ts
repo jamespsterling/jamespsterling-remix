@@ -668,8 +668,8 @@ export const data = {
         'cloudflare-pages',
         'fontsource',
         'tailwindcss',
-        'font-awesome',
         'tw-elements',
+        'font-awesome',
       ],
       hasArticle: true,
       description:
@@ -680,7 +680,7 @@ export const data = {
       name: 'eekä',
       date: new Date('Dec, 2019'),
       image: { src: '/img/projects/eeka-home.png', type: 'image/png', height: 300 },
-      technologies: ['angular-js', 'express-js', 'rxjs', 'google-cloud'],
+      technologies: ['angular-js', 'node-js', 'express-js', 'rxjs', 'google-cloud'],
       description:
         'An lightweight Angular web app to visualize "everything I care about" (eekä). Using Angular & ExpressJs along with Google Cloud Datastore this app is a passion project to put many disconnected things in one place. Aggregating data from IoT smart devices (Personal Weather Station, HVAC, etc) with GCP Cloud Functions, I am then able to retrieve and display meaningful real-time data using Apache ECharts. Integrating many other 3rd party services such as DarkSky, The Weather Channel, YouTube, Google Maps, TradingView, and many others I am able to consolidate the sheer number of apps and services all in one place–constantly evolving.',
     },
@@ -724,7 +724,7 @@ export const data = {
         type: 'image/png',
         height: 300,
       },
-      technologies: ['php', 'ractive-js', 'javascript', 'mysql'],
+      technologies: ['php', 'node-js', 'ractive-js', 'javascript', 'mysql', 'azure'],
 
       description:
         'A web-based event orchestration platform, from event registration to in-person networking using the proprietary matchmaking software, IoT in Action Events has been a staple product for Microsoft to empower industry IoT experts, students, and solution providers all in one place. Supplemented in 2019 with the IoT Event mobile app, and Video-on-demand platform, the IoT in Action experience continues to grow under partnership between EAS and Microsoft.',
@@ -753,7 +753,7 @@ export const data = {
         type: 'image/png',
         height: 300,
       },
-      technologies: ['php', 'bootstrap', 'javascript', 'css3'],
+      technologies: ['php', 'bootstrap', 'javascript', 'css3', 'aws'],
       description:
         'Built with Bootstrap v4 & PHP to help users create their email signatures at Extreme Arts + Sciences and helps maintain a consistent look and feel across the organization.',
     },
@@ -762,7 +762,7 @@ export const data = {
       name: 'IRIS',
       date: new Date('Sep, 2016'),
       image: { src: '/img/projects/iris.webp', type: 'image/webp', height: 300, width: 300 },
-      technologies: ['php', 'jquery', 'jquery-ui', 'javascript', 'apache-solr', 'mysql'],
+      technologies: ['php', 'jquery', 'jquery-ui', 'javascript', 'apache-solr', 'mysql', 'linux'],
       description:
         'IRIS is an web-based safety library with industry and state driven content with a focus on preventing claims and offering a vast searchable library of safety and training content. Completely home-grown and built on open source technology, LAMP coupled with Apache Solr; and features a highly developed content management administrative toolset.',
       link: 'https://web.archive.org/web/20171027211006/https://iris.yorkrsg.com/gateway',
@@ -856,6 +856,7 @@ export const data = {
         height: 200,
         class: 'york-loader',
       },
+      technologies: ['css3'],
       description:
         'York loader is a SVG animated loader created for optimized loading with some York flare. It\'s done using CSS <span class="font-mono text-orange-700 dark:text-orange-500">stroke-dasharray</span> and <span class="font-mono text-orange-700 dark:text-orange-500">stroke-dashoffset</span> with keyframes CSS animation.',
     },
