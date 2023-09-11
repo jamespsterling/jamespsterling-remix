@@ -14,15 +14,19 @@ export const handle = {
 };
 
 export const loader = async () => {
-  return json(data);
+  const { about } = data;
+
+  return json({
+    about,
+  });
 };
 
 export default function Index() {
-  const data = useLoaderData<typeof loader>();
+  const { about } = useLoaderData<typeof loader>();
 
   return (
     <>
-      <Lead about={data.about} bgOnly={true} />
+      <Lead about={about} bgOnly={true} />
       <Breadcrumbs currentPage="Contact" />
       <Contact />
     </>

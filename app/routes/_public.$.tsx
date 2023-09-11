@@ -1,6 +1,6 @@
 import { json } from '@remix-run/cloudflare';
 import { Link, RouteMatch, useLoaderData } from '@remix-run/react';
-import { Breadcrumbs, Error, Lead } from '~/components';
+import { Error, Lead } from '~/components';
 import { data } from '~/data/portfolio';
 
 export const handle = {
@@ -14,15 +14,19 @@ export const handle = {
 };
 
 export const loader = async () => {
-  return json(data);
+  const { about } = data;
+
+  return json({
+    about,
+  });
 };
 
 export default function Index() {
-  const data = useLoaderData<typeof loader>();
+  const { about } = useLoaderData<typeof loader>();
 
   return (
     <>
-      <Lead about={data.about} bgOnly={true} narrow={true} />
+      <Lead about={about} bgOnly={true} narrow={true} />
       <Error />
     </>
   );

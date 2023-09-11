@@ -22,17 +22,22 @@ export const handle = {
 };
 
 export const loader = async () => {
-  return json(data);
+  const { about, projects } = data;
+
+  return json({
+    about,
+    projects,
+  });
 };
 
 export default function Index() {
-  const data = useLoaderData<typeof loader>();
+  const { about, projects } = useLoaderData<typeof loader>();
 
   return (
     <>
-      <Lead about={data.about} bgOnly={true} />
+      <Lead about={about} bgOnly={true} />
       <Breadcrumbs currentPage="Projects" />
-      <Projects projects={data.projects} />
+      <Projects projects={projects} />
     </>
   );
 }

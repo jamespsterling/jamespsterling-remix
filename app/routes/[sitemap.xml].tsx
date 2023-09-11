@@ -32,7 +32,7 @@ export const toXmlSitemap = (urls: string[]) => {
 // https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
 export const loader = async () => {
   try {
-    const projects = data.projects;
+    const { projects } = data;
 
     const sitemap = toXmlSitemap([
       ...staticRoutes.map(({ to }) => `${BASE_URL}${to}`),

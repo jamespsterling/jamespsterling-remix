@@ -248,7 +248,7 @@ body.dark {
 
   #contact-form {
     button {
-      background: #1a1a1a;
+      background: darken($base-color, 25%);
       color: $header-color;
     }
 
