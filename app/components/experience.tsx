@@ -1,9 +1,11 @@
-import { IconName, IconPrefix, library } from '@fortawesome/fontawesome-svg-core';
+import type { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 import { faAngular } from '@fortawesome/free-brands-svg-icons/faAngular';
 import { faNodeJs } from '@fortawesome/free-brands-svg-icons/faNodeJs';
 import { faPhp } from '@fortawesome/free-brands-svg-icons/faPhp';
 import { faReact } from '@fortawesome/free-brands-svg-icons/faReact';
+import { faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 
 import { faCode } from '@fortawesome/free-solid-svg-icons/faCode';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
@@ -14,7 +16,7 @@ import { ReactSVG } from 'react-svg';
 import type { Experience } from '~/data/types';
 import { linkStyles } from '~/styles/constants';
 
-library.add(faReact, faAngular, faPhp, faNodeJs, faCode, faLaptopCode);
+library.add(faReact, faAngular, faPhp, faNodeJs, faCode, faBoxesStacked, faLaptopCode);
 
 export default function Experience({
   experience,
@@ -40,7 +42,12 @@ export default function Experience({
                 <div className="heading-grid">
                   <div>
                     <h3>
-                      <a href={job.link} target="_blank" rel="noopener" className={linkStyles}>
+                      <a
+                        href={job.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={linkStyles}
+                      >
                         {job.employer}
                         <FontAwesomeIcon icon={faExternalLinkAlt} size="2xs" />
                       </a>
@@ -52,7 +59,11 @@ export default function Experience({
                       <ReactSVG src={job.logo} />
                     </div>
                   ) : (
-                    <img src={job.logo} alt={`${job.employer} logo`} />
+                    <img
+                      src={job.logo}
+                      alt={`${job.employer} logo`}
+                      className={job.logoStyles?.join(',')}
+                    />
                   )}
                 </div>
 

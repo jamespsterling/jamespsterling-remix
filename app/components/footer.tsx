@@ -102,10 +102,21 @@ export default function Footer() {
         <div className="mb-6 flex justify-center">
           {links.map((entry, i) => (
             <a
-              className="text-neutral-800 dark:text-neutral-200 icon-link mx-2"
+              className={clsx([
+                'text-neutral-800',
+                'dark:text-neutral-200',
+                'hover:text-sky-700',
+                'dark:hover:text-violet-700',
+                'focus:text-sky-700',
+                'dark:focus:text-violet-700',
+                'mx-2',
+                'transition',
+                'duration-150',
+                'ease-in-out',
+              ])}
               href={entry.link}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               aria-label={entry.label}
               key={i}
             >

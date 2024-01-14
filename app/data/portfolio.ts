@@ -55,7 +55,7 @@ import {
   faWind,
 } from '@fortawesome/free-solid-svg-icons';
 import { linkStyles } from '~/styles/constants';
-import { Project } from './types';
+import type { Project } from './types';
 
 const about = {
   name: 'James Sterling',
@@ -105,9 +105,25 @@ const certifications = [
 ];
 const experience = [
   {
+    employer: 'Aidium',
+    title: 'Senior Fullstack Engineer',
+    time: 'Sep 2023 - Present',
+    icon: 'fas fa-boxes-stacked',
+    description: [
+      'Build new user-facing features and scalable UI components using <b>React</b>, <b>Next.js</b>, <b>Tailwindcss</b>, <b>Storybook</b>, & <b>TanStack Query</b>.',
+      'Working closely with the product and design team to implement complex feature concepts from zero-to-one, back to front.',
+      'Architect and build scalable serverless back-end components using <b>Typescript</b>, <b>Nodejs</b>, <b>Prisma</b>, <b>TypeGraphQL</b>, <b>GraphQL</b>, & <b>MongoDB</b>.',
+      'Champions DX improvements to help alleviate pain-points around hot-reload inefficiencies at scale, optimize test performance with <b>@swc/jest</b>, & slow <b>Next.js</b> compile times.',
+      'Works to establish baseline <b>clean-code</b> concepts, importance of <b>type-safety</b>, & <b>separation-of-concerns</b> principals.',
+    ],
+    link: 'https://thinkaidium.com/',
+    logo: '/img/companies/aidium.webp',
+    logoStyles: ['wider'],
+  },
+  {
     employer: 'Lattice',
     title: 'Staff Software Engineer',
-    time: 'May 2022 - Present',
+    time: 'May 2022 - Sep 2023',
     icon: 'fab fa-react',
     description: [
       'Full stack development on new product initiatives and next-gen platform focused engineering empowering experiences using <b>React</b>, <b>Next.js</b>, <b>Chakra UI</b>, <b>Zod</b>, <b>Relay</b>, <b>GraphQL</b>, <b>NestJS</b>, <b>Sequelize</b>, <b>gRPC</b>, & <b>Node.js</b>.',
