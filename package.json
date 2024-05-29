@@ -3,10 +3,12 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix build",
-    "dev:remix": "remix dev -c \"npm run start\"",
-    "dev": "concurrently \"npm run sass\" \"npm run dev:remix\"",
-    "start": "wrangler pages dev --live-reload --compatibility-date=2023-08-14 ./public ",
+    "dev": "remix vite:dev",
+    "build": "remix vite:build",
+    "preview": "wrangler pages dev ./build/client",
+    "deploy": "wrangler pages deploy ./build/client",
+    "dev:all": "concurrently \"npm run sass\" \"npm run remix vite:dev\"",
+    "start": "wrangler pages dev --live-reload --compatibility-date=2023-08-14 ./public",
     "typecheck": "tsc",
     "sass": "sass --watch app/styles/sass/styles.scss app/styles/styles.css --style compressed",
     "sass:build": "sass app/styles/sass/styles.scss app/styles/styles.css --style compressed",
@@ -23,7 +25,6 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@remix-run/cloudflare": "^2.9.2",
     "@remix-run/cloudflare-pages": "^2.9.2",
-    "@remix-run/css-bundle": "^2.9.2",
     "@remix-run/react": "^2.9.2",
     "bootstrap": "^5.3.3",
     "clsx": "^2.1.1",
@@ -49,6 +50,7 @@
     "eslint": "^8.57.0",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.13.0",
+    "oxlint": "^0.4.2",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "prettier": "^3.2.5",
@@ -56,8 +58,9 @@
     "sass": "^1.77.2",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
-    "wrangler": "^3.57.2",
-    "oxlint": "^0.4.2"
+    "vite": "^5.2.12",
+    "vite-tsconfig-paths": "^4.3.2",
+    "wrangler": "^3.57.2"
   },
   "engines": {
     "node": ">=22.2.0"

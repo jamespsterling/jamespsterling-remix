@@ -1,9 +1,7 @@
-import type { LoaderFunctionArgs, ActionFunctionArgs, LinksFunction } from '@remix-run/cloudflare';
+import type { LoaderFunctionArgs, ActionFunctionArgs } from '@remix-run/cloudflare';
 import { json, redirect } from '@remix-run/cloudflare';
-import { cssBundleHref } from '@remix-run/css-bundle';
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -15,19 +13,14 @@ import { useEffect } from 'react';
 import { userPrefs } from '~/cookies';
 import * as gtag from '~/utils/gtags.client';
 
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
-];
-
 type ContextHack = { context: { [key: string]: any } };
 
 export const loader = async ({ request, context }: LoaderFunctionArgs & ContextHack) => {
   const cookieHeader = request.headers.get('Cookie');
   const cookie = (await userPrefs.parse(cookieHeader)) || {};
-
   return json({
-    env: context.env.ENV,
-    gaTrackingId: context.env.GA_TRACKING_ID,
+    env: context.cloudflare.ENV,
+    gaTrackingId: context.cloudflare.GA_TRACKING_ID,
     darkMode: cookie.darkMode,
   });
 };
@@ -87,7 +80,6 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );
