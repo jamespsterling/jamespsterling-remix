@@ -1,4 +1,4 @@
-import { data } from '~/data/portfolio';
+import type { data } from '~/data/portfolio';
 
 export type About = typeof data.about;
 export type Experience = typeof data.experience;

@@ -1,5 +1,6 @@
 import { json } from '@remix-run/cloudflare';
-import { Link, RouteMatch, useLoaderData } from '@remix-run/react';
+import type { RouteMatch} from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
 import { Breadcrumbs, Contact, Lead } from '~/components';
 import { data } from '~/data/portfolio';
 

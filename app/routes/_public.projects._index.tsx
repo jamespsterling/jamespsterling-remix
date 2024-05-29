@@ -1,5 +1,7 @@
-import { LinksFunction, json } from '@remix-run/cloudflare';
-import { Link, RouteMatch, useLoaderData } from '@remix-run/react';
+import type { LinksFunction} from '@remix-run/cloudflare';
+import { json } from '@remix-run/cloudflare';
+import type { RouteMatch} from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
 import { Breadcrumbs, Lead, Projects } from '~/components';
 import { data } from '~/data/portfolio';
 

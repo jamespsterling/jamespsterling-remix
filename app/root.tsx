@@ -1,4 +1,5 @@
-import { LoaderArgs, json, type LinksFunction, ActionArgs, redirect } from '@remix-run/cloudflare';
+import type { LoaderFunctionArgs, ActionFunctionArgs, LinksFunction } from '@remix-run/cloudflare';
+import { json, redirect } from '@remix-run/cloudflare';
 import { cssBundleHref } from '@remix-run/css-bundle';
 import {
   Links,
@@ -20,7 +21,7 @@ export const links: LinksFunction = () => [
 
 type ContextHack = { context: { [key: string]: any } };
 
-export const loader = async ({ request, context }: LoaderArgs & ContextHack) => {
+export const loader = async ({ request, context }: LoaderFunctionArgs & ContextHack) => {
   const cookieHeader = request.headers.get('Cookie');
   const cookie = (await userPrefs.parse(cookieHeader)) || {};
 
@@ -31,7 +32,7 @@ export const loader = async ({ request, context }: LoaderArgs & ContextHack) => 
   });
 };
 
-export const action = async ({ request }: ActionArgs) => {
+export const action = async ({ request }: ActionFunctionArgs) => {
   const cookieHeader = request.headers.get('Cookie');
   const cookie = (await userPrefs.parse(cookieHeader)) || {};
   const bodyParams = await request.formData();

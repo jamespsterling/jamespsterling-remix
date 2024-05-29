@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ReactSVG } from 'react-svg';
 import Loading from '~/components/icons/Loading';
-import { Project } from '~/data/types';
+import type { Project } from '~/data/types';
 
 export default function Image({
   image,
@@ -28,7 +28,7 @@ export default function Image({
               opacity: loading ? 0 : 1,
               transition: '0.5s all',
             }}
-            alt={`${image.src} image`}
+            alt={`${image.src}`}
             onLoad={() => setLoading(false)}
             loading="lazy"
             className={`${classes} ${image.classes}`}

@@ -1,5 +1,5 @@
 import { Link } from '@remix-run/react';
-import { Project } from '~/data/types';
+import type { Project } from '~/data/types';
 import { ProjectImage } from '.';
 
 export default function Projects({ projects }: { projects: Project[] }) {

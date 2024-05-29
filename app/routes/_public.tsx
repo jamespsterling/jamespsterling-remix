@@ -1,4 +1,4 @@
-import { type LinksFunction, type V2_MetaFunction } from '@remix-run/cloudflare';
+import { type LinksFunction, type MetaFunction } from '@remix-run/cloudflare';
 import { Outlet, useFetcher, useLoaderData, useLocation } from '@remix-run/react';
 import { useEffect } from 'react';
 import { Footer, Menu } from '~/components';
@@ -30,7 +30,7 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [{ title: 'James Sterling' }, { name: 'description', content: 'Portfolio' }];
 };
 
