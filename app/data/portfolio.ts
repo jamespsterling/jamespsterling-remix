@@ -29,6 +29,7 @@ import {
   faCamera,
   faCircleNodes,
   faCircleNotch,
+  faClock,
   faCode,
   faCodeCompare,
   faCubes,
@@ -53,14 +54,28 @@ import {
   faWandMagicSparkles,
   faWandSparkles,
   faWind,
+  faUmbrellaBeach,
+  faCube,
+  faPlay,
+  faSquareCaretUp,
+  faCheckCircle,
+  faHexagonNodes,
+  faAlignLeft,
+  faLinesLeaning,
+  faArrowUpRightDots
 } from '@fortawesome/free-solid-svg-icons';
 import { linkStyles } from '~/styles/constants';
 import type { Project } from './types';
 
+const CAREER_START_DATE = new Date('Feb 2009'); 
+const yearsOfExperience = Math.floor(
+  (new Date().getTime() - CAREER_START_DATE.getTime()) / (1000 * 60 * 60 * 24 * 365)
+);
+
 const about = {
   name: 'James Sterling',
   title: 'Fullstack Software Engineer',
-  body: 'Full-stack software engineer with 16 years of experience crafting software for SaaS platforms, enterprise deployments, and everything in between. My focus is to leverage the entire stack, back-end, middleware, and front-end to deliver thoughtful UI/UX experiences. My passion for self-documenting, scalable, and robust software orchestrations drives me to learn from and coach other engineers in best practices, refine developer experience (DX) tooling, and continuously hone my craft as a curious engineer.',
+  body: `Full-stack software engineer with ${yearsOfExperience} years of experience crafting software for SaaS platforms, enterprise deployments, and everything in between. My focus is to leverage the entire stack, back-end, middleware, and front-end to deliver thoughtful UI/UX experiences. My passion for self-documenting, scalable, and robust software orchestrations drives me to learn from and coach other engineers in best practices, refine developer experience (DX) tooling, and continuously hone my craft as a curious engineer.`,
 };
 const education = {
   university: {
@@ -239,9 +254,12 @@ const skills = [
   'typescript',
   'javascript',
   'react',
+  'nextjs',
+  'graphql',
+  'temporal',
+  'tanstack',
   'react-router',
   'relay',
-  'nextjs',
   'angular-js',
   'rxjs',
   'ngrx',
@@ -251,7 +269,6 @@ const skills = [
   'node-js',
   'php',
   'c#',
-  'graphql',
   'express-js',
   'ionic-framework',
   'nx',
@@ -265,12 +282,14 @@ const skills = [
   'zend-framework',
   'asp-net-mvc',
   'rivets-js',
+  'mongodb',
   'mysql',
   'postgres',
   'mssql',
-  'mongodb',
+  'prisma',
   'entity-framework',
   'orm',
+  'jest',
   'nightwatch-js',
   'cypress',
   'cucumber',
@@ -279,6 +298,8 @@ const skills = [
   'aws',
   'google-cloud',
   'azure',
+  'render',
+  'vercel',
   'linux',
   'apache-httpd',
   'apache-solr',
@@ -288,6 +309,10 @@ const skills = [
   'docker',
   'mermaid-js',
   'git',
+  'eslint',
+  'prettier',
+  'swc',
+  'biomejs'
 ];
 const tools = ['iTerm2', 'Oh My Zsh', 'DevTools', 'VSCode'];
 const technologies = [
@@ -669,6 +694,66 @@ const technologies = [
     link: 'https://git-scm.com/',
     icon: faGitAlt,
   },
+  {
+    id: 'temporal',
+    label: 'Temporal',
+    link: 'https://temporal.io/',
+    icon: faClock,
+  },
+  {
+    id: 'tanstack',
+    label: 'Tanstack',
+    link: 'https://tanstack.com/',
+    icon: faUmbrellaBeach,
+  },
+  {
+    id: 'render',
+    label: 'Render',
+    link: 'https://render.com/',
+    icon: faCube,
+  },
+  {
+    id: 'vercel',
+    label: 'Vercel',
+    link: 'https://vercel.com/',
+    icon: faPlay,
+  },
+  {
+    id: 'prisma',
+    label: 'Prisma',
+    link: 'https://prisma.io/',
+    icon: faSquareCaretUp,
+  },
+  {
+    id: 'jest',
+    label: 'Jest',
+    link: 'https://jestjs.io/',
+    icon: faCheckCircle,
+  },
+  {
+    id: 'eslint',
+    label: 'ESLint',
+    link: 'https://eslint.org/',
+    icon: faHexagonNodes,
+  },
+  {
+    id: 'prettier',
+    label: 'Prettier',
+    link: 'https://prettier.io/',
+    icon: faAlignLeft,
+  },
+  {
+    id: 'biomejs',
+    label: 'Biome',
+    link: 'https://biomejs.dev/',
+    icon: faArrowUpRightDots,
+  },
+  {
+    id: 'swc',
+    label: 'SWC',
+    link: 'https://swc.rs/',
+    icon: faLinesLeaning,
+  },
 ];
 const projects: Project[] = [
   {
@@ -875,7 +960,7 @@ const projects: Project[] = [
 ];
 
 export const data = {
-  updated: '2023-09-11T16:32:17.023Z',
+  updated: '2024-12-20T14:44:10.976Z',
   about,
   education,
   certifications,
