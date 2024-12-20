@@ -67,7 +67,7 @@ import {
 import { linkStyles } from '~/styles/constants';
 import type { Project } from './types';
 
-const CAREER_START_DATE = new Date('Feb 2009'); 
+const CAREER_START_DATE = new Date(2009, 1); 
 const yearsOfExperience = Math.floor(
   (new Date().getTime() - CAREER_START_DATE.getTime()) / (1000 * 60 * 60 * 24 * 365)
 );
