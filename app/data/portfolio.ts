@@ -60,7 +60,7 @@ import type { Project } from './types';
 const about = {
   name: 'James Sterling',
   title: 'Fullstack Software Engineer',
-  body: 'Full-stack software engineer with 15 years of experience crafting software for SaaS platforms, enterprise deployments, and everything in between. My focus is to leverage the entire stack, back-end, middleware, and front-end to deliver thoughtful UI/UX experiences. My passion for self-documenting, scalable, and robust software orchestrations drives me to learn from and coach other engineers in best practices, refine developer experience (DX) tooling, and continuously hone my craft as a curious engineer.',
+  body: 'Full-stack software engineer with 16 years of experience crafting software for SaaS platforms, enterprise deployments, and everything in between. My focus is to leverage the entire stack, back-end, middleware, and front-end to deliver thoughtful UI/UX experiences. My passion for self-documenting, scalable, and robust software orchestrations drives me to learn from and coach other engineers in best practices, refine developer experience (DX) tooling, and continuously hone my craft as a curious engineer.',
 };
 const education = {
   university: {
@@ -674,7 +674,7 @@ const projects: Project[] = [
   {
     id: 'portfolio',
     name: 'Portfolio',
-    date: new Date('Aug, 2023').toISOString(),
+    date: new Date(2023, 7).toISOString(),
     image: { src: '/img/projects/portfolio.png', type: 'image/png', height: 300 },
     technologies: [
       'remix',
@@ -691,7 +691,7 @@ const projects: Project[] = [
   {
     id: 'eeka',
     name: 'eekä',
-    date: new Date('Dec, 2019').toISOString(),
+    date: new Date(2019, 11).toISOString(),
     image: { src: '/img/projects/eeka-home.png', type: 'image/png', height: 300 },
     technologies: ['angular-js', 'node-js', 'express-js', 'rxjs', 'google-cloud'],
     description:
@@ -700,7 +700,7 @@ const projects: Project[] = [
   {
     id: 'crash-cart-app',
     name: 'CrashCart App',
-    date: new Date('Nov, 2019').toISOString(),
+    date: new Date(2019, 10).toISOString(),
     image: {
       src: '/img/projects/crash-cart-frame.png',
       type: 'image/png',
@@ -714,7 +714,7 @@ const projects: Project[] = [
   {
     id: 'iot-events-app',
     name: 'IoT Events App',
-    date: new Date('Jan, 2020').toISOString(),
+    date: new Date(2020, 0).toISOString(),
     image: {
       src: '/img/projects/iot-mobile-app.png',
       type: 'image/png',
@@ -731,7 +731,7 @@ const projects: Project[] = [
   {
     id: 'iot-in-action-events',
     name: 'IoT In Action Events',
-    date: new Date('Oct, 2018').toISOString(),
+    date: new Date(2018, 9).toISOString(),
     image: {
       src: '/img/projects/iot-web.png',
       type: 'image/png',
@@ -745,7 +745,7 @@ const projects: Project[] = [
   {
     id: 'godaddy-signature',
     name: 'GoDaddy Email Signature Generator',
-    date: new Date('Dec, 2018').toISOString(),
+    date: new Date(2018, 11).toISOString(),
     image: {
       src: '/img/projects/godaddy-email-sig/main.png',
       type: 'image/png',
@@ -759,7 +759,7 @@ const projects: Project[] = [
   {
     id: 'easci-signature',
     name: 'EASCI Email Signature Generator',
-    date: new Date('Dec, 2018').toISOString(),
+    date: new Date(2018, 11).toISOString(),
     image: {
       src: '/img/projects/easci-email-sig/signature-fold.png',
       type: 'image/png',
@@ -772,7 +772,7 @@ const projects: Project[] = [
   {
     id: 'iris',
     name: 'IRIS',
-    date: new Date('Sep, 2016').toISOString(),
+    date: new Date(2016, 8).toISOString(),
     image: { src: '/img/projects/iris.webp', type: 'image/webp', height: 300, width: 300 },
     technologies: ['php', 'jquery', 'jquery-ui', 'javascript', 'apache-solr', 'mysql', 'linux'],
     description:
@@ -782,7 +782,7 @@ const projects: Project[] = [
   {
     id: 'york-styleguide',
     name: 'York Styleguide',
-    date: new Date('Jun, 2015').toISOString(),
+    date: new Date(2015, 5).toISOString(),
     image: {
       src: '/img/projects/york-styleguide/assets.png',
       type: 'image/jpg',
@@ -797,7 +797,7 @@ const projects: Project[] = [
   {
     id: 'careworks-styleguide',
     name: 'Careworks Styleguide',
-    date: new Date('Jun, 2015').toISOString(),
+    date: new Date(2015, 5).toISOString(),
     image: {
       src: '/img/projects/careworks-styleguide/primary.png',
       type: 'image/png',
@@ -812,7 +812,7 @@ const projects: Project[] = [
   {
     id: 'monocle',
     name: 'Monocle',
-    date: new Date('Sep, 2016').toISOString(),
+    date: new Date(2016, 8).toISOString(),
     image: { src: '/img/projects/monocle.jpg', type: 'image/jpg', height: 169, width: 300 },
     technologies: ['android'],
     description:
@@ -821,7 +821,7 @@ const projects: Project[] = [
   {
     id: 'focus-help-portal',
     name: 'FOCUS Help Portal',
-    date: new Date('Jun, 2015').toISOString(),
+    date: new Date(2015, 5).toISOString(),
     image: { src: '/img/projects/focus-help.png', type: 'image/png', height: 300, width: 300 },
     technologies: ['html5', 'css3', 'php', 'javascript', 'sass'],
     description:
@@ -831,7 +831,7 @@ const projects: Project[] = [
   {
     id: 'email-signature-generator',
     name: 'Email Signature Generator',
-    date: new Date('Aug, 2016').toISOString(),
+    date: new Date(2016, 7).toISOString(),
     image: { src: '/img/projects/emailsig.jpg', type: 'image/jpg', height: 296, width: 300 },
     technologies: ['php', 'bootstrap', 'javascript', 'css3'],
     description:
@@ -841,7 +841,7 @@ const projects: Project[] = [
   {
     id: 'provider-gateway',
     name: 'Provider Gateway',
-    date: new Date('Jul, 2017').toISOString(),
+    date: new Date(2017, 6).toISOString(),
     image: { src: '/img/projects/provider.png', type: 'image/png', height: 300, width: 300 },
     technologies: ['html5', 'css3', 'javascript', 'asp-net-mvc', 'font-awesome', 'bootstrap'],
     description:
@@ -851,7 +851,7 @@ const projects: Project[] = [
   {
     id: 'wc-payment-options',
     name: 'WC Payment Options',
-    date: new Date('Mar, 2014').toISOString(),
+    date: new Date(2014, 2).toISOString(),
     image: { src: '/img/projects/wcpay.png', type: 'image/png', height: 300 },
     technologies: ['javascript', 'html5', 'css3'],
     description:
@@ -861,7 +861,7 @@ const projects: Project[] = [
   {
     id: 'york-loader',
     name: 'York Loader',
-    date: new Date('Apr, 2017').toISOString(),
+    date: new Date(2017, 3).toISOString(),
     image: {
       src: '/img/projects/york-loader.svg',
       type: 'image/svg+xml',
