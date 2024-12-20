@@ -5,8 +5,8 @@ import {
   faLinkedin,
   faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Icon from "@joojocoding/react-boxicons";
 import { useLocation, useNavigate } from '@remix-run/react';
 import { clsx } from 'clsx';
 import { useEffect, useState } from 'react';
@@ -70,7 +70,7 @@ export default function Footer() {
           'fixed',
           'bottom-[40px]',
           'left-[40px]',
-          'p-3',
+          'p-2',
           'bg-sky-600',
           'dark:bg-violet-600',
           'text-white',
@@ -96,7 +96,7 @@ export default function Footer() {
           'ease-in-out',
         ])}
       >
-        <FontAwesomeIcon icon={faChevronUp} size="lg" />
+        <Icon name="chevron-up" size="sm" />
       </button>
       <div className="container pt-6 mx-auto">
         <div className="mb-6 flex justify-center">
