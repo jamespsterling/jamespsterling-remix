@@ -11,8 +11,10 @@
     "sass": "sass --watch app/styles/sass/styles.scss app/styles/styles.css --style compressed",
     "sass:build": "sass app/styles/sass/styles.scss app/styles/styles.css --style compressed",
     "icons": "npx @svgr/cli --out-dir app/components/icons -- public/img",
-    "lint:fix": "oxlint --fix && eslint --cache --fix \"**/*.ts*\"",
-    "lint": "oxlint && eslint --cache \"**/*.ts*\""
+    "lint:fix": "biome check --write .",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "format:check": "biome format ."
   },
   "dependencies": {
     "@fontsource/open-sans": "^5.1.0",
@@ -34,6 +36,7 @@
     "tw-elements": "^2.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
     "@cloudflare/workers-types": "^4.20241218.0",
     "@remix-run/dev": "^2.15.1",
     "@remix-run/eslint-config": "^2.15.1",
@@ -56,8 +59,7 @@
     "sass": "^1.83.0",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",
-    "wrangler": "^3.99.0",
-    "oxlint": "^0.15.3"
+    "wrangler": "^3.99.0"
   },
   "engines": {
     "node": ">=24.8.0"

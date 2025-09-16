@@ -1,0 +1,75 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"includes": [
+			"app/**/*",
+			"server.ts",
+			"remix.config.js",
+			"tailwind.config.ts",
+			"postcss.config.js",
+			"prettier.config.js",
+			"svgo.config.cjs",
+			"svgr.config.cjs"
+		],
+		"experimentalScannerIgnores": [
+			"node_modules/**",
+			"build/**",
+			"public/build/**",
+			"functions/**",
+			"*.config.js",
+			"*.config.cjs",
+			"*.config.mjs",
+			"*.config.ts",
+			"remix.env.d.ts",
+			"app/styles/styles.css",
+			"app/styles/styles.css.map"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineWidth": 100
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedVariables": "error"
+			},
+			"style": {
+				"useConst": "error"
+			},
+			"suspicious": {
+				"noExplicitAny": "warn"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"semicolons": "always",
+			"trailingCommas": "es5"
+		}
+	},
+	"json": {
+		"formatter": {
+			"indentStyle": "tab"
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	}
+}

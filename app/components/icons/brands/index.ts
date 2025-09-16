@@ -1,1 +1,1 @@
-export { default as LinkedInLogo } from './LinkedInLogo';
+export { default as LinkedInLogo } from "./LinkedInLogo";

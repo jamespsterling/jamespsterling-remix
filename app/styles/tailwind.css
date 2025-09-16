@@ -1,6 +1,6 @@
-@import '@fontsource/open-sans/latin.css';
-@import '@fortawesome/fontawesome-svg-core/styles.css';
-@import './styles.css';
+@import "@fontsource/open-sans/latin.css";
+@import "@fortawesome/fontawesome-svg-core/styles.css";
+@import "./styles.css";
 
 @tailwind base;
 @tailwind components;
