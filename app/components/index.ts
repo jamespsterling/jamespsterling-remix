@@ -4,7 +4,7 @@ export { default as Breadcrumbs } from "./breadcrumbs";
 export { default as Certifications } from "./certifications";
 export { default as Contact } from "./contact";
 export { default as Education } from "./education";
-export { default as Error } from "./error.tsx";
+export { default as Error } from "./error";
 export { default as Experience } from "./experience";
 export { default as Footer } from "./footer";
 export { default as ProjectImage } from "./image";

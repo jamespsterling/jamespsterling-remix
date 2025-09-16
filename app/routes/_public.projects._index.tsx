@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
-import type { RouteMatch } from "@remix-run/react";
+import type { UIMatch } from "@remix-run/react";
 import { Link, useLoaderData } from "@remix-run/react";
 import { Breadcrumbs, Lead, Projects } from "~/components";
 import { data } from "~/data/portfolio";
@@ -14,7 +14,7 @@ export const links: LinksFunction = () =>
 	}));
 
 export const handle = {
-	breadcrumb: (_match: RouteMatch, currentPage: string) => (
+	breadcrumb: (_match: UIMatch, currentPage: string) => (
 		<>
 			<Link to="/">About</Link>
 			<span className="separator">/</span>

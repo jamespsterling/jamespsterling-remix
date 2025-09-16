@@ -22,7 +22,7 @@ export default function Index() {
 	const { about, experience, education, certifications, technologies } =
 		useLoaderData<typeof loader>();
 	const [{ data: rootData }] = useMatches();
-	const darkMode = rootData.darkMode;
+	const darkMode = (rootData as any)?.darkMode;
 
 	return (
 		<>

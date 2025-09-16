@@ -1,11 +1,11 @@
 import { json } from "@remix-run/cloudflare";
-import type { RouteMatch } from "@remix-run/react";
+import type { UIMatch } from "@remix-run/react";
 import { Link, useLoaderData, useNavigate } from "@remix-run/react";
 import { Article, Breadcrumbs, Lead, Project } from "~/components";
 import { data } from "~/data/portfolio";
 
 export const handle = {
-	breadcrumb: (_match: RouteMatch, currentPage: string) => (
+	breadcrumb: (_match: UIMatch, currentPage: string) => (
 		<>
 			<Link to="/">About</Link>
 			<span className="separator">/</span>
@@ -16,7 +16,7 @@ export const handle = {
 	),
 };
 
-export const loader = async ({ params }) => {
+export const loader = async ({ params }: { params: { projectId: string } }) => {
 	const { projectId } = params;
 	const project = data.projects.find((p) => p.id === projectId);
 	const technologies =
