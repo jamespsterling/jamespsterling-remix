@@ -7,7 +7,7 @@ import Tailwind from "~/styles/tailwind.css";
 export const links: LinksFunction = () => [
 	{
 		rel: "preload",
-		href: "/img//lead-bg-10.jpg",
+		href: "/img/lead-bg-10.jpg",
 		as: "image",
 		type: "image/jpeg",
 	},

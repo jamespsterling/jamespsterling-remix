@@ -1,7 +1,7 @@
 @use 'colors' as *;
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -9,14 +9,28 @@ header {
   z-index: 10;
 
   ul {
-    background: rgba($background-dark, 0.4);
+    background: linear-gradient(to bottom,
+        rgba($background-dark, 0.8) 0%,
+        rgba($background-dark, 0.5) 30%,
+        rgba($background-dark, 0.2) 60%,
+        rgba($background-dark, 0.05) 85%,
+        rgba($background-dark, 0) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     text-align: center;
     padding: 10px;
     margin: 0;
   }
 
   @media only screen and (max-width: 767px) {
-    background: rgba($background-dark, 0.9);
+    background: linear-gradient(to bottom,
+        rgba($background-dark, 0.9) 0%,
+        rgba($background-dark, 0.6) 30%,
+        rgba($background-dark, 0.3) 60%,
+        rgba($background-dark, 0.1) 85%,
+        rgba($background-dark, 0) 100%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
   }
 
   li {
@@ -38,8 +52,9 @@ header {
     &:hover {
       color: $base-color-hover;
       text-decoration: none;
-      background: #eee;
+      background: #eeeeee95;
       border-radius: 4px;
+      filter: backdrop-blur(10px);
     }
 
     // &:focus {

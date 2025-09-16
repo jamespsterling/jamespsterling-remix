@@ -18,8 +18,9 @@ body.dark {
 
   header {
     a:hover {
-      background: rgb(0 0 0 / 75%);
+      background: #00000095;
       color: $accent-color;
+      filter: backdrop-blur(10px);
     }
   }
 
