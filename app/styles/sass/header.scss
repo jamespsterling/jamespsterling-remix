@@ -1,4 +1,4 @@
-@import 'colors.scss';
+@use 'colors' as *;
 
 header {
   position: absolute;
@@ -130,6 +130,6 @@ header {
   transition: transform 0.2s linear;
 }
 
-.checkbox:checked + .checkbox-label .ball {
+.checkbox:checked+.checkbox-label .ball {
   transform: translateX(24px);
 }

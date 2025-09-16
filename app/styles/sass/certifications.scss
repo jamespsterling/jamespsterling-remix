@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'colors' as *;
+
 #certifications {
   padding: 50px 15px 20px 15px;
   border-bottom: 1px solid $border;
@@ -52,7 +55,7 @@
 
   h5 {
     font-size: 0.9rem;
-    color: lighten($text, 10%);
+    color: color.adjust($text, $lightness: 10%);
   }
 
   p,
@@ -99,6 +102,7 @@
       height: 64px;
       margin-top: 12px;
     }
+
     .certification-date {
       width: initial;
     }

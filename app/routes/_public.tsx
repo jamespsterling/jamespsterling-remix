@@ -1,6 +1,5 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Outlet, useFetcher, useLoaderData, useLocation } from "@remix-run/react";
-import { useEffect } from "react";
 import { Footer, Menu } from "~/components";
 import { loader as darkMode } from "~/data/loader/dark-mode";
 import Tailwind from "~/styles/tailwind.css";
@@ -39,14 +38,6 @@ export const loader = darkMode;
 export default function Index() {
 	const { darkMode } = useLoaderData<typeof loader>();
 	const { pathname } = useLocation();
-
-	useEffect(() => {
-		if (darkMode === "enabled") {
-			document.body.classList.add("dark");
-		} else {
-			document.body.classList.remove("dark");
-		}
-	}, [darkMode]);
 
 	const fetcher = useFetcher();
 

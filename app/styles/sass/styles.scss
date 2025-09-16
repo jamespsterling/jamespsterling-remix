@@ -11,21 +11,22 @@
     Gulp and send to the /css folder which is then loaded on the page.
 */
 
-@import 'colors';
-@import 'mixins';
-@import 'dark';
-@import 'header';
-@import 'fireflies';
-@import 'lead';
-@import 'about';
-@import 'experience';
-@import 'education';
-@import 'certifications';
-@import 'skills';
-@import 'projects';
-@import 'contact';
-@import 'animations';
-@import 'responsive';
+@use 'sass:color';
+@use 'colors' as *;
+@use 'mixins' as *;
+@use 'dark';
+@use 'header';
+@use 'fireflies';
+@use 'lead';
+@use 'about';
+@use 'experience';
+@use 'education';
+@use 'certifications';
+@use 'skills';
+@use 'projects';
+@use 'contact';
+@use 'animations';
+@use 'responsive';
 
 html,
 body {
@@ -161,7 +162,7 @@ a {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid lighten($text, 25%);
+    border: 3px solid color.adjust($text, $lightness: 25%);
     text-align: center;
     transition: 0.3s all;
 
@@ -213,10 +214,12 @@ a {
   color: inherit;
   position: relative;
   z-index: 1;
+
   &:focus {
     outline: none;
   }
-  > span {
+
+  >span {
     vertical-align: middle;
   }
 }

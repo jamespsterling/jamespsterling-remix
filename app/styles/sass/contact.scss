@@ -1,3 +1,7 @@
+@use 'sass:color';
+@use 'colors' as *;
+@use 'mixins' as *;
+
 #contact {
   padding: 8rem 0 10rem;
   background: $contact-base;
@@ -22,15 +26,16 @@
     margin-bottom: 10px;
     background: #454545;
     color: #fff;
-    border: 1px darken(#454545, 10%);
+    border: 1px color.adjust(#454545, $lightness: -10%);
     @include transition();
+
     @include placeholder {
       color: #fff;
     }
 
     &:focus {
       outline: none;
-      background: darken(#454545, 10%);
+      background: color.adjust(#454545, $lightness: -10%);
     }
   }
 
@@ -66,7 +71,7 @@
     color: #fff;
 
     &:hover {
-      background-color: darken(#0a66c2, 7.5%) !important;
+      background-color: color.adjust(#0a66c2, $lightness: -7.5%) !important;
     }
 
     svg {

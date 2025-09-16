@@ -1,6 +1,10 @@
+@use 'sass:color';
+@use 'colors' as *;
+@use 'mixins' as *;
+
 #experience {
-  padding: 50px 15px;
-  text-align: center;
+  @include section-padding;
+  @include center-text;
   border-bottom: 1px solid $border;
   transition: 0.2s all;
 
@@ -25,12 +29,10 @@
     height: 100%;
     width: 3px;
     background: var(--base-color);
-    background: linear-gradient(
-      180deg,
-      var(--base-color) 0%,
-      var(--base-color) 97%,
-      rgba(0, 0, 0, 0) 100%
-    );
+    background: linear-gradient(180deg,
+        var(--base-color) 0%,
+        var(--base-color) 97%,
+        rgba(0, 0, 0, 0) 100%);
     z-index: 0;
   }
 }
@@ -66,9 +68,10 @@
           opacity: 0;
           transition: 0.2s all;
         }
+
         &:hover {
           svg {
-            color: darken($background-alt, 2%);
+            color: color.adjust($background-alt, $lightness: -2%);
             opacity: 1;
           }
         }
