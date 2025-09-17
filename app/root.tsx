@@ -17,6 +17,7 @@ import * as gtag from "~/utils/gtags.client";
 
 export const links: LinksFunction = () => [
 	...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+	{ rel: "stylesheet", href: "/styles/styles.css" },
 ];
 
 type ContextHack = { context: { [key: string]: any } };

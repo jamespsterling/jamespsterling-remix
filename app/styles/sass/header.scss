@@ -60,9 +60,9 @@ header {
     transition: 0.5s all;
 
     &:hover {
-      color: $base-color-hover;
+      color: $white;
       text-decoration: none;
-      background: #eeeeee95;
+      background: rgb(0, 0, 0, 0.66);
       border-radius: 4px;
       filter: backdrop-blur(10px);
     }

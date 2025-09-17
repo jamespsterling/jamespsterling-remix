@@ -3,18 +3,20 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix build",
-    "dev:remix": "remix dev -c \"npm run start\"",
-    "dev": "concurrently \"npm run sass\" \"npm run dev:remix\"",
+    "build": "npm run sass:build && remix build",
+    "dev": "concurrently \"npm run sass:watch\" \"remix dev -c \\\"wrangler pages dev --live-reload --compatibility-date=2023-08-14 ./public\\\"\"",
+    "dev:remix": "remix dev",
+    "dev:cloudflare": "concurrently \"npm run sass:watch\" \"remix dev -c \\\"npm run start\\\"\"",
     "start": "wrangler pages dev --live-reload --compatibility-date=2023-08-14 ./public ",
     "typecheck": "tsc",
-    "sass": "sass --watch app/styles/sass/styles.scss app/styles/styles.css --style compressed",
+    "sass:watch": "sass --watch app/styles/sass/styles.scss app/styles/styles.css --style expanded --source-map",
     "sass:build": "sass app/styles/sass/styles.scss app/styles/styles.css --style compressed",
     "icons": "npx @svgr/cli --out-dir app/components/icons -- public/img",
     "lint:fix": "biome check --write .",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "format:check": "biome format ."
+    "format:check": "biome format .",
+    "clean": "rm -rf public/build .cache"
   },
   "dependencies": {
     "@fontsource/open-sans": "^5.2.6",
