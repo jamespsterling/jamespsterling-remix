@@ -16,6 +16,10 @@
     "lint": "biome check .",
     "format": "biome format --write .",
     "format:check": "biome format .",
+    "test": "node test-bot-detection.mjs",
+    "test:bot-detection": "node test-bot-detection.mjs",
+    "test:server": "node test-server.mjs",
+    "test:all": "node test-all.mjs",
     "clean": "rm -rf public/build .cache"
   },
   "dependencies": {
