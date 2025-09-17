@@ -1,7 +1,7 @@
 import { faBars, faMoon, faSun, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "@remix-run/react";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useId } from "react";
 
 type Props = {
 	toggleDarkMode(): void;
@@ -10,6 +10,10 @@ type Props = {
 
 export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 	const menuRef = useRef<HTMLUListElement>(null);
+	const mobileMenuOpenId = useId();
+	const mobileMenuCloseId = useId();
+	const menuId = useId();
+	const checkboxId = useId();
 
 	const toggleMobileMenu = () => {
 		if (window.innerWidth > 768) {
@@ -19,15 +23,15 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 		document.querySelector("header")?.classList.toggle("active");
 	};
 
-	const getLuminance = (r: number, g: number, b: number): number => {
+	const getLuminance = useCallback((r: number, g: number, b: number): number => {
 		const [rs, gs, bs] = [r, g, b].map((c) => {
 			c = c / 255;
 			return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
 		});
 		return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-	};
+	}, []);
 
-	const getBackgroundColor = (element: Element): string | null => {
+	const getBackgroundColor = useCallback((element: Element): string | null => {
 		const computedStyle = window.getComputedStyle(element);
 		const bgColor = computedStyle.backgroundColor;
 
@@ -40,9 +44,9 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 		}
 
 		return bgColor;
-	};
+	}, []);
 
-	const isLightBackground = (colorString: string): boolean => {
+	const isLightBackground = useCallback((colorString: string): boolean => {
 		// Extract RGB values from color string
 		const rgbMatch = colorString.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
 		if (!rgbMatch) return false;
@@ -52,7 +56,7 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 
 		// Return true if luminance is above 0.5 (light background)
 		return luminance > 0.5;
-	};
+	}, [getLuminance]);
 
 	// Scroll spy effect
 	useEffect(() => {
@@ -133,18 +137,29 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 			window.removeEventListener("scroll", throttledHandleScroll);
 			window.removeEventListener("resize", throttledHandleScroll);
 		};
-	}, []);
+	}, [getBackgroundColor, isLightBackground]);
 
 	return (
 		<>
-			<div id="mobile-menu-open" className="shadow-large" onClick={() => toggleMobileMenu()}>
+			<button 
+				id={mobileMenuOpenId} 
+				className="shadow-large" 
+				onClick={() => toggleMobileMenu()}
+				aria-label="Open mobile menu"
+				type="button"
+			>
 				<FontAwesomeIcon icon={faBars} />
-			</div>
+			</button>
 			<header>
-				<div id="mobile-menu-close" onClick={() => toggleMobileMenu()}>
+				<button 
+					id={mobileMenuCloseId} 
+					onClick={() => toggleMobileMenu()}
+					aria-label="Close mobile menu"
+					type="button"
+				>
 					<FontAwesomeIcon icon={faTimes} />
-				</div>
-				<ul id="menu" ref={menuRef} className="shadow backdrop-blur">
+				</button>
+				<ul id={menuId} ref={menuRef} className="shadow backdrop-blur">
 					<li>
 						<Link to="/" onClick={() => toggleMobileMenu()}>
 							About
@@ -179,13 +194,13 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 						<input
 							type="checkbox"
 							className="checkbox"
-							id="checkbox"
+							id={checkboxId}
 							aria-label="toggle dark mode"
 							onChange={toggleDarkMode}
 							checked={darkModeEnabled}
 							onClick={() => toggleMobileMenu()}
 						/>
-						<label htmlFor="checkbox" className="checkbox-label">
+						<label htmlFor={checkboxId} className="checkbox-label">
 							<FontAwesomeIcon icon={faMoon} />
 							<FontAwesomeIcon icon={faSun} />
 							<span className="ball"></span>
