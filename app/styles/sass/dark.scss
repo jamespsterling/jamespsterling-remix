@@ -135,7 +135,8 @@ body.dark {
       transition: 0.2s all;
 
       &:hover {
-        border: 1px solid var(--accent-color);
+        border: 1px solid color-mix(in srgb, var(--accent-color) 66%, transparent);
+        box-shadow: 0 2px 10px 0 color-mix(in srgb, var(--accent-color) 33%, transparent);
 
         .project {
           transition: 0.2s all;
