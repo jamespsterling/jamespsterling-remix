@@ -6,7 +6,7 @@
 
 import type { AppLoadContext, EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
-import { isbot } from "isbot";
+import { isBot } from "~/utils/bot-detection";
 import { renderToReadableStream } from "react-dom/server";
 
 export default async function handleRequest(
@@ -28,7 +28,8 @@ export default async function handleRequest(
 		}
 	);
 
-	if (isbot(request.headers.get("user-agent"))) {
+	// Enhanced bot detection for 2025 - waits for complete HTML for bots
+	if (isBot(request.headers.get("user-agent"))) {
 		await body.allReady;
 	}
 
