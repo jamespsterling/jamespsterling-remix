@@ -5,7 +5,7 @@
   background-image: url(/img/lead-bg-9.jpg);
   background-size: cover;
   background-position: center;
-  padding: 185px 15px 150px;
+  padding: 185px 15px 120px;
   overflow: hidden;
   filter: saturate(1.33);
   transition: 0.2s all;
@@ -30,6 +30,8 @@
       width: 12vw;
       border-radius: 50%;
       margin: auto;
+      filter: contrast(128%) grayscale(100%) saturate(120%);
+      mix-blend-mode: none;
     }
   }
 

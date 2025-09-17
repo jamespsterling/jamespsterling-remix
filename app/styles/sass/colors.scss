@@ -6,8 +6,8 @@
 
 @use 'sass:color';
 
-$base-color: #096ca7;
-$accent-color: #71c900;
+$base-color: #6bb1da;
+$accent-color: #67b700;
 $dark-color: #2a2a2a;
 
 $base-color-hover: color.adjust($dark-color, $lightness: 10%);
