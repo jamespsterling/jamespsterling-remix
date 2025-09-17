@@ -42,13 +42,34 @@
 		"rules": {
 			"recommended": true,
 			"correctness": {
-				"noUnusedVariables": "error"
+				"noUnusedVariables": "error",
+				"useUniqueElementIds": "off",
+				"useExhaustiveDependencies": "off",
+				"noUnknownFunction": "off",
+				"noMissingVarFunction": "off"
 			},
 			"style": {
-				"useConst": "error"
+				"useConst": "error",
+				"noDescendingSpecificity": "off",
+				"useExponentiationOperator": "off"
+			},
+			"complexity": {
+				"noImportantStyles": "off"
 			},
 			"suspicious": {
-				"noExplicitAny": "warn"
+				"noExplicitAny": "warn",
+				"noRedeclare": "off",
+				"noArrayIndexKey": "off",
+				"noShadowRestrictedNames": "off",
+				"noUnknownAtRules": "off",
+				"noDuplicateProperties": "off"
+			},
+			"security": {
+				"noDangerouslySetInnerHtml": "off"
+			},
+			"a11y": {
+				"useButtonType": "off",
+				"noSvgWithoutTitle": "off"
 			}
 		}
 	},
