@@ -1,0 +1,8 @@
+name = "jamespsterling-remix"
+compatibility_date = "2023-08-14"
+
+[env.production]
+vars = { ADMIN_TOKEN = "your-production-admin-token" }
+
+[env.preview]
+vars = { ADMIN_TOKEN = "your-preview-admin-token" }

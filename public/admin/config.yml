@@ -1,0 +1,127 @@
+backend:
+  name: github
+  repo: jamespsterling/jamespsterling-remix
+  branch: main
+  # Add authentication requirement
+  auth_type: implicit
+
+# Require authentication for all operations
+publish_mode: editorial_workflow
+
+media_folder: "public/img"
+public_folder: "/img"
+
+# Add security headers
+display_url: "https://jamespsterling.com"
+
+collections:
+  # Articles/Case Studies
+  - name: "articles"
+    label: "Articles"
+    folder: "app/data/articles/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Project ID", name: "projectId", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # About Information
+  - name: "about"
+    label: "About"
+    files:
+      - label: "About Information"
+        name: "about"
+        file: "app/data/about.yml"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "text"}
+
+  # Experience entries
+  - name: "experience"
+    label: "Experience"
+    files:
+      - label: "Experience"
+        name: "experience"
+        file: "app/data/experience.yml"
+        fields:
+          - label: "Experience Entries"
+            name: "entries"
+            widget: "list"
+            fields:
+              - {label: "Employer", name: "employer", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Time Period", name: "time", widget: "string"}
+              - {label: "Icon", name: "icon", widget: "string"}
+              - label: "Description"
+                name: "description"
+                widget: "list"
+                field: {label: "Bullet Point", name: "item", widget: "text"}
+              - {label: "Link", name: "link", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image"}
+              - label: "Client Logos (Light)"
+                name: "clientLogos"
+                widget: "object"
+                fields:
+                  - label: "Light Logos"
+                    name: "light"
+                    widget: "list"
+                    field: {label: "Logo", name: "logo", widget: "image"}
+                  - label: "Dark Logos"
+                    name: "dark"
+                    widget: "list"
+                    field: {label: "Logo", name: "logo", widget: "image"}
+
+  # Education
+  - name: "education"
+    label: "Education"
+    files:
+      - label: "Education"
+        name: "education"
+        file: "app/data/education.yml"
+        fields:
+          - {label: "University Name", name: "name", widget: "string"}
+          - {label: "University Link", name: "link", widget: "string"}
+          - {label: "Degree", name: "degree", widget: "string"}
+          - {label: "Concentration", name: "concentration", widget: "text"}
+          - {label: "Dates", name: "dates", widget: "string"}
+          - {label: "Project Description", name: "project", widget: "text"}
+
+  # Certifications
+  - name: "certifications"
+    label: "Certifications"
+    files:
+      - label: "Certifications"
+        name: "certifications"
+        file: "app/data/certifications.yml"
+        fields:
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
+              - {label: "Issued By", name: "issued", widget: "text"}
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Badge Image", name: "badge", widget: "image"}
+
+  # Skills
+  - name: "skills"
+    label: "Skills"
+    files:
+      - label: "Skills"
+        name: "skills"
+        file: "app/data/skills.yml"
+        fields:
+          - label: "Skills List"
+            name: "skills"
+            widget: "list"
+            field: {label: "Skill", name: "skill", widget: "string"}
+          - label: "Tools List"
+            name: "tools"
+            widget: "list"
+            field: {label: "Tool", name: "tool", widget: "string"}
