@@ -4,13 +4,19 @@ A [Remix](https://remix.run) implementation of my portfolio, using static conten
 
 ## Setup
 
-This project uses Node.js 22 and npm 11.6+. To fix the Node.js version with [Nvm](https://github.com/nvm-sh/nvm), run:
+This project uses Node.js 22 and npm 10.9.2 (required for Cloudflare Workers v3). To fix the Node.js version with [Nvm](https://github.com/nvm-sh/nvm), run:
 
 ```sh
 nvm use
 ```
 
-This will automatically use the correct npm version that comes with Node.js 22. Then install the dependencies:
+You may need to install npm 10.9.2 specifically for Cloudflare compatibility:
+
+```sh
+npm install -g npm@10.9.2
+```
+
+Then install the dependencies:
 
 ```sh
 npm install
