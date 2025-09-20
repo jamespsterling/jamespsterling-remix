@@ -1,11 +1,11 @@
 import { json } from "@remix-run/cloudflare";
 import type { UIMatch } from "@remix-run/react";
 import { Link, useLoaderData, useNavigate } from "@remix-run/react";
-import { Article, Breadcrumbs, Lead, Project } from "~/components";
+import { Breadcrumbs, Lead, Project } from "~/components";
 import MarkdownArticle from "~/components/markdown-article";
-import { iotEventsMarkdown, portfolioMarkdown } from "~/data/articles/markdown-content";
-import { data } from "~/data/portfolio";
-import { parseMarkdown } from "~/utils/markdown";
+import { iotEventsMarkdown, portfolioMarkdown } from "~/data/content-data";
+import { data } from "~/data/content-loader";
+import { parseContentMarkdown } from "~/utils/content-loader";
 
 export const handle = {
 	breadcrumb: (_match: UIMatch, currentPage: string) => (
@@ -37,9 +37,14 @@ export const loader = async ({ params }: { params: { projectId: string } }) => {
 	let markdownArticle = null;
 	if (project?.hasArticle) {
 		const markdownContent = MARKDOWN_CONTENT_MAP[projectId];
+		console.log(
+			`Loading markdown for project ${projectId}:`,
+			markdownContent ? "Found" : "Not found"
+		);
 		if (markdownContent) {
 			try {
-				markdownArticle = parseMarkdown(markdownContent);
+				markdownArticle = parseContentMarkdown(markdownContent);
+				console.log("Parsed markdown article:", markdownArticle);
 			} catch (error) {
 				console.error(`Failed to parse markdown for project ${projectId}:`, error);
 			}
@@ -66,7 +71,6 @@ export default function Index() {
 			{project?.hasArticle && markdownArticle && (
 				<MarkdownArticle content={markdownArticle.content} />
 			)}
-			{project?.hasArticle && !markdownArticle && <Article component={project.id} />}
 		</>
 	);
 }

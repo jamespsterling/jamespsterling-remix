@@ -1,5 +1,4 @@
 export { default as About } from "./about";
-export { default as Article } from "./article";
 export { default as Breadcrumbs } from "./breadcrumbs";
 export { default as Certifications } from "./certifications";
 export { default as Contact } from "./contact";
@@ -9,9 +8,9 @@ export { default as Experience } from "./experience";
 export { default as Footer } from "./footer";
 export { default as ProjectImage } from "./image";
 export { default as Lead } from "./lead";
+export { default as MarkdownArticle } from "./markdown-article";
 export { default as Menu } from "./menu";
 export { default as Project } from "./project";
 export { default as Projects } from "./projects";
 export { default as Skills } from "./skills";
 export { default as Technology } from "./technology";
-export { default as MarkdownArticle } from "./markdown-article";

@@ -1,4 +1,4 @@
-import { data } from "~/data/portfolio";
+import { data } from "~/data/content-loader";
 
 const BASE_URL = "https://jamespsterling.com";
 

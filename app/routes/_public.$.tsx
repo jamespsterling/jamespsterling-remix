@@ -2,7 +2,7 @@ import { json } from "@remix-run/cloudflare";
 import type { UIMatch } from "@remix-run/react";
 import { Link, useLoaderData } from "@remix-run/react";
 import { Error, Lead } from "~/components";
-import { data } from "~/data/portfolio";
+import { data } from "~/data/content-loader";
 
 export const handle = {
 	breadcrumb: (_match: UIMatch, currentPage: string) => (

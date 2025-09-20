@@ -1,7 +1,7 @@
 import { json } from "@remix-run/cloudflare";
 import { useLoaderData, useMatches } from "@remix-run/react";
 import { About, Certifications, Education, Experience, Lead, Skills } from "~/components";
-import { data } from "~/data/portfolio";
+import { data } from "~/data/content-loader";
 import type { Technology } from "~/data/types";
 
 export const loader = async () => {
