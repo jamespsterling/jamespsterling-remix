@@ -60,7 +60,14 @@
     "wrangler": "^4.37.1"
   },
   "engines": {
-    "node": "22.16.0",
-    "npm": "10.9.2"
+    "node": ">=22.16.0",
+    "npm": ">=10.9.2"
+  },
+  "overrides": {
+    "estree-util-value-to-estree": ">=3.3.3",
+    "esbuild": ">=0.24.3",
+    "remark-mdx-frontmatter": {
+      "estree-util-value-to-estree": ">=3.3.3"
+    }
   }
 }
