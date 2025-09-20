@@ -26,4 +26,5 @@ export type Project = {
 export type Projects = Project[];
 export type Technologies = typeof data.technologies;
 export type Technology = Technologies[number];
-export type Skill = typeof data.skills;
+export type Skills = typeof data.skills;
+export type Skill = Skills["core"][number] | Skills["additional"][number];
