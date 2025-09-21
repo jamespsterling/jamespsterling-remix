@@ -5,7 +5,7 @@ export default function Certifications({ certifications }: { certifications: Cer
 		<div id="certifications">
 			<h2 className="heading mb-8 md:mb-10">Certifications</h2>
 			{certifications.map((certification, i) => (
-				<div className="certification-block shadow-large" key={i}>
+				<div className="certification-block" key={i}>
 					<div className="certification-header">
 						<img loading="lazy" src={certification.badge.src} alt={certification.badge.alt} />
 						<div className="certification-text-header">
@@ -14,7 +14,7 @@ export default function Certifications({ certifications }: { certifications: Cer
 									{certification.name}
 								</a>
 							</h3>
-							<h4 className="mb-1" dangerouslySetInnerHTML={{ __html: certification.issued }}></h4>
+							<h4 className="mb-6" dangerouslySetInnerHTML={{ __html: certification.issued }}></h4>
 							<h5>{certification.description}</h5>
 						</div>
 					</div>

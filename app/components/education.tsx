@@ -4,9 +4,13 @@ export default function Education({ education }: { education: Education }) {
 	return (
 		<div id="education">
 			<h2 className="heading mb-8 md:mb-10">Education</h2>
-			<div className="education-block shadow-large">
+			<div className="education-block">
 				<div className="education-header">
-					<img loading="lazy" src={education.university.logo.src} alt={education.university.logo.alt} />
+					<img
+						loading="lazy"
+						src={education.university.logo.src}
+						alt={education.university.logo.alt}
+					/>
 					<div className="education-text-header">
 						<h3>
 							<a target="_blank" rel="noopener noreferrer" href={education.university.link}>
@@ -15,7 +19,7 @@ export default function Education({ education }: { education: Education }) {
 						</h3>
 						<h4>{education.university.degree}</h4>
 						<h5
-							className="mb-1"
+							className="mb-6"
 							dangerouslySetInnerHTML={{ __html: education.university.concentration }}
 						></h5>
 						<p>
