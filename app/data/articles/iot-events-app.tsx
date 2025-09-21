@@ -8,48 +8,96 @@ export default function IotEventsApp() {
 						<div className="-m-1 flex flex-wrap md:-m-2">
 							<div className="flex w-1/2 flex-wrap">
 								<div className="w-full p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block h-full w-full rounded-lg object-cover object-center"
-										src="/img/projects/iot-events-app/splash.png"
-									/>
+									<picture>
+										<source srcSet="/img/projects/iot-events-app/splash.avif" type="image/avif" />
+										<source srcSet="/img/projects/iot-events-app/splash.webp" type="image/webp" />
+										<img
+											src="/img/projects/iot-events-app/splash.jpg"
+											alt="gallery"
+											className="block h-full w-full rounded-lg object-cover object-center"
+											loading="lazy"
+										/>
+									</picture>
 								</div>
 								<div className="w-1/2 p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block h-full w-full rounded-lg object-cover object-center"
-										src="/img/projects/iot-events-app/event-speakers-sm.png"
-									/>
+									<picture>
+										<source
+											srcSet="/img/projects/iot-events-app/event-speakers-sm.avif"
+											type="image/avif"
+										/>
+										<source
+											srcSet="/img/projects/iot-events-app/event-speakers-sm.webp"
+											type="image/webp"
+										/>
+										<img
+											src="/img/projects/iot-events-app/event-speakers-sm.jpg"
+											alt="gallery"
+											className="block h-full w-full rounded-lg object-cover object-center"
+											loading="lazy"
+										/>
+									</picture>
 								</div>
 								<div className="w-1/2 p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block h-full w-full rounded-lg object-cover object-center"
-										src="/img/projects/iot-events-app/notifications-sm.png"
-									/>
+									<picture>
+										<source
+											srcSet="/img/projects/iot-events-app/notifications-sm.avif"
+											type="image/avif"
+										/>
+										<source
+											srcSet="/img/projects/iot-events-app/notifications-sm.webp"
+											type="image/webp"
+										/>
+										<img
+											src="/img/projects/iot-events-app/notifications-sm.png"
+											alt="gallery"
+											className="block h-full w-full rounded-lg object-cover object-center"
+											loading="lazy"
+										/>
+									</picture>
 								</div>
 							</div>
 							<div className="flex w-1/2 flex-wrap">
 								<div className="w-1/2 p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block h-full w-full rounded-lg object-cover object-center"
-										src="/img/projects/iot-events-app/event-sm.png"
-									/>
+									<picture>
+										<source srcSet="/img/projects/iot-events-app/event-sm.avif" type="image/avif" />
+										<source srcSet="/img/projects/iot-events-app/event-sm.webp" type="image/webp" />
+										<img
+											src="/img/projects/iot-events-app/event-sm.png"
+											alt="gallery"
+											className="block h-full w-full rounded-lg object-cover object-center"
+											loading="lazy"
+										/>
+									</picture>
 								</div>
 								<div className="w-1/2 p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block h-full w-full rounded-lg object-cover object-center"
-										src="/img/projects/iot-events-app/event-venue-sm.png"
-									/>
+									<picture>
+										<source
+											srcSet="/img/projects/iot-events-app/event-venue-sm.avif"
+											type="image/avif"
+										/>
+										<source
+											srcSet="/img/projects/iot-events-app/event-venue-sm.webp"
+											type="image/webp"
+										/>
+										<img
+											src="/img/projects/iot-events-app/event-venue-sm.png"
+											alt="gallery"
+											className="block h-full w-full rounded-lg object-cover object-center"
+											loading="lazy"
+										/>
+									</picture>
 								</div>
 								<div className="w-full p-1 md:p-2">
-									<img
-										alt="gallery"
-										className="block h-full w-full rounded-lg object-cover object-center"
-										src="/img/projects/iot-events-app/events.png"
-									/>
+									<picture>
+										<source srcSet="/img/projects/iot-events-app/events.avif" type="image/avif" />
+										<source srcSet="/img/projects/iot-events-app/events.webp" type="image/webp" />
+										<img
+											src="/img/projects/iot-events-app/events.png"
+											alt="gallery"
+											className="block h-full w-full rounded-lg object-cover object-center"
+											loading="lazy"
+										/>
+									</picture>
 								</div>
 							</div>
 						</div>

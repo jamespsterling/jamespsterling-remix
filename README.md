@@ -39,6 +39,17 @@ This portfolio app uses modular [SASS](https://sass-lang.com/) & [Tailwindcss](h
 
 Tailwind is the new kid on the block, bringing utility-focused class styling which I believe compliments the composition-focus of React. While tailwind does not recommend using a preprocessor in tandem, it is not generally destructive to do so and only means a small detriment to developer experience (DX). Ultimately, I plan to completely switch over to Tailwind entirely.
 
+### Image Optimization
+
+This project includes a comprehensive image optimization system with modern formats and responsive images. See the [documentation](./doc/README.md) for details.
+
+**Quick start:**
+```bash
+npm run setup:images    # Install tools (once)
+npm run optimize:images # Optimize all images
+npm run optimize:new    # Optimize new images
+```
+
 ## Todo
 
 - [x] Dark mode toggle with cookies

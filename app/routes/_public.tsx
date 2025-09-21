@@ -7,21 +7,21 @@ import Tailwind from "~/styles/tailwind.css";
 export const links: LinksFunction = () => [
 	{
 		rel: "preload",
-		href: "/img/lead-bg-10.jpg",
+		href: "/img/lead-bg-10.webp",
 		as: "image",
-		type: "image/jpeg",
+		type: "image/webp",
 	},
 	{
 		rel: "preload",
-		href: "/img/lead-bg-9.jpg",
+		href: "/img/lead-bg-9.webp",
 		as: "image",
-		type: "image/jpeg",
+		type: "image/webp",
 	},
 	{
 		rel: "preload",
-		href: "/img/headshot.jpg",
+		href: "/img/headshot.webp",
 		as: "image",
-		type: "image/jpg",
+		type: "image/webp",
 	},
 	{
 		rel: "stylesheet",

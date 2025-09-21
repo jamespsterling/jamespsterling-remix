@@ -77,7 +77,7 @@ const education = {
 		name: "Southeastern Louisiana University",
 		link: "https://www.southeastern.edu",
 		logo: {
-			src: "/img/education/athletics-lion-spirit.png",
+			src: "/img/education/athletics-lion-spirit.webp",
 			alt: "SELU Logo",
 		},
 		degree: "Bachelor of Science in Computer Science",
@@ -98,7 +98,7 @@ const certifications = [
 		name: "AWS Partner: Accreditation (Technical)",
 		link: "https://www.credly.com/badges/903f4009-a4cc-4c7f-921d-1ef9e4279387",
 		badge: {
-			src: "/img/certifications/aws-partner-accreditation-technical.png",
+			src: "/img/certifications/aws-partner-accreditation-technical.webp",
 			alt: "AWS Partner Badge",
 		},
 		issued: `Issued by <a
@@ -162,10 +162,10 @@ const experience = [
 			"Leads the team development effort to migration of cart and checkout experiences on next-gen platform for Metro by T-Mobile.",
 		],
 		link: "https://nortal.com/",
-		logo: "/img/companies/nortal.png",
+		logo: "/img/companies/nortal.webp",
 		clientLogos: {
-			light: ["/img/brands/tmobile.png", "/img/brands/tvision.png", "/img/brands/metro.png"],
-			dark: ["/img/brands/tmobile.png", "/img/brands/tvision.png", "/img/brands/metro-dark.png"],
+			light: ["/img/brands/tmobile.webp", "/img/brands/tvision.webp", "/img/brands/metro.webp"],
+			dark: ["/img/brands/tmobile.webp", "/img/brands/tvision.webp", "/img/brands/metro-dark.webp"],
 		},
 	},
 	{
@@ -185,16 +185,16 @@ const experience = [
 		logo: "/img/companies/eas-logo.webp",
 		clientLogos: {
 			light: [
-				"/img/brands/microsoft.png",
-				"/img/brands/bing.png",
-				"/img/brands/godaddy.png",
+				"/img/brands/microsoft.webp",
+				"/img/brands/bing.webp",
+				"/img/brands/godaddy.webp",
 				"/img/brands/united-fcu.svg",
 				"/img/brands/tdecu.svg",
 			],
 			dark: [
-				"/img/brands/microsoft-dark.png",
-				"/img/brands/bing.png",
-				"/img/brands/godaddy.png",
+				"/img/brands/microsoft-dark.webp",
+				"/img/brands/bing.webp",
+				"/img/brands/godaddy.webp",
 				"/img/brands/united-fcu.svg",
 				"/img/brands/tdecu.svg",
 			],
@@ -211,10 +211,10 @@ const experience = [
 			"Migrates manual deployment processes using configuration of continuous integration & delivery (CI/CD) pipelines using <b>TeamCity</b> and <b>Octopus Deploy</b> to improve <b>DevOps</b> practices in both Linux and Windows server environments.",
 		],
 		link: "https://www.sedgwick.com/acquisition-news",
-		logo: "/img/companies/york.png",
+		logo: "/img/companies/york.webp",
 		clientLogos: {
-			light: ["/img/brands/farmers.webp", "/img/brands/walmart.png", "/img/brands/lyft.png"],
-			dark: ["/img/brands/farmers-dark.png", "/img/brands/walmart.png", "/img/brands/lyft.png"],
+			light: ["/img/brands/farmers.webp", "/img/brands/walmart.webp", "/img/brands/lyft.webp"],
+			dark: ["/img/brands/farmers-dark.webp", "/img/brands/walmart.webp", "/img/brands/lyft.webp"],
 		},
 	},
 	{
@@ -227,7 +227,7 @@ const experience = [
 			"Contributes new feature work and tech debt refinement for MEDTRON's Electronic Health Record System (EHR) with focus on HIPPA compliance and usability.",
 		],
 		link: "https://www.medtronsoftware.com/",
-		logo: "/img/companies/medtron.png",
+		logo: "/img/companies/medtron.webp",
 	},
 	{
 		employer: "York Risk Services Group, Inc.",
@@ -761,7 +761,7 @@ const projects: Project[] = [
 		id: "portfolio",
 		name: "Portfolio",
 		date: new Date(2023, 7).toISOString(),
-		image: { src: "/img/projects/portfolio.png", type: "image/png", height: 300 },
+		image: { src: "/img/projects/portfolio.webp", type: "image/webp", height: 300 },
 		technologies: [
 			"remix",
 			"cloudflare-pages",
@@ -778,7 +778,7 @@ const projects: Project[] = [
 		id: "eeka",
 		name: "eekä",
 		date: new Date(2019, 11).toISOString(),
-		image: { src: "/img/projects/eeka-home.png", type: "image/png", height: 300 },
+		image: { src: "/img/projects/eeka-home.webp", type: "image/webp", height: 300 },
 		technologies: ["angular-js", "node-js", "express-js", "rxjs", "google-cloud"],
 		description:
 			'An lightweight Angular web app to visualize "everything I care about" (eekä). Using Angular & ExpressJs along with Google Cloud Datastore this app is a passion project to put many disconnected things in one place. Aggregating data from IoT smart devices (Personal Weather Station, HVAC, etc) with GCP Cloud Functions, I am then able to retrieve and display meaningful real-time data using Apache ECharts. Integrating many other 3rd party services such as DarkSky, The Weather Channel, YouTube, Google Maps, TradingView, and many others I am able to consolidate the sheer number of apps and services all in one place–constantly evolving.',
@@ -788,8 +788,8 @@ const projects: Project[] = [
 		name: "CrashCart App",
 		date: new Date(2019, 10).toISOString(),
 		image: {
-			src: "/img/projects/crash-cart-frame.png",
-			type: "image/png",
+			src: "/img/projects/crash-cart-frame.webp",
+			type: "image/webp",
 			height: 300,
 			classes: "mx-auto max-w-sm shadow-none",
 		},
@@ -802,8 +802,8 @@ const projects: Project[] = [
 		name: "IoT Events App",
 		date: new Date(2020, 0).toISOString(),
 		image: {
-			src: "/img/projects/iot-mobile-app.png",
-			type: "image/png",
+			src: "/img/projects/iot-mobile-app.webp",
+			type: "image/webp",
 			height: 300,
 			classes: "mx-auto max-w-sm shadow-none",
 		},
@@ -819,8 +819,8 @@ const projects: Project[] = [
 		name: "IoT In Action Events",
 		date: new Date(2018, 9).toISOString(),
 		image: {
-			src: "/img/projects/iot-web.png",
-			type: "image/png",
+			src: "/img/projects/iot-web.webp",
+			type: "image/webp",
 			height: 300,
 		},
 		technologies: ["php", "node-js", "ractive-js", "javascript", "mysql", "azure"],
@@ -833,8 +833,8 @@ const projects: Project[] = [
 		name: "GoDaddy Email Signature Generator",
 		date: new Date(2018, 11).toISOString(),
 		image: {
-			src: "/img/projects/godaddy-email-sig/main.png",
-			type: "image/png",
+			src: "/img/projects/godaddy-email-sig/main.webp",
+			type: "image/webp",
 			height: 300,
 			width: 300,
 		},
@@ -847,8 +847,8 @@ const projects: Project[] = [
 		name: "EASCI Email Signature Generator",
 		date: new Date(2018, 11).toISOString(),
 		image: {
-			src: "/img/projects/easci-email-sig/signature-fold.png",
-			type: "image/png",
+			src: "/img/projects/easci-email-sig/signature-fold.webp",
+			type: "image/webp",
 			height: 300,
 		},
 		technologies: ["php", "bootstrap", "javascript", "css3", "aws"],
@@ -870,8 +870,8 @@ const projects: Project[] = [
 		name: "York Styleguide",
 		date: new Date(2015, 5).toISOString(),
 		image: {
-			src: "/img/projects/york-styleguide/assets.png",
-			type: "image/jpg",
+			src: "/img/projects/york-styleguide/assets.webp",
+			type: "image/webp",
 			height: 300,
 			width: 300,
 		},
@@ -885,8 +885,8 @@ const projects: Project[] = [
 		name: "Careworks Styleguide",
 		date: new Date(2015, 5).toISOString(),
 		image: {
-			src: "/img/projects/careworks-styleguide/primary.png",
-			type: "image/png",
+			src: "/img/projects/careworks-styleguide/primary.webp",
+			type: "image/webp",
 			height: 300,
 			width: 300,
 		},
@@ -899,7 +899,7 @@ const projects: Project[] = [
 		id: "monocle",
 		name: "Monocle",
 		date: new Date(2016, 8).toISOString(),
-		image: { src: "/img/projects/monocle.jpg", type: "image/jpg", height: 169, width: 300 },
+		image: { src: "/img/projects/monocle.webp", type: "image/webp", height: 169, width: 300 },
 		technologies: ["android"],
 		description:
 			"Using Google Glass, Monocle was a proof of concept project using Android Dev Studio for York Innovation to push the boundaries of the Risk Assessment process.",
@@ -908,7 +908,7 @@ const projects: Project[] = [
 		id: "focus-help-portal",
 		name: "FOCUS Help Portal",
 		date: new Date(2015, 5).toISOString(),
-		image: { src: "/img/projects/focus-help.png", type: "image/png", height: 300, width: 300 },
+		image: { src: "/img/projects/focus-help.webp", type: "image/webp", height: 300, width: 300 },
 		technologies: ["html5", "css3", "php", "javascript", "sass"],
 		description:
 			"Built as a companion to York's RIMS system, FOCUS Help Portal provide training material, and other useful information to help FOCUS users. It was built using a highly customized version of HTML5 Boilerplate.",
@@ -918,7 +918,7 @@ const projects: Project[] = [
 		id: "email-signature-generator",
 		name: "Email Signature Generator",
 		date: new Date(2016, 7).toISOString(),
-		image: { src: "/img/projects/emailsig.jpg", type: "image/jpg", height: 296, width: 300 },
+		image: { src: "/img/projects/emailsig.webp", type: "image/webp", height: 296, width: 300 },
 		technologies: ["php", "bootstrap", "javascript", "css3"],
 		description:
 			"Built with Bootstrap v4, PHP, and Micro-service Offices API to assist users create their email signatures at York and helps maintain a consistent look and feel across the organization.",
@@ -928,7 +928,7 @@ const projects: Project[] = [
 		id: "provider-gateway",
 		name: "Provider Gateway",
 		date: new Date(2017, 6).toISOString(),
-		image: { src: "/img/projects/provider.png", type: "image/png", height: 300, width: 300 },
+		image: { src: "/img/projects/provider.webp", type: "image/webp", height: 300, width: 300 },
 		technologies: ["html5", "css3", "javascript", "asp-net-mvc", "font-awesome", "bootstrap"],
 		description:
 			"Provider Gateway is a self-service tool to assist providers in looking up payment statuses from claims submitted through York. Built on ASP.Net MVC, ASP.Net WebAPI, and Bootstrap v3.",
@@ -938,7 +938,7 @@ const projects: Project[] = [
 		id: "wc-payment-options",
 		name: "WC Payment Options",
 		date: new Date(2014, 2).toISOString(),
-		image: { src: "/img/projects/wcpay.png", type: "image/png", height: 300 },
+		image: { src: "/img/projects/wcpay.webp", type: "image/webp", height: 300 },
 		technologies: ["javascript", "html5", "css3"],
 		description:
 			"WC Payment Options is a companion website to FARA's claim system at the time and was built in the early days before responsive web design really took a hold. It was designed to be dead simple to use for claimants to choose how they receive their Worker's Compensation benefits.",

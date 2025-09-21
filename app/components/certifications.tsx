@@ -7,7 +7,7 @@ export default function Certifications({ certifications }: { certifications: Cer
 			{certifications.map((certification, i) => (
 				<div className="certification-block shadow-large" key={i}>
 					<div className="certification-header">
-						<img src={certification.badge.src} alt={certification.badge.alt} />
+						<img loading="lazy" src={certification.badge.src} alt={certification.badge.alt} />
 						<div className="certification-text-header">
 							<h3>
 								<a target="_blank" rel="noopener noreferrer" href={certification.link}>

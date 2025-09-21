@@ -20,7 +20,10 @@
     "test:bot-detection": "node test-bot-detection.mjs",
     "test:server": "node test-server.mjs",
     "test:all": "node test-all.mjs",
-    "clean": "rm -rf public/build .cache"
+    "clean": "rm -rf public/build .cache",
+    "setup:images": "./scripts/setup.sh",
+    "optimize:images": "node scripts/optimize-images-complete.mjs",
+    "optimize:new": "node scripts/optimize-new-images.mjs"
   },
   "dependencies": {
     "@fontsource/open-sans": "^5.2.6",
@@ -52,6 +55,7 @@
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.1.0",
+    "glob": "^11.0.3",
     "postcss": "^8.4.49",
     "postcss-import": "^16.1.0",
     "sass": "^1.92.1",

@@ -59,7 +59,7 @@ export default function Experience({
 											<ReactSVG src={job.logo} />
 										</div>
 									) : (
-										<img
+										<img loading="lazy"
 											src={job.logo}
 											alt={`${job.employer} logo`}
 											className={job.logoStyles?.join(",")}
@@ -80,7 +80,7 @@ export default function Experience({
 										{(darkMode ? job.clientLogos.dark : job.clientLogos.light).map(
 											(clientLogo, k) => (
 												<div key={k}>
-													<img src={clientLogo} alt={`${clientLogo} logo`} />
+													<img loading="lazy" src={clientLogo} alt={`${clientLogo} logo`} />
 												</div>
 											)
 										)}

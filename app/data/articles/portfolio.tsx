@@ -166,21 +166,31 @@ export default function Portfolio() {
 							instead of manually importing only our used icons.
 						</p>
 
-						<img
-							src="/img/projects/portfolio/optimization-before.png"
-							className="mb-6 w-full rounded-lg shadow-lg dark:shadow-black/20"
-							alt=""
-						/>
+						<picture>
+							<source srcSet="/img/projects/portfolio/optimization-before.avif" type="image/avif" />
+							<source srcSet="/img/projects/portfolio/optimization-before.webp" type="image/webp" />
+							<img
+								src="/img/projects/portfolio/optimization-before.png"
+								alt=""
+								className="mb-6 w-full rounded-lg shadow-lg dark:shadow-black/20"
+								loading="lazy"
+							/>
+						</picture>
 						<p className="mb-6">
 							Optimizing we can save upwards of{" "}
 							<span className="font-mono text-orange-700 dark:text-orange-500">~845 kb</span>.
 						</p>
 
-						<img
-							src="/img/projects/portfolio/optimization-after.png"
-							className="mb-6 w-full rounded-lg shadow-lg dark:shadow-black/20"
-							alt=""
-						/>
+						<picture>
+							<source srcSet="/img/projects/portfolio/optimization-after.avif" type="image/avif" />
+							<source srcSet="/img/projects/portfolio/optimization-after.webp" type="image/webp" />
+							<img
+								src="/img/projects/portfolio/optimization-after.png"
+								alt=""
+								className="mb-6 w-full rounded-lg shadow-lg dark:shadow-black/20"
+								loading="lazy"
+							/>
+						</picture>
 
 						<h1 className="mb-4 text-2xl font-normal">Wrapping up</h1>
 
@@ -191,11 +201,16 @@ export default function Portfolio() {
 							engines rank your site.
 						</p>
 
-						<img
-							src="/img/projects/portfolio/optimization.png"
-							className="mb-6 w-full rounded-lg shadow-lg dark:shadow-black/20"
-							alt=""
-						/>
+						<picture>
+							<source srcSet="/img/projects/portfolio/optimization.avif" type="image/avif" />
+							<source srcSet="/img/projects/portfolio/optimization.webp" type="image/webp" />
+							<img
+								src="/img/projects/portfolio/optimization.jpg"
+								alt=""
+								className="mb-6 w-full rounded-lg shadow-lg dark:shadow-black/20"
+								loading="lazy"
+							/>
+						</picture>
 
 						<h1 className="mb-4 text-3xl font-normal">Closing</h1>
 						<p>

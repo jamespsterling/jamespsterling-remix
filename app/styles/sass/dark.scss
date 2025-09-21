@@ -49,6 +49,9 @@ body.dark {
 
   #lead {
     background-image: url(/img/lead-bg-10.jpg);
+  background-image: url(/img/lead-bg-10.jpg);
+  background-image: url(/img/lead-bg-10.webp);
+    background-image: url(/img/lead-bg-10.avif);
     background-position: center;
     transition: 0.2s all;
   }
@@ -99,11 +102,6 @@ body.dark {
   #certifications,
   #projects {
     transition: 0.2s all;
-  }
-
-  #education,
-  #certifications {
-    border-bottom: 1px solid #292929;
   }
 
   #experience,
@@ -204,8 +202,6 @@ body.dark {
   }
 
   #certifications {
-    background: #171717;
-    background: linear-gradient(153deg, #004056 0%, #171717 100%);
 
     .certification-block {
       background: #373737;
@@ -236,7 +232,7 @@ body.dark {
 
   #contact {
     background: #1e1e1e;
-    background: linear-gradient(180deg, #2f1537, transparent);
+    background: linear-gradient(180deg, #080808, transparent);
 
     h2 {
       color: $text-color;

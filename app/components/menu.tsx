@@ -93,16 +93,6 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 			const bgColor = getBackgroundColor(targetElement);
 			const needsHighContrast = bgColor ? isLightBackground(bgColor) : false;
 
-			// Debug logging (remove in production)
-			if (process.env.NODE_ENV === "development") {
-				console.log("Scroll detection:", {
-					element: targetElement?.id || targetElement?.tagName,
-					bgColor,
-					needsHighContrast,
-					checkPoint: Math.round(checkPoint),
-				});
-			}
-
 			// Toggle high-contrast class
 			if (needsHighContrast) {
 				menuRef.current.classList.add("high-contrast");

@@ -21,18 +21,22 @@ export default function Image({
 				</div>
 			) : (
 				<>
-					<img
-						src={image.src}
-						style={{
-							height: loading ? 0 : "auto",
-							opacity: loading ? 0 : 1,
-							transition: "0.5s all",
-						}}
-						alt={`${image.src}`}
-						onLoad={() => setLoading(false)}
-						loading="lazy"
-						className={`${classes} ${image.classes}`}
-					/>
+					<picture>
+						<source srcSet={image.src.replace(".webp", ".avif")} type="image/avif" />
+						<source srcSet={image.src} type="image/webp" />
+						<img
+							src={image.src}
+							style={{
+								height: loading ? 0 : "auto",
+								opacity: loading ? 0 : 1,
+								transition: "0.5s all",
+							}}
+							alt={`${image.src}`}
+							onLoad={() => setLoading(false)}
+							loading="lazy"
+							className={`${classes} ${image.classes}`}
+						/>
+					</picture>
 					{loading && (
 						<div className="loading">
 							<Loading />
