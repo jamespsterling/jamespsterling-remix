@@ -2,17 +2,17 @@
 
 // https://codepen.io/mikegolus/pen/Jegvym
 $quantity: 15;
-$glow: #00ff37;
-$glow-2: #00ff9d;
-$glow-3: #fdffc8;
+$glow: var(--firefly-glow);
+$glow-2: var(--firefly-glow-2);
+$glow-3: var(--firefly-glow-3);
 
 .firefly {
-  position: relative;
+  position: absolute;
   left: 50%;
   top: 50%;
-  width: 0.4vw;
-  height: 0.4vw;
-  margin: (-0.2vw) 0 0 9.8vw;
+  width: 0.2vw;
+  height: 0.2vw;
+  margin: -0.1vw 0 0 9.9vw;
   animation: ease 200s alternate infinite;
   pointer-events: none;
 
@@ -27,15 +27,15 @@ $glow-3: #fdffc8;
   }
 
   &::before {
-    background: #f2f2f2;
-    opacity: 0.4;
+    background: white;
+    opacity: 0.2;
     animation: drift ease alternate infinite;
   }
 
   &::after {
-    background: #fff;
+    background: white;
     opacity: 0;
-    box-shadow: 0 0 0vw 0vw yellow;
+    box-shadow: 0 0 0vw 0vw $glow;
     animation: drift ease alternate infinite, flash ease infinite;
   }
 }
@@ -94,6 +94,6 @@ $glow-3: #fdffc8;
 
   5% {
     opacity: 1;
-    box-shadow: 0 0 2vw 0.4vw $glow-3;
+    box-shadow: 0 0 1.5vw 0.2vw $glow;
   }
 }

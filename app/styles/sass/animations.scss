@@ -4,7 +4,7 @@
     stroke-width: 2px;
     stroke-dashoffset: 0;
     stroke-dasharray: 10 40;
-    stroke: #ffcf2b;
+    stroke: var(--animation-yellow);
     animation: 3s 0.2s draw-yellow infinite;
   }
 
@@ -13,7 +13,7 @@
     stroke-width: 2px;
     stroke-dashoffset: 40;
     stroke-dasharray: 100 40;
-    stroke: #0076bf;
+    stroke: var(--animation-blue);
     animation: 3s 0.1s draw-blue infinite;
   }
 
@@ -22,7 +22,7 @@
     stroke-width: 2px;
     stroke-dashoffset: 0;
     stroke-dasharray: 10 40;
-    stroke: #00c081;
+    stroke: var(--animation-green);
     animation: 3s 0.3s draw-green infinite;
   }
 
@@ -38,7 +38,7 @@
   }
 
   50% {
-    fill: #ffcf2b;
+    fill: var(--animation-yellow);
     stroke-dasharray: 760;
     stroke-dashoffset: 0;
   }
@@ -57,7 +57,7 @@
   }
 
   50% {
-    fill: #0076bf;
+    fill: var(--animation-blue);
     stroke-dasharray: 760;
     stroke-dashoffset: 0;
   }
@@ -76,7 +76,7 @@
   }
 
   50% {
-    fill: #00c081;
+    fill: var(--animation-green);
     stroke-dasharray: 760;
     stroke-dashoffset: 0;
   }
@@ -94,7 +94,7 @@
   }
 
   35% {
-    fill: #bbbdbf;
+    fill: var(--animation-shadow);
   }
 
   100% {

@@ -56,14 +56,14 @@ header {
 
   a {
     display: block;
-    color: $background-alt;
+    color: var(--background-alt);
     padding: 10px;
     transition: 0.5s all;
 
     &:hover {
-      color: $white;
+      color: var(--text-primary);
       text-decoration: none;
-      background: rgb(0, 0, 0, 0.66);
+      background: var(--glass-dark-bg-hover);
       border-radius: 4px;
       filter: backdrop-blur(10px);
     }
@@ -92,12 +92,12 @@ header {
   position: fixed;
   right: 15px;
   top: 10px;
-  color: #666666;
+  color: var(--text-light);
   font-size: 1.5em;
   z-index: 10;
   padding: 0 7px;
   border-radius: 4px;
-  background: $background;
+  background: var(--background);
 }
 
 #mobile-menu-close {
@@ -107,7 +107,7 @@ header {
   font-size: 1.5em;
   padding: 10px 15px;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--text-primary);
 
   span {
     font-size: 0.5em;
@@ -125,7 +125,7 @@ header {
 }
 
 .checkbox-label {
-  background-color: #111;
+  background-color: var(--background-dark);
   width: 50px;
   height: 26px;
   border-radius: 50px;
@@ -138,15 +138,15 @@ header {
 }
 
 .fa-moon {
-  color: #f2f2f2;
+  color: var(--background-alt);
 }
 
 .fa-sun {
-  color: #f2f2f2;
+  color: var(--background-alt);
 }
 
 .checkbox-label .ball {
-  background-color: #fff;
+  background-color: var(--text-primary);
   width: 22px;
   height: 22px;
   position: absolute;

@@ -3,75 +3,103 @@
 @use 'mixins' as *;
 
 #contact {
-  padding: 8rem 0 10rem;
-  background: $contact-base;
-  background: linear-gradient(180deg, $contact-base, transparent);
+  @include section-padding-lg;
+  background: var(--background-dark);
+  position: relative;
   text-align: center;
 
+  // Subtle gradient overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    @include section-container;
+    position: relative;
+    z-index: 1;
+  }
+
   h2 {
-    margin: 0 0 15px 0;
+    @include section-header;
+    margin-bottom: var(--space-12);
   }
 }
 
 #contact-form {
-  margin: auto 25vw;
+  max-width: 500px;
+  margin: 0 auto;
 
   input,
   textarea {
     display: block;
     width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: none;
-    margin-bottom: 10px;
-    background: #454545;
-    color: #fff;
-    border: 1px color.adjust(#454545, $lightness: -10%);
+    padding: var(--space-4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--space-4);
+    background: var(--glass-subtle);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    font-size: var(--text-base);
     @include transition();
 
     @include placeholder {
-      color: #fff;
+      color: var(--text-muted);
     }
 
     &:focus {
       outline: none;
-      background: color.adjust(#454545, $lightness: -10%);
+      background: var(--glass-light);
+      border: 1px solid var(--base-color);
+      box-shadow: 0 0 0 3px rgba(107, 177, 218, 0.1);
     }
   }
 
   textarea {
-    height: 150px;
+    height: 120px;
     resize: none;
+    font-family: inherit;
   }
 
   button {
     display: block;
     width: 100%;
-    background: #fff;
-    border-radius: 4px;
-    padding: 5px 10px;
+    background: var(--base-color);
+    border-radius: 12px;
+    padding: var(--space-4);
     border: none;
-    color: #6b6b6b;
-    font-weight: 700;
-    box-shadow:
-      0 1px 3px rgba(0, 0, 0, 0.12),
-      0 1px 2px rgba(0, 0, 0, 0.24);
+    color: var(--text-primary);
+    font-weight: var(--font-medium);
+    font-size: var(--text-base);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(107, 177, 218, 0.3);
     @include transition();
 
     &:hover {
-      box-shadow:
-        0 10px 10px rgba(0, 0, 0, 0.19),
-        0 6px 6px rgba(0, 0, 0, 0.23);
+      background: color.adjust($base-color, $lightness: 5%);
+      box-shadow: 0 6px 20px rgba(107, 177, 218, 0.4);
+      transform: translateY(-1px);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     }
   }
 
   .linked-in-button {
-    margin: 1rem auto;
-    background-color: #0a66c2 !important;
-    color: #fff;
+    margin: var(--space-6) auto;
+    background-color: var(--linkedin-blue) !important;
+    color: var(--text-primary);
+    box-shadow: 0 4px 16px rgba(10, 102, 194, 0.3);
 
     &:hover {
-      background-color: color.adjust(#0a66c2, $lightness: -7.5%) !important;
+      background-color: var(--linkedin-blue-hover) !important;
+      box-shadow: 0 6px 20px rgba(10, 102, 194, 0.4);
     }
 
     svg {
@@ -80,7 +108,7 @@
       filter: brightness(0) invert(1);
       top: -1px;
       position: relative;
-      margin-left: 4px;
+      margin-left: var(--space-1);
       display: inline-block;
     }
   }

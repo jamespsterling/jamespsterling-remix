@@ -32,8 +32,8 @@
 }
 
 @mixin card-style {
-  background: #373737;
-  border: 1px solid #232323;
+  background: var(--background-card);
+  border: 1px solid var(--border-light);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,4 +41,89 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// ===== APPLE-INSPIRED DESIGN SYSTEM =====
+@mixin section-padding-sm {
+  padding: var(--space-16) 0;
+}
+
+@mixin section-padding-lg {
+  padding: var(--space-24) 0 var(--space-20) 0;
+}
+
+@mixin section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+@mixin section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+
+  h2 {
+    font-size: var(--text-4xl);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 var(--space-4) 0;
+    background-image: linear-gradient(to right, var(--gradient-primary-start), var(--gradient-primary-end));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+// ===== GLASSMORPHISM LEVELS =====
+@mixin glass-subtle {
+  background: var(--glass-subtle);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@mixin glass-light {
+  background: var(--glass-light);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@mixin glass-medium {
+  background: var(--glass-medium);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@mixin glass-strong {
+  background: var(--glass-strong);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@mixin glass-emphasis {
+  background: var(--glass-emphasis);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+// ===== CARD SYSTEM =====
+@mixin card-base {
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+@mixin card-interactive {
+  @include card-base;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
 }

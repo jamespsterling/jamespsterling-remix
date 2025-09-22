@@ -28,7 +28,7 @@ export default function Experience({
 	const imageExtension = (src: string) => src.split(".").pop();
 
 	return (
-		<div id="experience" className="background-alt">
+		<div id="experience">
 			<h2 className="heading mb-0 md:mb-6">Experience</h2>
 			<div id="experience-timeline">
 				{experience.map((job, i) => (
@@ -38,7 +38,7 @@ export default function Experience({
 						</div>
 						<div className="vtimeline-block">
 							<span className="vtimeline-date">{job.time}</span>
-							<div data-date="October 2020 - Present" className="vtimeline-content shadow-large">
+							<div data-date="October 2020 - Present" className="vtimeline-content">
 								<div className="heading-grid">
 									<div>
 										<h3>
@@ -59,7 +59,8 @@ export default function Experience({
 											<ReactSVG src={job.logo} />
 										</div>
 									) : (
-										<img loading="lazy"
+										<img
+											loading="lazy"
 											src={job.logo}
 											alt={`${job.employer} logo`}
 											className={job.logoStyles?.join(",")}

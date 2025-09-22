@@ -17,7 +17,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
 				<div className="grid">
 					{projects.map((project, i) => (
 						<Link to={`/projects/${kebabCase(project.id)}`} className="project-link" key={i}>
-							<div className="project shadow-large">
+							<div className="project">
 								<div className="project-image">
 									<div className={project.image.class}>
 										<ProjectImage image={project.image} />

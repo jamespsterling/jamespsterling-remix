@@ -6,28 +6,81 @@
 
 @use 'sass:color';
 
+// ===== PRIMARY BRAND COLORS =====
 $base-color: #6bb1da;
 $accent-color: #67b700;
 $dark-color: #2a2a2a;
 
-$base-color-hover: color.adjust($dark-color, $lightness: 10%);
-
+// ===== BACKGROUND COLORS =====
 $background: #2a2a2a;
 $background-dark: #0a0a0a;
 $background-alt: #f2f2f5;
+$background-section: #1a1a1a;
+$background-card: #373737;
+$background-card-hover: #292929;
 
+// ===== TEXT COLORS =====
+$text-primary: #ffffff;
+$text-secondary: #d7d7d7;
+$text-tertiary: #e0e0e0;
+$text-muted: #c1c1c1;
+$text-subtle: #b1b1b1;
+$text-faded: #afafaf;
+$text-light: #a2a2a2;
+$text-dark: #676767;
+$text-darker: #464646;
+
+// ===== BORDER COLORS =====
 $border: #dcd9d9;
+$border-light: #232323;
+$border-medium: #292929;
+$border-strong: #363636;
 
-$heading: #464646;
-$text: #676767;
+// ===== GLASSMORPHISM COLORS =====
+$glass-bg-light: rgba(255, 255, 255, 0.05);
+$glass-bg-medium: rgba(255, 255, 255, 0.08);
+$glass-bg-strong: rgba(255, 255, 255, 0.1);
+$glass-bg-hover: rgba(255, 255, 255, 0.15);
+$glass-border-light: rgba(255, 255, 255, 0.1);
+$glass-border-medium: rgba(255, 255, 255, 0.15);
+$glass-border-strong: rgba(255, 255, 255, 0.2);
 
-$link: #464646;
+// ===== DARK GLASSMORPHISM COLORS =====
+$glass-dark-bg-light: rgba(0, 0, 0, 0.1);
+$glass-dark-bg-medium: rgba(0, 0, 0, 0.2);
+$glass-dark-bg-strong: rgba(0, 0, 0, 0.3);
+$glass-dark-bg-hover: rgba(0, 0, 0, 0.4);
+
+// ===== GRADIENT COLORS =====
+$gradient-primary-start: #fff;
+$gradient-primary-end: #d7d7d7;
+$gradient-accent-start: #00a6a9;
+$gradient-accent-end: #9ffc67;
+$gradient-dark-start: #13131300;
+$gradient-dark-end: #000000e6;
+
+// ===== ANIMATION COLORS =====
+$animation-yellow: #ffcf2b;
+$animation-blue: #0076bf;
+$animation-green: #00c081;
+$animation-shadow: #bbbdbf;
+$firefly-glow: #00ff37;
+$firefly-glow-2: #00ff9d;
+$firefly-glow-3: #fdffc8;
+
+// ===== BRAND COLORS =====
+$linkedin-blue: #0a66c2;
+$linkedin-blue-hover: color.adjust($linkedin-blue, $lightness: -7.5%);
+
+// ===== LEGACY COMPATIBILITY =====
+$heading: $text-darker;
+$text: $text-dark;
+$link: $text-darker;
 $link-hover: $base-color;
-
-$contact-base: #d7d7d7;
+$contact-base: $text-secondary;
 $contact-accent: #096ca7;
 
-// Common colors used throughout
+// ===== COMMON UTILITY COLORS =====
 $white: #fff;
 $black: #000;
 $gray-light: #f2f2f2;
@@ -35,19 +88,180 @@ $gray-medium: #636363;
 $gray-dark: #1e1e1e;
 $gray-darker: #0a0a0a;
 
+// ===== APPLE-INSPIRED DESIGN SYSTEM =====
+// Typography Scale - Apple's precise hierarchy
+$text-scale-xs: 0.75rem; // 12px
+$text-scale-sm: 0.875rem; // 14px
+$text-scale-base: 1rem; // 16px
+$text-scale-lg: 1.125rem; // 18px
+$text-scale-xl: 1.25rem; // 20px
+$text-scale-2xl: 1.5rem; // 24px
+$text-scale-3xl: 1.875rem; // 30px
+$text-scale-4xl: 2.25rem; // 36px
+$text-scale-5xl: 3rem; // 48px
+
+// Font Weight Scale - Harmonized system
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Spacing Scale - 8px grid system
+$space-1: 0.25rem; // 4px
+$space-2: 0.5rem; // 8px
+$space-3: 0.75rem; // 12px
+$space-4: 1rem; // 16px
+$space-5: 1.25rem; // 20px
+$space-6: 1.5rem; // 24px
+$space-8: 2rem; // 32px
+$space-10: 2.5rem; // 40px
+$space-12: 3rem; // 48px
+$space-16: 4rem; // 64px
+$space-20: 5rem; // 80px
+$space-24: 6rem; // 96px
+
+// Section Backgrounds - Clean, consistent system
+$section-bg-primary: var(--background-section);
+$section-bg-secondary: var(--background-dark);
+$section-bg-accent: linear-gradient(135deg, var(--background-section) 0%, var(--background-dark) 100%);
+
+// Glassmorphism Levels - Strategic use only
+$glass-subtle: rgba(255, 255, 255, 0.03);
+$glass-light: rgba(255, 255, 255, 0.05);
+$glass-medium: rgba(255, 255, 255, 0.08);
+$glass-strong: rgba(255, 255, 255, 0.12);
+$glass-emphasis: rgba(255, 255, 255, 0.15);
+
+// Hover State Colors - Consistent accent system
+$hover-primary: var(--base-color);
+$hover-secondary: var(--accent-color);
+$hover-success: #10b981;
+$hover-warning: #f59e0b;
+$hover-danger: #ef4444;
+$hover-info: #3b82f6;
+
+// ===== CSS CUSTOM PROPERTIES =====
 :root {
+  // Primary Brand
   --base-color: #{$base-color};
   --accent-color: #{$accent-color};
   --dark-color: #{$dark-color};
-  --base-color-hover: #{$base-color-hover};
+
+  // Backgrounds
   --background: #{$background};
   --background-dark: #{$background-dark};
   --background-alt: #{$background-alt};
+  --background-section: #{$background-section};
+  --background-card: #{$background-card};
+  --background-card-hover: #{$background-card-hover};
+
+  // Text Colors
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-tertiary: #{$text-tertiary};
+  --text-muted: #{$text-muted};
+  --text-subtle: #{$text-subtle};
+  --text-faded: #{$text-faded};
+  --text-light: #{$text-light};
+  --text-dark: #{$text-dark};
+  --text-darker: #{$text-darker};
+
+  // Border Colors
   --border: #{$border};
+  --border-light: #{$border-light};
+  --border-medium: #{$border-medium};
+  --border-strong: #{$border-strong};
+
+  // Glassmorphism
+  --glass-bg-light: #{$glass-bg-light};
+  --glass-bg-medium: #{$glass-bg-medium};
+  --glass-bg-strong: #{$glass-bg-strong};
+  --glass-bg-hover: #{$glass-bg-hover};
+  --glass-border-light: #{$glass-border-light};
+  --glass-border-medium: #{$glass-border-medium};
+  --glass-border-strong: #{$glass-border-strong};
+
+  // Dark Glassmorphism
+  --glass-dark-bg-light: #{$glass-dark-bg-light};
+  --glass-dark-bg-medium: #{$glass-dark-bg-medium};
+  --glass-dark-bg-strong: #{$glass-dark-bg-strong};
+  --glass-dark-bg-hover: #{$glass-dark-bg-hover};
+
+  // Gradients
+  --gradient-primary-start: #{$gradient-primary-start};
+  --gradient-primary-end: #{$gradient-primary-end};
+  --gradient-accent-start: #{$gradient-accent-start};
+  --gradient-accent-end: #{$gradient-accent-end};
+  --gradient-dark-start: #{$gradient-dark-start};
+  --gradient-dark-end: #{$gradient-dark-end};
+
+  // Animation
+  --animation-yellow: #{$animation-yellow};
+  --animation-blue: #{$animation-blue};
+  --animation-green: #{$animation-green};
+  --animation-shadow: #{$animation-shadow};
+  --firefly-glow: #{$firefly-glow};
+  --firefly-glow-2: #{$firefly-glow-2};
+  --firefly-glow-3: #{$firefly-glow-3};
+
+  // Brand
+  --linkedin-blue: #{$linkedin-blue};
+  --linkedin-blue-hover: #{$linkedin-blue-hover};
+
+  // Legacy Compatibility
   --heading: #{$heading};
   --text: #{$text};
   --link: #{$link};
   --link-hover: #{$link-hover};
   --contact-base: #{$contact-base};
   --contact-accent: #{$contact-accent};
+
+  // Apple-Inspired Design System
+  // Typography Scale
+  --text-xs: #{$text-scale-xs};
+  --text-sm: #{$text-scale-sm};
+  --text-base: #{$text-scale-base};
+  --text-lg: #{$text-scale-lg};
+  --text-xl: #{$text-scale-xl};
+  --text-2xl: #{$text-scale-2xl};
+  --text-3xl: #{$text-scale-3xl};
+  --text-4xl: #{$text-scale-4xl};
+  --text-5xl: #{$text-scale-5xl};
+
+  // Font Weight Scale
+  --font-light: #{$font-weight-light};
+  --font-normal: #{$font-weight-normal};
+  --font-medium: #{$font-weight-medium};
+  --font-semibold: #{$font-weight-semibold};
+  --font-bold: #{$font-weight-bold};
+
+  // Spacing Scale
+  --space-1: #{$space-1};
+  --space-2: #{$space-2};
+  --space-3: #{$space-3};
+  --space-4: #{$space-4};
+  --space-5: #{$space-5};
+  --space-6: #{$space-6};
+  --space-8: #{$space-8};
+  --space-10: #{$space-10};
+  --space-12: #{$space-12};
+  --space-16: #{$space-16};
+  --space-20: #{$space-20};
+  --space-24: #{$space-24};
+
+  // Glassmorphism Levels
+  --glass-subtle: #{$glass-subtle};
+  --glass-light: #{$glass-light};
+  --glass-medium: #{$glass-medium};
+  --glass-strong: #{$glass-strong};
+  --glass-emphasis: #{$glass-emphasis};
+
+  // Hover State Colors
+  --hover-primary: #{$hover-primary};
+  --hover-secondary: #{$hover-secondary};
+  --hover-success: #{$hover-success};
+  --hover-warning: #{$hover-warning};
+  --hover-danger: #{$hover-danger};
+  --hover-info: #{$hover-info};
 }

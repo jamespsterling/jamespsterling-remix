@@ -44,16 +44,26 @@ body.dark {
   .icon-link:hover {
     color: color.adjust($base-color, $lightness: -20%);
     background: none;
-    transition: 0s all;
   }
 
   #lead {
-    background-image: url(/img/lead-bg-10.jpg);
-    background-image: url(/img/lead-bg-10.jpg);
-    background-image: url(/img/lead-bg-10.webp);
-    background-image: url(/img/lead-bg-10.avif);
+    background-image: url(/img/lead-bg-8.jpg);
+    background-image: url(/img/lead-bg-8.jpg);
+    background-image: url(/img/lead-bg-8.webp);
+    background-image: url(/img/lead-bg-8.avif);
     background-position: center;
-    transition: 0.2s all;
+  }
+
+  #lead-content {
+    background: #00000078;
+
+    h2 {
+      background-image: linear-gradient(45deg, #430096, #ff4700);
+    }
+
+    .headshot img {
+      border: 4px solid rgb(0 0 0 / 90%);
+    }
   }
 
   #breadcrumbs {

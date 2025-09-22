@@ -1,16 +1,72 @@
 @use 'colors' as *;
+@use 'mixins' as *;
 
 #about {
-  padding: 3rem 1rem;
-  border-bottom: 1px solid $border;
+  @include section-padding;
+  background: var(--background-section);
+  position: relative;
+
+  // Subtle texture overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    @include section-container;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-content {
+    @include glass-subtle;
+    @include card-base;
+    padding: var(--space-16);
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      @include glass-light;
+      border: 1px solid var(--hover-primary);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    }
+  }
 
   h2 {
-    color: $heading;
+    @include section-header;
+    margin-bottom: var(--space-8);
   }
 
   p {
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    line-height: 1.6;
     margin: 0;
-    font-size: 12.5pt;
-    line-height: 1.33;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #about {
+    .about-content {
+      padding: 2rem 1.5rem;
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
   }
 }

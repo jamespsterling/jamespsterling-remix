@@ -70,8 +70,8 @@ body::-webkit-scrollbar-thumb {
 
 .footer {
   flex-shrink: 0;
-  border-top: 1px solid $border;
-  background: #f2f2f2;
+  border-top: 1px solid var(--border);
+  background: var(--background-alt);
 }
 
 a {
@@ -95,7 +95,7 @@ a {
 }
 
 .subtle-link {
-  color: #a2a2a2;
+  color: var(--text-light);
 }
 
 .loading {
@@ -110,20 +110,23 @@ a {
 }
 
 .icon-link:hover {
-  color: $base-color;
+  color: var(--base-color);
   background: none;
   transition: 0.2s all;
 }
 
 #breadcrumbs {
   width: 100%;
-  background: #f4f4f4;
-  padding: 0.5rem;
+  background: var(--gray-light);
+  padding: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-normal);
 
   a {
-    padding: 0.5rem;
+    padding: var(--space-2);
     color: var(--link);
     transition: 0.2s all;
+    font-weight: var(--font-medium);
 
     &:hover {
       color: var(--link-hover);
@@ -132,13 +135,13 @@ a {
   }
 
   span {
-    padding: 0.5rem;
+    padding: var(--space-2);
     color: var(--text);
   }
 
   .separator {
-    padding: 0 0.2rem;
-    color: #636363;
+    padding: 0 var(--space-1);
+    color: var(--gray-medium);
   }
 }
 
@@ -148,7 +151,7 @@ a {
 
   p {
     margin: 0;
-    color: $text;
+    color: var(--text);
   }
 }
 
@@ -172,7 +175,7 @@ a {
   }
 
   svg {
-    color: $text;
+    color: var(--text);
     top: 3px;
     position: relative;
   }
@@ -194,7 +197,7 @@ a {
 
   a {
     display: block;
-    color: $text;
+    color: var(--text);
     padding: 10px;
 
     &:hover {
@@ -239,9 +242,11 @@ a {
 .heading {
   position: relative;
   display: inline-block;
-  font-size: 2em;
+  font-size: var(--text-4xl);
   font-weight: 300;
-  margin: 0 0 30px 0;
+  margin: 0 0 var(--space-12) 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 
   &:after {
     position: absolute;
@@ -251,13 +256,14 @@ a {
     width: 50px;
     left: 0;
     right: 0;
-    margin: 0 auto;
+    margin: var(--space-4) auto 0 auto;
     background: var(--base-color);
+    opacity: 0.6;
   }
 }
 
 .background-alt {
-  background: $background-alt;
+  background: var(--background-alt);
 }
 
 .york-loader {

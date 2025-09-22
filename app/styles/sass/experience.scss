@@ -5,11 +5,35 @@
 #experience {
   @include section-padding;
   @include center-text;
-  border-bottom: 1px solid $border;
   transition: 0.2s all;
+  background: linear-gradient(0deg, #13131300, #00000022);
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  // Subtle texture overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    @include section-container;
+    position: relative;
+    z-index: 1;
+  }
 
   h2 {
-    color: $heading;
+    @include section-header;
+    margin-bottom: var(--space-12);
   }
 }
 
@@ -28,22 +52,25 @@
     right: auto;
     height: 100%;
     width: 3px;
-    background: var(--base-color);
-    background: linear-gradient(180deg,
-        var(--base-color) 0%,
-        var(--base-color) 97%,
-        rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 97%, rgba(0, 0, 0, 0) 100%);
     z-index: 0;
   }
 }
 
 .vtimeline-content {
   margin-left: 235px;
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  padding: 15px;
-  border-radius: 3px;
+  @include glass-subtle;
+  @include card-base;
+  padding: var(--space-8);
   text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    @include glass-light;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--hover-primary);
+  }
 
   .heading-grid {
     display: grid;
@@ -80,19 +107,18 @@
   }
 
   h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: $heading;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-semibold);
+    color: var(--contact-base);
     display: inline-block;
     margin: 0;
 
     a {
       text-decoration: none;
+      transition: 0.2s all;
 
       &:hover {
-        background: var(--accent-color);
-        color: $background-alt;
-        transition: 0.2s all;
+        color: var(--background-alt);
       }
     }
 
@@ -106,15 +132,27 @@
   }
 
   h4 {
-    font-size: 1.2em;
-    font-weight: 300;
-    color: #737373;
+    font-size: var(--text-xl);
+    font-weight: var(--font-medium);
+    color: rgba(255, 255, 255, 0.9);
   }
 
   p {
     color: $text;
     font-size: 0.9em;
     margin: 0;
+  }
+
+  ul {
+    li {
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .client-logos {
@@ -145,14 +183,15 @@
 
 .vtimeline-icon {
   position: relative;
-  color: #fff;
+  color: var(--text-primary);
   width: 3rem;
   height: 3rem;
-  background: var(--base-color);
+  @include glass-subtle;
   border-radius: 50%;
   float: left;
   z-index: 99;
   margin-left: 167px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 
   svg {
     margin-top: 0.7rem;
@@ -165,14 +204,22 @@
   position: absolute;
   left: 0;
   top: 14px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9rem;
-  color: #374054;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark {
+  #experience {
+    background: #121212;
+    border-bottom: 1px solid $gray-dark;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   #experience-timeline {
     padding-right: 0;
+    margin-top: 2rem;
 
     &:before,
     &:after {
@@ -203,7 +250,19 @@
 
   .vtimeline-content {
     margin-left: 40px;
-    padding: 12px;
+    padding: 20px 24px;
+
+    .heading-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 12px;
+
+      img,
+      .svg-wrapper {
+        justify-self: center;
+        order: -1;
+      }
+    }
   }
 
   .vtimeline-icon {
