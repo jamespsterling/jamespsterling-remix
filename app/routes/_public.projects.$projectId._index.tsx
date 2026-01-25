@@ -1,5 +1,5 @@
 import type { UIMatch } from "react-router";
-import { Link, useLoaderData, useNavigate } from "react-router";
+import { Link, redirect, useLoaderData } from "react-router";
 import { Article, Breadcrumbs, Lead, Project } from "~/components";
 import { data } from "~/data/portfolio";
 
@@ -18,6 +18,9 @@ export const handle = {
 export const loader = async ({ params }: { params: { projectId: string } }) => {
 	const { projectId } = params;
 	const project = data.projects.find((p) => p.id === projectId);
+	if (!project) {
+		return redirect("/projects");
+	}
 	const technologies =
 		project?.technologies
 			?.map((techKey) => data.technologies.find((s) => s.id === techKey) ?? null)
@@ -28,12 +31,7 @@ export const loader = async ({ params }: { params: { projectId: string } }) => {
 
 export default function Index() {
 	const { project, technologies } = useLoaderData<typeof loader>();
-	const navigate = useNavigate();
-
-	if (!project || !technologies) {
-		navigate("/projects");
-		return null;
-	}
+	if (!project || !technologies) return null;
 
 	return (
 		<>

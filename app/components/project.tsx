@@ -1,6 +1,5 @@
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "react-router";
 import { clsx } from "clsx";
 import type { Project, Technology } from "~/data/types";
 import { ProjectImage } from ".";
@@ -12,12 +11,7 @@ export default function Project({
 	project: Project;
 	technologies: Technology[];
 }) {
-	const navigate = useNavigate();
-
-	if (!project) {
-		navigate("/projects");
-		return null;
-	}
+	if (!project) return null;
 
 	return (
 		<article className="max-w-1xl px-6 py-6 mx-auto space-y-16 dark:text-gray-50">

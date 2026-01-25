@@ -59,10 +59,11 @@ export default function Experience({
 											<ReactSVG src={job.logo} />
 										</div>
 									) : (
-										<img loading="lazy"
+										<img
+											loading="lazy"
 											src={job.logo}
 											alt={`${job.employer} logo`}
-											className={job.logoStyles?.join(",")}
+											className={job.logoStyles?.join(" ")}
 										/>
 									)}
 								</div>
