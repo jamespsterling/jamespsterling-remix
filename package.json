@@ -24,7 +24,8 @@
     "setup:images": "./scripts/setup.sh",
     "optimize:images": "node scripts/optimize-images-complete.mjs",
     "optimize:new": "node scripts/optimize-new-images.mjs",
-    "test:smoke": "playwright test"
+    "test:smoke": "playwright test",
+    "test:ui:smoke": "playwright test --ui"
   },
   "dependencies": {
     "@fontsource/open-sans": "^5.2.6",
