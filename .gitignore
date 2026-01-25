@@ -11,6 +11,9 @@ node_modules
 
 .eslintcache
 .wrangler
+functions/*.js
+functions/*.js.map
+functions/metafile*.json
 functions/version.txt
 
 # Compiled SASS files (generated during development)
