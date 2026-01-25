@@ -72,6 +72,7 @@
     "esbuild": ">=0.24.3",
     "remark-mdx-frontmatter": {
       "estree-util-value-to-estree": ">=3.3.3"
-    }
+    },
+    "tar": "7.5.6"
   }
 }
