@@ -134,7 +134,7 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 				<div id="mobile-menu-close" onClick={() => toggleMobileMenu()}>
 					<FontAwesomeIcon icon={faTimes} />
 				</div>
-				<ul id="menu" ref={menuRef} className="shadow backdrop-blur">
+				<ul id="menu" ref={menuRef} className="shadow-sm backdrop-blur-sm">
 					<li>
 						<Link to="/" onClick={() => toggleMobileMenu()}>
 							About

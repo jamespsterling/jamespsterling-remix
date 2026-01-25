@@ -94,7 +94,7 @@ export default function Footer() {
 					"focus:border-white/30",
 					"dark:focus:border-white/20",
 					"focus:shadow-xl",
-					"focus:outline-none",
+					"focus:outline-hidden",
 					"focus:ring-0",
 					"active:bg-zinc-600/40",
 					"dark:active:bg-zinc-600/40",

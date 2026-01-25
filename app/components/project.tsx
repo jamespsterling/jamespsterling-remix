@@ -29,7 +29,7 @@ export default function Project({
 								<div
 									className={clsx([
 										"relative",
-										"z-[1]",
+										"z-1",
 										"block",
 										"rounded-lg",
 										"bg-[hsla(0,0%,100%,0.55)]",

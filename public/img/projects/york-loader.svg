@@ -22,7 +22,7 @@
     points="162.8,47.3 22.4,135.5 206.1,58.3 "
 />
 <polygon
-    class="shadow"
+    class="shadow-sm"
     fill="#BBBDBF"
     points="22.4,135.5 220.7,112.3 293.1,135.6 "
 />
