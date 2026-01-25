@@ -54,7 +54,7 @@ export default function Project({
 												href={project.link}
 												className="ml-2 text-neutral-600"
 												target="_blank"
-												rel="noreferrer"
+												rel="noopener noreferrer"
 											>
 												Link
 												<FontAwesomeIcon
@@ -77,7 +77,7 @@ export default function Project({
 												className="mx-auto mb-2 flex items-center md:mx-1 md:mb-2 lg:mb-0"
 												href={technology.link}
 												target="_blank"
-												rel="noreferrer"
+												rel="noopener noreferrer"
 											>
 												<FontAwesomeIcon
 													icon={technology.icon}

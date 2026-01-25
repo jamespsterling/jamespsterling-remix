@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import LinkedInLogo from "~/components/icons/brands/LinkedInLogo";
 
 export default function Contact() {
@@ -7,11 +6,15 @@ export default function Contact() {
 			<h2 className="heading">Get in Touch</h2>
 
 			<div id="contact-form">
-				<Link to="https://www.linkedin.com/in/jamespsterling/" target="_blank" rel="noopener">
+				<a
+					href="https://www.linkedin.com/in/jamespsterling/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<button className="linked-in-button">
 						Message me on <LinkedInLogo />
 					</button>
-				</Link>
+				</a>
 				<form method="POST" action="https://formspree.io/jamespsterling@gmail.com">
 					<input type="hidden" name="_subject" value="Contact request from portfolio website" />
 					<input type="email" name="_replyto" placeholder="Your email" required />

@@ -15,7 +15,7 @@ export default function Portfolio() {
 							Version 1 of my portfolio site was built on traditional{" "}
 							<a
 								href="https://github.com/jamespsterling/jamespsterling.github.io/blob/master/index.html"
-								rel="noreferrer"
+								rel="noopener noreferrer"
 								target="_blank"
 								className={linkStyles}
 							>
@@ -24,7 +24,7 @@ export default function Portfolio() {
 							with{" "}
 							<a
 								href="https://github.com/jamespsterling/jamespsterling.github.io/blob/master/gulpfile.js"
-								rel="noreferrer"
+								rel="noopener noreferrer"
 								target="_blank"
 								className={linkStyles}
 							>
@@ -41,7 +41,12 @@ export default function Portfolio() {
 						<p className="mb-6">
 							Wanting to use my recent admiration for React frameworks and recalling a colleague
 							suggest{" "}
-							<a href="https://remix.run/" rel="noreferrer" target="_blank" className={linkStyles}>
+							<a
+								href="https://remix.run/"
+								rel="noopener noreferrer"
+								target="_blank"
+								className={linkStyles}
+							>
 								Remix
 							</a>
 							, I took to diving head deep into seeing what performance optimizations it might
@@ -52,8 +57,8 @@ export default function Portfolio() {
 							Getting up and running with Cloudflare Pages takes just a couple minutes–cloudflare
 							publishes some{" "}
 							<a
-								href="ttps://developers.cloudflare.com/pages/framework-guides/deploy-a-remix-site/"
-								rel="noreferrer"
+								href="https://developers.cloudflare.com/pages/framework-guides/deploy-a-remix-site/"
+								rel="noopener noreferrer"
 								target="_blank"
 								className={linkStyles}
 							>
@@ -93,7 +98,7 @@ export default function Portfolio() {
 							rendering, it can aid in eliminating{" "}
 							<a
 								href="https://www.afasterweb.com/2015/08/29/what-the-jank/"
-								rel="noreferrer"
+								rel="noopener noreferrer"
 								target="_blank"
 								className={linkStyles}
 							>
@@ -115,7 +120,7 @@ export default function Portfolio() {
 							Fontsource is paving the way for{" "}
 							<a
 								href="https://fontsource.org/docs/getting-started/introduction#1-performance"
-								rel="noreferrer"
+								rel="noopener noreferrer"
 								target="_blank"
 								className={linkStyles}
 							>
@@ -152,7 +157,7 @@ export default function Portfolio() {
 							Using{" "}
 							<a
 								href="https://esbuild.github.io/analyze/"
-								rel="noreferrer"
+								rel="noopener noreferrer"
 								target="_blank"
 								className={linkStyles}
 							>
