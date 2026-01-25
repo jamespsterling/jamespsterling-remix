@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import type { About } from "~/data/types";
 
 export default function Lead({
