@@ -1,8 +1,8 @@
-@import '@fontsource/open-sans/latin.css' layer(base);
-@import '@fortawesome/fontawesome-svg-core/styles.css' layer(base);
-@import './styles.css' layer(base);
+@import "@fontsource/open-sans/latin.css" layer(base);
+@import "@fortawesome/fontawesome-svg-core/styles.css" layer(base);
+@import "./styles.css" layer(base);
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -15,11 +15,11 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }

@@ -1,6 +1,6 @@
-import { logDevReady } from "react-router";
 import { createPagesFunctionHandler } from "@react-router/cloudflare";
 import * as build from "@react-router/dev/server-build";
+import { logDevReady } from "react-router";
 
 if (process.env.NODE_ENV === "development") {
 	logDevReady(build);

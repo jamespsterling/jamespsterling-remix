@@ -18,8 +18,8 @@ export const loader = async () => {
 export default function Index() {
 	const { about, experience, education, certifications, technologies, skills } =
 		useLoaderData<typeof loader>();
-	const [{ data: rootData }] = useMatches();
-	const darkMode = (rootData as any)?.darkMode;
+	const [rootMatch] = useMatches();
+	const darkMode = (rootMatch?.data as { darkMode?: string } | undefined)?.darkMode;
 
 	return (
 		<>

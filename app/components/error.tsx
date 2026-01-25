@@ -1,7 +1,7 @@
 import { faArrowLeft, faRoadCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, useNavigate } from "react-router";
 import { clsx } from "clsx";
+import { Link, useNavigate } from "react-router";
 
 export default function Error() {
 	const navigate = useNavigate();

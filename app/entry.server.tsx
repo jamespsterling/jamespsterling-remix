@@ -4,10 +4,10 @@
  * For more information, see https://remix.run/file-conventions/entry.server
  */
 
+import { renderToReadableStream } from "react-dom/server";
 import type { AppLoadContext, EntryContext } from "react-router";
 import { ServerRouter } from "react-router";
 import { isBot } from "~/utils/bot-detection";
-import { renderToReadableStream } from "react-dom/server";
 
 export default async function handleRequest(
 	request: Request,

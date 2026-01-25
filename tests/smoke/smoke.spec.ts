@@ -66,8 +66,7 @@ test("all app routes respond", async ({ page }) => {
 
 	const baseURL = test.info().project.use.baseURL as string | undefined;
 	for (const route of routes) {
-		const url =
-			baseURL && route.path.startsWith("/") ? `${baseURL}${route.path}` : route.path;
+		const url = baseURL && route.path.startsWith("/") ? `${baseURL}${route.path}` : route.path;
 		const localUrl = baseURL ? url.replace(PRODUCTION_BASE_URL, baseURL) : url;
 		const pageResponse = await page.goto(localUrl, { waitUntil: "domcontentloaded" });
 		expect(pageResponse?.status()).toBe(route.expectedStatus);

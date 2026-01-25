@@ -21,7 +21,7 @@ export function isBot(userAgent: string | null): boolean {
 		/perplexity/i,
 		/bard/i,
 		/gemini/i,
-		
+
 		// Social media crawlers
 		/facebookexternalhit/i,
 		/twitterbot/i,
@@ -30,7 +30,7 @@ export function isBot(userAgent: string | null): boolean {
 		/telegrambot/i,
 		/slackbot/i,
 		/discordbot/i,
-		
+
 		// SEO and analytics tools
 		/semrushbot/i,
 		/ahrefsbot/i,
@@ -38,14 +38,14 @@ export function isBot(userAgent: string | null): boolean {
 		/mozbot/i,
 		/screaming frog/i,
 		/deepcrawl/i,
-		
+
 		// Monitoring and testing tools
 		/pingdom/i,
 		/uptimerobot/i,
 		/statuscake/i,
 		/newrelic/i,
 		/datadog/i,
-		
+
 		// Automation tools
 		/selenium/i,
 		/puppeteer/i,
@@ -53,13 +53,13 @@ export function isBot(userAgent: string | null): boolean {
 		/headless/i,
 		/phantom/i,
 		/nightmare/i,
-		
+
 		// Cloud and CDN crawlers
 		/cloudflare/i,
 		/amazonbot/i,
 		/aws/i,
 		/google-cloud/i,
-		
+
 		// Generic bot indicators
 		/bot\b/i,
 		/crawler/i,
@@ -71,7 +71,7 @@ export function isBot(userAgent: string | null): boolean {
 		/ghost/i,
 	];
 
-	return botPatterns.some(pattern => pattern.test(userAgent));
+	return botPatterns.some((pattern) => pattern.test(userAgent));
 }
 
 /**
@@ -95,7 +95,7 @@ export function isSearchEngineBot(userAgent: string | null): boolean {
 		/telegrambot/i,
 	];
 
-	return searchEnginePatterns.some(pattern => pattern.test(userAgent));
+	return searchEnginePatterns.some((pattern) => pattern.test(userAgent));
 }
 
 /**
@@ -117,5 +117,5 @@ export function isAIBot(userAgent: string | null): boolean {
 		/openai/i,
 	];
 
-	return aiPatterns.some(pattern => pattern.test(userAgent));
+	return aiPatterns.some((pattern) => pattern.test(userAgent));
 }

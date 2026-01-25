@@ -1,13 +1,31 @@
-import type { ActionFunctionArgs, HeadersFunction, LinksFunction, LoaderFunctionArgs } from "react-router";
-import { redirect } from "react-router";
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useLocation } from "react-router";
 import { useEffect } from "react";
+import type {
+	ActionFunctionArgs,
+	HeadersFunction,
+	LinksFunction,
+	LoaderFunctionArgs,
+} from "react-router";
+import {
+	Links,
+	Meta,
+	Outlet,
+	redirect,
+	Scripts,
+	ScrollRestoration,
+	useLoaderData,
+	useLocation,
+} from "react-router";
 import { userPrefs } from "~/cookies";
 import * as gtag from "~/utils/gtags.client";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: "/styles/styles.css" }];
 
-type ContextHack = { context: { [key: string]: any } };
+type EnvVars = {
+	ENV?: string;
+	GA_TRACKING_ID?: string;
+};
+
+type ContextHack = { context: { env?: EnvVars } };
 
 export const loader = async ({ request, context }: LoaderFunctionArgs & ContextHack) => {
 	const cookieHeader = request.headers.get("Cookie");
@@ -41,10 +59,7 @@ export const headers: HeadersFunction = () => {
 	headers.set("X-Frame-Options", "DENY");
 	headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
 	headers.set("X-DNS-Prefetch-Control", "off");
-	headers.set(
-		"Permissions-Policy",
-		"camera=(), microphone=(), geolocation=(), payment=()"
-	);
+	headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()");
 	if (process.env.NODE_ENV === "production") {
 		headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
 	}

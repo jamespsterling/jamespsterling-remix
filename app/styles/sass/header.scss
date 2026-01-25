@@ -83,6 +83,8 @@ header {
 
 #mobile-menu-open {
   display: none;
+  border: none;
+  font: inherit;
   cursor: pointer;
   position: fixed;
   right: 15px;
@@ -97,6 +99,8 @@ header {
 
 #mobile-menu-close {
   display: none;
+  border: none;
+  font: inherit;
   text-align: right;
   width: 100%;
   font-size: 1.5em;

@@ -1,5 +1,4 @@
-import type { LinksFunction } from "react-router";
-import type { UIMatch } from "react-router";
+import type { LinksFunction, UIMatch } from "react-router";
 import { Link, useLoaderData } from "react-router";
 import { Breadcrumbs, Lead, Projects } from "~/components";
 import { data } from "~/data/portfolio";

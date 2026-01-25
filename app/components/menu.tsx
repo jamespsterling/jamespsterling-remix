@@ -1,7 +1,7 @@
 import { faBars, faMoon, faSun, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router";
 
 type Props = {
 	toggleDarkMode(): void;
@@ -127,13 +127,24 @@ export default function Menu({ toggleDarkMode, darkModeEnabled }: Props) {
 
 	return (
 		<>
-			<div id="mobile-menu-open" className="shadow-large" onClick={() => toggleMobileMenu()}>
+			<button
+				type="button"
+				id="mobile-menu-open"
+				className="shadow-large"
+				aria-label="Open navigation menu"
+				onClick={() => toggleMobileMenu()}
+			>
 				<FontAwesomeIcon icon={faBars} />
-			</div>
+			</button>
 			<header>
-				<div id="mobile-menu-close" onClick={() => toggleMobileMenu()}>
+				<button
+					type="button"
+					id="mobile-menu-close"
+					aria-label="Close navigation menu"
+					onClick={() => toggleMobileMenu()}
+				>
 					<FontAwesomeIcon icon={faTimes} />
-				</div>
+				</button>
 				<ul id="menu" ref={menuRef} className="shadow-sm backdrop-blur-sm">
 					<li>
 						<Link to="/" onClick={() => toggleMobileMenu()}>
