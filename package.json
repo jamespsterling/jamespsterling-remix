@@ -28,7 +28,7 @@
     "test:ui:smoke": "playwright test --ui"
   },
   "dependencies": {
-    "@fontsource/open-sans": "^5.2.6",
+    "@fontsource/open-sans": "^5.2.7",
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
