@@ -20,9 +20,7 @@ export default defineConfig({
 		},
 	],
 	webServer: {
-		command:
-			process.env.PLAYWRIGHT_WEB_SERVER_COMMAND ??
-			"npm run start -- --port 8787",
+		command: process.env.PLAYWRIGHT_WEB_SERVER_COMMAND ?? "npm run dev",
 		url: baseURL,
 		reuseExistingServer: !process.env.CI,
 		timeout: 120_000,

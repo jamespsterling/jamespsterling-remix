@@ -1,12 +1,11 @@
-import { json } from "@remix-run/cloudflare";
-import { useLoaderData, useMatches } from "@remix-run/react";
+import { useLoaderData, useMatches } from "react-router";
 import { About, Certifications, Education, Experience, Lead, Skills } from "~/components";
 import { data } from "~/data/portfolio";
 
 export const loader = async () => {
 	const { about, experience, education, skills, certifications, technologies } = data;
 
-	return json({
+	return Response.json({
 		about,
 		experience,
 		education,

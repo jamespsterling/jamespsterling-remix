@@ -19,3 +19,4 @@ app/styles/styles.css.map
 # Playwright
 playwright-report
 test-results
+.react-router

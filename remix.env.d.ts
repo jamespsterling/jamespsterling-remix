@@ -1,4 +1,3 @@
-/// <reference types="@remix-run/dev" />
-/// <reference types="@remix-run/cloudflare" />
-/// <reference types="@remix-run/cloudflare-pages" />
+/// <reference types="@react-router/dev" />
+/// <reference types="@react-router/cloudflare" />
 /// <reference types="@cloudflare/workers-types" />

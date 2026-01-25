@@ -1,4 +1,4 @@
-import { useMatches } from "@remix-run/react";
+import { useMatches } from "react-router";
 
 export default function Breadcrumbs({ currentPage }: { currentPage: string }) {
 	const matches = useMatches();

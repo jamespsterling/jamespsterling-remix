@@ -1,6 +1,5 @@
-import { json } from "@remix-run/cloudflare";
-import type { UIMatch } from "@remix-run/react";
-import { Link, useLoaderData, useNavigate } from "@remix-run/react";
+import type { UIMatch } from "react-router";
+import { Link, useLoaderData, useNavigate } from "react-router";
 import { Article, Breadcrumbs, Lead, Project } from "~/components";
 import { data } from "~/data/portfolio";
 
@@ -24,7 +23,7 @@ export const loader = async ({ params }: { params: { projectId: string } }) => {
 			?.map((techKey) => data.technologies.find((s) => s.id === techKey) ?? null)
 			.filter((f) => f !== null) ?? [];
 
-	return json({ project, technologies });
+	return Response.json({ project, technologies });
 };
 
 export default function Index() {

@@ -1,6 +1,5 @@
-import { json } from "@remix-run/cloudflare";
-import type { UIMatch } from "@remix-run/react";
-import { Link, useLoaderData } from "@remix-run/react";
+import type { UIMatch } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import { Error, Lead } from "~/components";
 import { data } from "~/data/portfolio";
 
@@ -17,7 +16,7 @@ export const handle = {
 export const loader = async () => {
 	const { about } = data;
 
-	return json({
+	return Response.json({
 		about,
 	});
 };

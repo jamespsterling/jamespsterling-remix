@@ -1,6 +1,6 @@
 import { faBars, faMoon, faSun, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import { useEffect, useRef } from "react";
 
 type Props = {

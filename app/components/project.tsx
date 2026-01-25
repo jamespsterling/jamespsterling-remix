@@ -1,6 +1,6 @@
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "@remix-run/react";
+import { useNavigate } from "react-router";
 import { clsx } from "clsx";
 import type { Project, Technology } from "~/data/types";
 import { ProjectImage } from ".";

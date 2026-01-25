@@ -1,6 +1,6 @@
 import { faArrowLeft, faRoadCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, useNavigate } from "@remix-run/react";
+import { Link, useNavigate } from "react-router";
 import { clsx } from "clsx";
 
 export default function Error() {

@@ -1,5 +1,5 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
-import { Outlet, useFetcher, useLoaderData, useLocation } from "@remix-run/react";
+import type { LinksFunction, MetaFunction } from "react-router";
+import { Outlet, useFetcher, useLoaderData, useLocation } from "react-router";
 import { Footer, Menu } from "~/components";
 import { loader as darkMode } from "~/data/loader/dark-mode";
 import Tailwind from "~/styles/tailwind.css";

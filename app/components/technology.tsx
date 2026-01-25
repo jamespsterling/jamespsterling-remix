@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import type { Technology } from "~/data/types";
 
 export default function Technology({ technology }: { technology: Technology }) {

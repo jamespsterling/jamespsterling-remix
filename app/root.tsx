@@ -1,24 +1,11 @@
-import type { ActionFunctionArgs, LinksFunction, LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { json, redirect } from "@remix-run/cloudflare";
-import { cssBundleHref } from "@remix-run/css-bundle";
-import {
-	Links,
-	LiveReload,
-	Meta,
-	Outlet,
-	Scripts,
-	ScrollRestoration,
-	useLoaderData,
-	useLocation,
-} from "@remix-run/react";
+import type { ActionFunctionArgs, LinksFunction, LoaderFunctionArgs } from "react-router";
+import { redirect } from "react-router";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useLocation } from "react-router";
 import { useEffect } from "react";
 import { userPrefs } from "~/cookies";
 import * as gtag from "~/utils/gtags.client";
 
-export const links: LinksFunction = () => [
-	...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-	{ rel: "stylesheet", href: "/styles/styles.css" },
-];
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: "/styles/styles.css" }];
 
 type ContextHack = { context: { [key: string]: any } };
 
@@ -26,7 +13,7 @@ export const loader = async ({ request, context }: LoaderFunctionArgs & ContextH
 	const cookieHeader = request.headers.get("Cookie");
 	const cookie = (await userPrefs.parse(cookieHeader)) || {};
 
-	return json({
+	return Response.json({
 		env: context.env.ENV,
 		gaTrackingId: context.env.GA_TRACKING_ID,
 		darkMode: cookie.darkMode,
@@ -88,7 +75,6 @@ export default function App() {
 				<Outlet />
 				<ScrollRestoration />
 				<Scripts />
-				<LiveReload />
 			</body>
 		</html>
 	);

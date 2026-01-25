@@ -1,7 +1,6 @@
-import type { LinksFunction } from "@remix-run/cloudflare";
-import { json } from "@remix-run/cloudflare";
-import type { UIMatch } from "@remix-run/react";
-import { Link, useLoaderData } from "@remix-run/react";
+import type { LinksFunction } from "react-router";
+import type { UIMatch } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import { Breadcrumbs, Lead, Projects } from "~/components";
 import { data } from "~/data/portfolio";
 
@@ -26,7 +25,7 @@ export const handle = {
 export const loader = async () => {
 	const { about, projects } = data;
 
-	return json({
+	return Response.json({
 		about,
 		projects,
 	});
