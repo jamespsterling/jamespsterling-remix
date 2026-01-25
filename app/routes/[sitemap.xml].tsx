@@ -31,12 +31,11 @@ export const toXmlSitemap = (urls: string[]) => {
 export const loader = async ({ request }: { request: Request }) => {
 	try {
 		const { projects } = data;
-		const baseUrl = new URL(request.url);
-		baseUrl.pathname = "";
+		const origin = new URL(request.url).origin;
 
 		const sitemap = toXmlSitemap([
-			...staticRoutes.map(({ to }) => `${baseUrl}${to}`),
-			...projects.map(({ id }) => `${baseUrl}/projects/${id}`),
+			...staticRoutes.map(({ to }) => new URL(to, origin).href),
+			...projects.map(({ id }) => new URL(`/projects/${id}`, origin).href),
 		]);
 
 		return new Response(sitemap, {
