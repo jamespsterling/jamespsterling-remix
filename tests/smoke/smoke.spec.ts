@@ -23,19 +23,21 @@ const getRouteFiles = () => new Set(fs.readdirSync(ROUTES_DIR));
 
 const buildRouteList = () => {
 	const files = getRouteFiles();
-	const routes: string[] = [];
+	const routes: Array<{ path: string; expectedStatus: number }> = [];
 
-	if (files.has("_public._index.tsx")) routes.push("/");
-	if (files.has("_public.projects._index.tsx")) routes.push("/projects");
-	if (files.has("_public.contact._index.tsx")) routes.push("/contact");
+	if (files.has("_public._index.tsx")) routes.push({ path: "/", expectedStatus: 200 });
+	if (files.has("_public.projects._index.tsx"))
+		routes.push({ path: "/projects", expectedStatus: 200 });
+	if (files.has("_public.contact._index.tsx"))
+		routes.push({ path: "/contact", expectedStatus: 200 });
 	if (files.has("_public.projects.$projectId._index.tsx")) {
 		for (const project of data.projects) {
-			routes.push(`/projects/${kebabCase(project.id)}`);
+			routes.push({ path: `/projects/${kebabCase(project.id)}`, expectedStatus: 200 });
 		}
 	}
-	if (files.has("_public.$.tsx")) routes.push("/not-found");
-	if (files.has("[robots.txt].tsx")) routes.push("/robots.txt");
-	if (files.has("[sitemap.xml].tsx")) routes.push("/sitemap.xml");
+	if (files.has("_public.$.tsx")) routes.push({ path: "/not-found", expectedStatus: 404 });
+	if (files.has("[robots.txt].tsx")) routes.push({ path: "/robots.txt", expectedStatus: 200 });
+	if (files.has("[sitemap.xml].tsx")) routes.push({ path: "/sitemap.xml", expectedStatus: 200 });
 
 	return routes;
 };
@@ -58,16 +60,17 @@ test("sitemap.xml responds and lists routes", async ({ request }) => {
 
 test("all app routes respond", async ({ page }) => {
 	const routes = buildRouteList().filter(
-		(route) => route !== "/robots.txt" && route !== "/sitemap.xml"
+		(route) => route.path !== "/robots.txt" && route.path !== "/sitemap.xml"
 	);
 	expect(routes.length).toBeGreaterThan(0);
 
 	const baseURL = test.info().project.use.baseURL as string | undefined;
 	for (const route of routes) {
-		const url = baseURL && route.startsWith("/") ? `${baseURL}${route}` : route;
+		const url =
+			baseURL && route.path.startsWith("/") ? `${baseURL}${route.path}` : route.path;
 		const localUrl = baseURL ? url.replace(PRODUCTION_BASE_URL, baseURL) : url;
 		const pageResponse = await page.goto(localUrl, { waitUntil: "domcontentloaded" });
-		expect(pageResponse?.ok()).toBeTruthy();
+		expect(pageResponse?.status()).toBe(route.expectedStatus);
 		await expect(page.locator("body")).toBeVisible();
 	}
 });

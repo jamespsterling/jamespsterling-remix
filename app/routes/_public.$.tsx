@@ -16,9 +16,12 @@ export const handle = {
 export const loader = async () => {
 	const { about } = data;
 
-	return Response.json({
-		about,
-	});
+	return Response.json(
+		{
+			about,
+		},
+		{ status: 404 }
+	);
 };
 
 export default function Index() {
