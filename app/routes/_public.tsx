@@ -49,7 +49,7 @@ export default function Index() {
 					toggleDarkMode={async () => {
 						fetcher.submit(
 							{ darkMode: darkMode === "enabled" ? "disabled" : "enabled", pathname },
-							{ method: "post" }
+							{ method: "post", action: "/" }
 						);
 					}}
 				/>
