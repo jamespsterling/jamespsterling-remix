@@ -15,3 +15,7 @@ functions
 # Compiled SASS files (generated during development)
 app/styles/styles.css
 app/styles/styles.css.map
+
+# Playwright
+playwright-report
+test-results
