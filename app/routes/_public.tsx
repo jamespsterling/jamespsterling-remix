@@ -2,7 +2,7 @@ import type { LinksFunction, MetaFunction } from "react-router";
 import { Outlet, useFetcher, useLoaderData, useLocation } from "react-router";
 import { Footer, Menu } from "~/components";
 import { loader as darkMode } from "~/data/loader/dark-mode";
-import Tailwind from "~/styles/tailwind.css";
+import tailwindCssUrl from "~/styles/tailwind.css?url";
 
 export const links: LinksFunction = () => [
 	{
@@ -25,7 +25,7 @@ export const links: LinksFunction = () => [
 	},
 	{
 		rel: "stylesheet",
-		href: Tailwind,
+		href: tailwindCssUrl,
 	},
 ];
 
