@@ -6,10 +6,12 @@ node_modules
 /functions/\[\[path\]\].js
 /functions/\[\[path\]\].js.map
 /public/build
+/build
 .dev.vars
 
 .eslintcache
 .wrangler
+functions/version.txt
 
 # Compiled SASS files (generated during development)
 app/styles/styles.css
