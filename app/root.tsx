@@ -1,4 +1,4 @@
-import type { ActionFunctionArgs, LinksFunction, LoaderFunctionArgs } from "react-router";
+import type { ActionFunctionArgs, HeadersFunction, LinksFunction, LoaderFunctionArgs } from "react-router";
 import { redirect } from "react-router";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData, useLocation } from "react-router";
 import { useEffect } from "react";
@@ -32,6 +32,22 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 			"Set-Cookie": await userPrefs.serialize(cookie),
 		},
 	});
+};
+
+export const headers: HeadersFunction = () => {
+	const headers = new Headers();
+	headers.set("X-Content-Type-Options", "nosniff");
+	headers.set("X-Frame-Options", "DENY");
+	headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+	headers.set("X-DNS-Prefetch-Control", "off");
+	headers.set(
+		"Permissions-Policy",
+		"camera=(), microphone=(), geolocation=(), payment=()"
+	);
+	if (process.env.NODE_ENV === "production") {
+		headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+	}
+	return headers;
 };
 
 export default function App() {
