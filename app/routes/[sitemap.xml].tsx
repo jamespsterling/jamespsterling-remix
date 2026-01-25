@@ -1,7 +1,5 @@
 import { data } from "~/data/portfolio";
 
-const BASE_URL = "https://jamespsterling.com";
-
 export const staticRoutes = [
 	{ to: "/", text: "About" },
 	{ to: "/projects", text: "Projects" },
@@ -30,13 +28,15 @@ export const toXmlSitemap = (urls: string[]) => {
 };
 
 // https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
-export const loader = async () => {
+export const loader = async ({ request }: { request: Request }) => {
 	try {
 		const { projects } = data;
+		const baseUrl = new URL(request.url);
+		baseUrl.pathname = "";
 
 		const sitemap = toXmlSitemap([
-			...staticRoutes.map(({ to }) => `${BASE_URL}${to}`),
-			...projects.map(({ id }) => `${BASE_URL}/projects/${id}`),
+			...staticRoutes.map(({ to }) => `${baseUrl}${to}`),
+			...projects.map(({ id }) => `${baseUrl}/projects/${id}`),
 		]);
 
 		return new Response(sitemap, {
