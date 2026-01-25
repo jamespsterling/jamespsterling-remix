@@ -10,7 +10,6 @@ node_modules
 
 .eslintcache
 .wrangler
-functions
 
 # Compiled SASS files (generated during development)
 app/styles/styles.css

@@ -1,0 +1,3 @@
+name = "jamespsterling-remix"
+compatibility_date = "2023-08-14"
+pages_build_output_dir = "build/client"
