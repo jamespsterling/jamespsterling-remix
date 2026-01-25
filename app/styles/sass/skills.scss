@@ -56,10 +56,14 @@
       .core-skill {
         display: inline-block;
         margin: 8px;
-        background: rgba(255, 255, 255, 0.1);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        box-shadow:
+          0 10px 30px rgba(0, 0, 0, 0.18),
+          0 4px 10px rgba(0, 0, 0, 0.12),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.2);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
@@ -83,9 +87,13 @@
         }
 
         &:hover {
-          background: rgba(255, 255, 255, 0.15);
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.12));
           transform: translateY(-2px);
-          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.6);
+          box-shadow:
+            0 14px 36px rgba(0, 0, 0, 0.22),
+            0 6px 16px rgba(0, 0, 0, 0.16),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.28);
 
           &::before {
             background: linear-gradient(40deg, #e0e0e0, #b3b3b3);
@@ -124,11 +132,14 @@
       .additional-skill {
         display: inline-block;
         margin: 6px;
-        background: rgba(255, 255, 255, 0.05);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow:
+          0 6px 16px rgba(0, 0, 0, 0.12),
+          0 3px 8px rgba(0, 0, 0, 0.08),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.16);
         list-style: none;
         cursor: default;
         font-size: 1em;
@@ -136,10 +147,13 @@
         border-radius: 3px;
 
         &:hover {
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
+          border: 1px solid rgba(255, 255, 255, 0.55);
           transform: translateY(-1px);
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 3px 10px rgba(0, 0, 0, 0.05);
+          box-shadow:
+            0 8px 22px rgba(0, 0, 0, 0.16),
+            0 4px 12px rgba(0, 0, 0, 0.1),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.22);
         }
 
         &:active {
@@ -184,14 +198,20 @@ body.dark {
     .core-skills {
       .core-skills-list {
         .core-skill {
-          background: rgba(0, 0, 0, 0.2);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.18));
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.45),
+            0 4px 14px rgba(0, 0, 0, 0.28),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 
           &:hover {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25));
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow:
+              0 14px 36px rgba(0, 0, 0, 0.55),
+              0 6px 18px rgba(0, 0, 0, 0.35),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.3);
           }
 
           a {
@@ -209,14 +229,20 @@ body.dark {
     .additional-skills {
       .additional-skills-list {
         .additional-skill {
-          background: rgba(0, 0, 0, 0.1);
-          border: 1px solid rgba(255, 255, 255, 0.05);
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1);
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.1));
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          box-shadow:
+            0 6px 16px rgba(0, 0, 0, 0.3),
+            0 3px 10px rgba(0, 0, 0, 0.18),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.16);
 
           &:hover {
-            background: rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.18));
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow:
+              0 8px 22px rgba(0, 0, 0, 0.38),
+              0 4px 12px rgba(0, 0, 0, 0.22),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.26);
           }
 
           a {

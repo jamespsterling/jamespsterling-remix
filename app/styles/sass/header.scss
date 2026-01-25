@@ -15,8 +15,6 @@ header {
         rgba($background-dark, 0.2) 60%,
         rgba($background-dark, 0.05) 85%,
         rgba($background-dark, 0) 100%);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     text-align: center;
     padding: 10px;
     margin: 0;
@@ -39,8 +37,6 @@ header {
         rgba($background-dark, 0.3) 60%,
         rgba($background-dark, 0.1) 85%,
         rgba($background-dark, 0) 100%);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
   }
 
   li {
@@ -65,7 +61,6 @@ header {
       text-decoration: none;
       background: rgb(0, 0, 0, 0.66);
       border-radius: 4px;
-      filter: backdrop-blur(10px);
     }
 
     // &:focus {
