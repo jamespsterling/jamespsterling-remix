@@ -12,10 +12,11 @@ type ContextHack = { context: { [key: string]: any } };
 export const loader = async ({ request, context }: LoaderFunctionArgs & ContextHack) => {
 	const cookieHeader = request.headers.get("Cookie");
 	const cookie = (await userPrefs.parse(cookieHeader)) || {};
+	const envVars = context?.env ?? {};
 
 	return Response.json({
-		env: context.env.ENV,
-		gaTrackingId: context.env.GA_TRACKING_ID,
+		env: envVars.ENV ?? null,
+		gaTrackingId: envVars.GA_TRACKING_ID ?? null,
 		darkMode: cookie.darkMode,
 	});
 };
