@@ -57,16 +57,16 @@
     "@tailwindcss/postcss": "^4.1.18",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
-    "concurrently": "^9.1.0",
+    "concurrently": "^9.2.1",
     "glob": "^13.0.0",
-    "postcss": "^8.4.49",
-    "postcss-import": "^16.1.0",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
     "sass": "^1.97.3",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "vite": "^6.0.0",
-    "vite-tsconfig-paths": "^5.0.0",
-    "wrangler": "^4.37.1"
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.0.5",
+    "wrangler": "^4.60.0"
   },
   "engines": {
     "node": ">=22.16.0",
